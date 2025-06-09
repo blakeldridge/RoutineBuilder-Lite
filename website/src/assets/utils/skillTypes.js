@@ -1,4 +1,4 @@
-const FloorSkills = {
+export const FloorSkills = {
     SINGLE : "Single Salto",
     MULTI : "Multiple Salto",
     SINGLE_TWIST : "Single Salto w/ Twist",
@@ -8,7 +8,7 @@ const FloorSkills = {
     CIRCLE : "Circle element",
 };
 
-const PommelSkills = {
+export const PommelSkills = {
     HANDSTAND : "Busnari or shear",
     HANDSTAND_DISMOUNT: "Handstand Dismounts",
     FLOP : "Flop",
@@ -19,14 +19,14 @@ const PommelSkills = {
     SPINDLE_TRAVEL : "Spindle Travel",
 };
 
-const PommelTypeSkills = {
+export const PommelTypeSkills = {
     TONG_FEI : "Tong Fei Travels",
     NIN_REYES : "Nin Reyes Travels",
     RUSSIAN_TRAVEL : "Russian style travels",
     SOHN_BEZ_FLOP : "Sohn/Bezugo",
 };
 
-const RingsSkills = {
+export const RingsSkills = {
     SWING_HANDSTAND : "Swing to Handstand",
     CROSS : "Cross, L-Cross, V-Cross",
     LSIT : "L-sit",
@@ -37,7 +37,7 @@ const RingsSkills = {
     INVERTED_CROSS : "Inverted cross"
 };
 
-const PbarSkills = {
+export const PbarSkills = {
     GIANT : "Giant Swings",
     FELGE : "Felge Swings",
     UPRISE_HANDSTAND : "Uprise Through Handstand",
@@ -46,7 +46,7 @@ const PbarSkills = {
     STRADDLE : "Straddle Salto",
 };
 
-const HbarSkills = {
+export const HbarSkills = {
     STOOP : "Adler elements",
     TKATCHEV : "Tkatchev / Piatti",
     KOVAC : "Kovac",

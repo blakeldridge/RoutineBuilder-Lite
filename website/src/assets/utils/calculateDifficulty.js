@@ -3,6 +3,9 @@ import { FloorSkills, PommelSkills, PommelTypeSkills, RingsSkills, PbarSkills, H
 
 const SKILL_GROUP_LIMIT = 4;
 
+const roundTo = (num, places) =>
+  Math.round(num * 10 ** places) / 10 ** places;
+
 export default function scoreRoutine(routine, apparatus) {   
     // routine : List of Skill Objects
 
@@ -29,7 +32,7 @@ export default function scoreRoutine(routine, apparatus) {
 // Function to calculate the starting execution of the routine
 function calculateExecution(routine) {
     // filter out invalid skills or non-existing skills
-    const numberOfSkills = routine.filter((skill) => skill !== null && !skill.invalid).length()
+    const numberOfSkills = routine.filter((skill) => skill !== null && !skill.invalid).length
     if (numberOfSkills >= 6){
         return 10.0;
     } else if (numberOfSkills == 0) {
@@ -43,23 +46,24 @@ function calculateExecution(routine) {
 function calculateTotal(routine) {
     // Add all skill's difficulty values together
     const difficulty = routine.reduce((total, skill) => {
-        return total + skill.difficulty;
+        let d = (!skill || skill.invalid) ? 0 : skill.difficulty;
+        return total + d;
     }, 0);
 
-    return difficulty;
+    return roundTo(difficulty, 2);
 }
 
 // Function to count how skills are in each skill group
 function countGroups(routine) {
     let groups = [0, 0, 0, 0];
-    routine.map((skill) => groups[skill.group - 1] + 1);
+    routine.map((skill) => groups[skill.group - 1] = groups[skill.group - 1] + 1);
     return groups;
 }
 
 // Function to calculate the highest value skill in each group
 function calculateGroups(routine) {
     let groups = [0, 0, 0, 0];
-    for (let i = 0; i < routine.length(); i++) {
+    for (let i = 0; i < routine.length; i++) {
         // skip uncounted skills
         if (routine[i] == null || routine[i].invalid) {
             continue;
@@ -82,13 +86,13 @@ function invalidateGroups(routine, apparatus) {
     // Floor has no dismount, disregard for rule 2
     if (apparatus !== Apparatus.FLOOR) {
         const dismountIndex = routine.findIndex(skill => skill.group == 4);
-        for (let i = dismountIndex; i < routine.length(); i++) {
+        for (let i = dismountIndex; i < routine.length; i++) {
             routine[i].invalid = true;
         }
     }
 
     // Invalidate the smallest valued elements of each group, if more than 4 elements in the group
-    for (let i = 0; i < groups.length(); i++) {
+    for (let i = 0; i < groups.length; i++) {
         let currentGroup = i + 1;
         let hbarCondition = false;
         // for high bar, if 2 flights are connected, you can have 5 elements in group 3
@@ -106,10 +110,13 @@ function invalidateGroups(routine, apparatus) {
             for (let j = 0; j < invalidSkills; j++) {
                 // make lowest valued skill invalid
                 const lowestSkill = routine.reduce((lowest, skill) => {
-                    return skill.group == currentGroup && skill.difficulty < lowest.difficulty ? skill : lowest;
+                    if (skill && !skill.invalid) {
+                        return skill.group == currentGroup && skill.difficulty < lowest.difficulty ? skill : lowest;
+                    }
                 });
 
-                lowestSkill.invalid = true;
+                let index = routine.findIndex(skill => skill == lowestSkill);
+                routine[index].invalid = true;
             }
         }
     }
@@ -123,18 +130,18 @@ function scoreFloor(routine) {
     // special repetitions
     // cannot do more than 1 strength skills
     const strengthSkills = routine.filter(skill => skill.type == FloorSkills.STRENGTH); 
-    if (strengthSkills.length() > 1) {
+    if (strengthSkills.length > 1) {
         let maxSkill = strengthSkills.reduce((max, skill) => {
             return skill.difficulty < max.difficulty ? skill : max;
         });
         routine.map(skill => 
-            skill.invalid = skill.type == FloorSkills.STRENGTH && skill != maxSkill ? true : false
+            skill.invalid = (skill.type == FloorSkills.STRENGTH && skill != maxSkill) ? true : false
         );
     }
 
     // cannot do more than 1 circle skill
     const circleSkills = routine.filter(skill => skill.type == FloorSkills.CIRCLE); 
-    if (circleSkills.length() > 1) {
+    if (circleSkills.length > 1) {
         let maxSkill = circleSkills.reduce((max, skill) => {
             return skill.difficulty < max.difficulty ? skill : max;
         });
@@ -158,7 +165,7 @@ function scoreFloor(routine) {
     }
 
     // D+ skills gain 0.5, <D gains partial requirement in groups 2-4
-    for (let i = 1; i < groups.length(); i++) {
+    for (let i = 1; i < groups.length; i++) {
         if (groups[i] >= 0.4) {
             requirements += 0.5;
         } else if (groups[i] > 0) {
@@ -168,13 +175,13 @@ function scoreFloor(routine) {
     
     // Calculate bonus
     let bonus = 0;
-    for (let i = 0; i < routine.length(); i++) {
+    for (let i = 0; i < routine.length; i++) {
         // cannot connect to invalid skill
         if (routine[i].invalid || routine[i] == null) {
             continue;
         } else if (routine[i].connection) {
             // cannot connect at end of routine / to invalid skill
-            if (i + 1 <= routine.length() || routine[i + 1].invalid || routine[i + 1] == null){
+            if (i + 1 >= routine.length || routine[i + 1].invalid || routine[i + 1] == null){
                 continue;
             }
             let skill1 = routine[i];
@@ -185,8 +192,7 @@ function scoreFloor(routine) {
                 continue;
             }
             // check for 0.1 connection
-            if (skill1.difficulty == 0.4 && skill2.difficulty == 0.4 ||
-                skill1.difficulty >= 0.4 && skill2.difficulty >= 0.2 && skill2.difficulty < 0.4||
+            if (skill1.difficulty >= 0.4 && skill2.difficulty >= 0.2 && skill2.difficulty < 0.4||
                 skill1.difficulty >= 0.2 && skill1.difficulty < 0.4 && skill2.difficulty >= 0.4
             ) {
                 bonus += 0.1;
@@ -202,9 +208,9 @@ function scoreFloor(routine) {
     // dismount element must be a double salto
     let penalty = 0.3;
     for (let i = routine.length - 1; i >= 0; i--) {
-        if (routine[i] != null && routine[i].invalid == false) {
-            if (routine[i].type == FloorSkills.MUTLI ||
-                routine[i].type == FloorSkills.MULTITWIST
+        if (routine[i] != null && !routine[i].invalid) {
+            if (routine[i].type == FloorSkills.MULTI ||
+                routine[i].type == FloorSkills.MULTI_TWIST
             ) {
                 penalty = 0;
             }
@@ -212,14 +218,16 @@ function scoreFloor(routine) {
         }
     }
 
-    const score = execution + difficulty + requirements + bonus - penalty;
+    const score = roundTo(execution + difficulty + requirements + bonus - penalty, 2);
+    
     return {
+        "routine" : routine,
         "score": score,
         "execution": execution,
         "difficulty": difficulty,
         "requirements": requirements,
-        "bonus": bonus,
-        "penalties": penalties
+        "bonus": roundTo(bonus, 2),
+        "penalty": penalty
     };
 }
 
@@ -234,9 +242,9 @@ function scorePommel(routine) {
         const skills = routine.filter(skill => skill.type == type);
         // if more than 2 skills of each type present
         // make smallest valued skills invalid
-        if (skills.length() > 2) {
+        if (skills.length > 2) {
 
-            const invalidSkills = skills.length() - 2;
+            const invalidSkills = skills.length - 2;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
@@ -252,9 +260,9 @@ function scorePommel(routine) {
         const skills = routine.filter(skill => skill.subtype == subtype);
         // if more than 1 skills of each sub type present
         // make smallest valued skills invalid
-        if (skills.length() > 1) {
+        if (skills.length > 1) {
 
-            const invalidSkills = skills.length() - 2;
+            const invalidSkills = skills.length - 2;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
@@ -281,7 +289,7 @@ function scorePommel(routine) {
     }
 
     // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
-    for (let i = 1; i < groups.length() - 1; i++) {
+    for (let i = 1; i < groups.length - 1; i++) {
         if (groups[i] >= 0.4) {
             requirements += 0.5;
         } else if (groups[i] > 0) {
@@ -312,9 +320,9 @@ function scoreRings(routine) {
         const skills = routine.filter(skill => skill.type == type);
         // if more than 2 skills of each type present
         // make smallest valued skills invalid
-        if (skills.length() > 2) {
+        if (skills.length > 2) {
 
-            const invalidSkills = skills.length() - 2;
+            const invalidSkills = skills.length - 2;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
@@ -328,7 +336,7 @@ function scoreRings(routine) {
 
     // repeated strength elements - more than 3 in a row must be separated by counting B+ element
     let strengthSkills = 0;
-    for (let i = 0; i < routine.length(); i++) {
+    for (let i = 0; i < routine.length; i++) {
         if (routine[i].group == 2 ||
             routine[i].group == 3
         ) {
@@ -356,7 +364,7 @@ function scoreRings(routine) {
     }
 
     // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
-    for (let i = 1; i < groups.length() - 1; i++) {
+    for (let i = 1; i < groups.length - 1; i++) {
         if (groups[i] >= 0.4) {
             requirements += 0.5;
         } else if (groups[i] > 0) {
@@ -369,13 +377,13 @@ function scoreRings(routine) {
 
     // calculate jonasson or yamawaki bonus
     let bonus = 0.0;
-    for (let i = 0; i < routine.length(); i++) {
+    for (let i = 0; i < routine.length; i++) {
         if (routine[i] == null || routine[i].invalid == true) {
             continue;
         }
 
         if (routine[i].connection) {
-            if (i + 1 >= routine.length() || routine[i + 1] == null || !routine[i + 1].invalid) {
+            if (i + 1 >= routine.length || routine[i + 1] == null || !routine[i + 1].invalid) {
                 continue;
             }
             if (routine[i].type == RingsSkills.YAMA_JON && routine[i + 1].type == RingsSkills.SWING_HANDSTAND) {
@@ -388,7 +396,7 @@ function scoreRings(routine) {
     // if there is no swing to handstand element in the counting elements, 0.3 penalty
     let penalty = 0.3;
     const handstandSkills = routine.filter(skill => skill.type == RingsSkills.SWING_HANDSTAND);
-    if (handstandSkills.length() > 0) {
+    if (handstandSkills.length > 0) {
         penalty = 0;
     }
 
@@ -434,9 +442,9 @@ function scorePbar(routine) {
         const skills = routine.filter(skill => skill.type == type);
         // if more than 2 skills of each type present
         // make smallest valued skills invalid
-        if (skills.length() > 1) {
+        if (skills.length > 1) {
 
-            const invalidSkills = skills.length() - 2;
+            const invalidSkills = skills.length - 2;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
@@ -463,7 +471,7 @@ function scorePbar(routine) {
     }
 
     // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
-    for (let i = 1; i < groups.length() - 1; i++) {
+    for (let i = 1; i < groups.length - 1; i++) {
         if (groups[i] >= 0.4) {
             requirements += 0.5;
         } else if (groups[i] > 0) {
@@ -494,9 +502,9 @@ function scoreHbar(routine) {
         const skills = routine.filter(skill => skill.type == type);
         // if more than 2 skills of each type present
         // make smallest valued skills invalid
-        if (skills.length() > 2) {
+        if (skills.length > 2) {
 
-            const invalidSkills = skills.length() - 2;
+            const invalidSkills = skills.length - 2;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
@@ -523,7 +531,7 @@ function scoreHbar(routine) {
     }
 
     // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
-    for (let i = 1; i < groups.length() - 1; i++) {
+    for (let i = 1; i < groups.length - 1; i++) {
         if (groups[i] >= 0.4) {
             requirements += 0.5;
         } else if (groups[i] > 0) {
@@ -536,13 +544,13 @@ function scoreHbar(routine) {
     
     // Calculate bonus
     let bonus = 0;
-    for (let i = 0; i < routine.length(); i++) {
+    for (let i = 0; i < routine.length; i++) {
         // cannot connect to invalid skill
         if (routine[i].invalid || routine[i] == null) {
             continue;
         } else if (routine[i].connection) {
             // cannot connect at end of routine / to invalid skill
-            if (i + 1 <= routine.length() || routine[i + 1].invalid || routine[i + 1] == null){
+            if (i + 1 <= routine.length || routine[i + 1].invalid || routine[i + 1] == null){
                 continue;
             }
             let skill1 = routine[i];
