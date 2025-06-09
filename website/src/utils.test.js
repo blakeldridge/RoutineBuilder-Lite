@@ -107,7 +107,7 @@ describe('Difficulty Calculation Tests', () => {
 
   it('should detect too many pommel subtypes', () => {
     // testPommelTooManySubType
-        const routine = [
+    const routine = [
         {"difficulty":0.5, "group": 2, "type":PommelSkills.FLOP, "subtype":PommelTypeSkills.SOHN_BEZ_FLOP},
         {"difficulty":0.5, "group": 2, "type":PommelSkills.FLOP, "subtype":PommelTypeSkills.SOHN_BEZ_FLOP},
         {"difficulty":0.4, "group": 3, "type":PommelSkills.WENDE_TRAVEL, "subtype":PommelTypeSkills.TONG_FEI},
@@ -121,26 +121,90 @@ describe('Difficulty Calculation Tests', () => {
 
   it('should validate rings routine', () => {
     // testRingsValid
+    const routine = [
+        {"difficulty":0.2, "group":3},
+        {"difficulty":0.1, "group":1},
+        {"difficulty":0.3, "group":1, "type":RingsSkills.SWING_HANDSTAND},
+        {"difficulty":0.1,"group":1},
+        {"difficulty":0.1,"group":2},
+        {"difficulty":0.3, "group":4}
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.RINGS);
+    expect(result["score"]).toBe(12.5);
   });
 
   it('should detect too many rings types', () => {
     // testRingsTooManyType
+    const routine = [
+        {"difficulty":0.3, "group":2, "type":RingsSkills.CROSS},
+        {"difficulty":0.3, "group":3, "type":RingsSkills.CROSS},
+        {"difficulty":0.3, "group":1, "type":RingsSkills.SWING_HANDSTAND},
+        {"difficulty":0.4,"group":3, "type":RingsSkills.MALTESE},
+        {"difficulty":0.4, "group":3, "type":RingsSkills.MALTESE}
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.RINGS);
+    expect(result["difficulty"]).toBe(1.3);
   });
 
   it('should allow 3 repeated elements on rings when valid', () => {
     // testRings3RepeatedValid
+    const routine = [
+        {"difficulty":0.1, "group":2},
+        {"difficulty":0.1, "group":3},
+        {"difficulty":0.1, "group":2},
+        {"difficulty":0.3, "group":1, "type":RingsSkills.SWING_HANDSTAND},
+        {"difficulty":0.1,"group":2},
+        {"difficulty":0.1,"group":3},
+        {"difficulty":0.1, "group":2}
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.RINGS);
+    expect(result["difficulty"]).toBe(0.9);
   });
 
   it('should detect 3 repeated elements on rings when invalid', () => {
     // testRings3RepeatedInvalid
+    const routine = [
+        {"difficulty":0.1, "group":2},
+        {"difficulty":0.1, "group":3},
+        {"difficulty":0.1, "group":2},
+        {"difficulty":0.1, "group":1},
+        {"difficulty":0.1,"group":2},
+        {"difficulty":0.1,"group":3},
+        {"difficulty":0.1, "group":2}
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.RINGS);
+    expect(result["difficulty"]).toBe(0.4);
   });
 
   it('should award bonus on rings', () => {
     // testRingsBonus
+    const routine = [
+        {"difficulty":0.2, "group":1, "type":RingsSkills.YAMA_JON},
+        {"difficulty":0.3, "group":1, "type":RingsSkills.YAMA_JON, "connection":true},
+        {"difficulty":0.3, "group":1, "type":RingsSkills.SWING_HANDSTAND},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.RINGS);
+    expect(result["bonus"]).toBe(0.1);
   });
 
   it('should apply penalty on rings', () => {
     // testRingsPenalty
+        const routine = [
+        {"difficulty":0.1, "group":2},
+        {"difficulty":0.1, "group":2},
+        {"difficulty":0.1, "group":3},
+        {"difficulty":0.1, "group":3},
+        {"difficulty":0.1, "group":1},
+        {"difficulty":0.1, "group":4}
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.RINGS);
+    expect(result["penalty"]).toBe(0.3);
   });
 
   it('should validate vault routine', () => {

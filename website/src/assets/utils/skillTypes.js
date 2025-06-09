@@ -34,7 +34,8 @@ export const RingsSkills = {
     PLANCHE : "Support scale, straddled inc.",
     MALTESE : "Support scale horizontal",
     VICTORIAN : "Inverted swallow",
-    INVERTED_CROSS : "Inverted cross"
+    INVERTED_CROSS : "Inverted cross",
+    YAMA_JON : "yamawaki or jonasson"
 };
 
 export const PbarSkills = {

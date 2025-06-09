@@ -321,19 +321,22 @@ function scoreRings(routine) {
     // special repetitions
 
     for (const type of Object.values(RingsSkills)) {
-        const skills = routine.filter(skill => skill.type == type);
-        // if more than 2 skills of each type present
-        // make smallest valued skills invalid
-        if (skills.length > 2) {
+        for (let j = 0; j < 2; j++) {
+            const skills = routine.filter(skill => skill.type == type && skill.group == j + 1);
+            // if more than 2 skills of each type present
+            // make smallest valued skills invalid
+            if (skills.length > 1) {
 
-            const invalidSkills = skills.length - 2;
-            // remove lowest skills violating rule
-            for (let i = 0; i < invalidSkills; i++) {
-                const lowestSkill = routine.reduce((lowest, skill) => {
-                    return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
-                });
+                const invalidSkills = skills.length - 1;
+                // remove lowest skills violating rule
+                for (let i = 0; i < invalidSkills; i++) {
+                    const lowestSkill = routine.reduce((lowest, skill) => {
+                        return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
+                    });
 
-                lowestSkill.invalid = true;
+                    const index = routine.findIndex(skill => skill == lowestSkill);
+                    routine[index].invalid = true;
+                }
             }
         }
     }
@@ -377,7 +380,7 @@ function scoreRings(routine) {
     }
 
     // Dismount gains itself requirement
-    requirement += group[3];
+    requirements += groups[3];
 
     // calculate jonasson or yamawaki bonus
     let bonus = 0.0;
@@ -387,7 +390,7 @@ function scoreRings(routine) {
         }
 
         if (routine[i].connection) {
-            if (i + 1 >= routine.length || routine[i + 1] == null || !routine[i + 1].invalid) {
+            if (i + 1 >= routine.length || routine[i + 1] == null || routine[i + 1].invalid) {
                 continue;
             }
             if (routine[i].type == RingsSkills.YAMA_JON && routine[i + 1].type == RingsSkills.SWING_HANDSTAND) {
