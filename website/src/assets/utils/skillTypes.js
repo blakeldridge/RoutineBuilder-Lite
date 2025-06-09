@@ -17,11 +17,22 @@ const PommelSkills = {
     WENDE_TRAVEL : "Russian Travel",
     SPINDLE : "Spindle",
     SPINDLE_TRAVEL : "Spindle Travel",
-}
+};
 
 const PommelTypeSkills = {
     TONG_FEI : "Tong Fei Travels",
     NIN_REYES : "Nin Reyes Travels",
     RUSSIAN_TRAVEL : "Russian style travels",
     SOHN_BEZ_FLOP : "Sohn/Bezugo",
-}
+};
+
+const RingsSkills = {
+    SWING_HANDSTAND : "Swing to Handstand",
+    CROSS : "Cross, L-Cross, V-Cross",
+    LSIT : "L-sit",
+    VSIT : "V-sit",
+    PLANCHE : "Support scale, straddled inc.",
+    MALTESE : "Support scale horizontal",
+    VICTORIAN : "Inverted swallow",
+    INVERTED_CROSS : "Inverted cross"
+};
