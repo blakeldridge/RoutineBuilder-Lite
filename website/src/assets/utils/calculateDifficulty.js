@@ -449,7 +449,7 @@ function scorePbar(routine) {
         const skills = routine.filter(skill => skill.type == type);
         // if more than 2 skills of each type present
         // make smallest valued skills invalid
-        if (skills.length > 1) {
+        if (skills.length > 2) {
 
             const invalidSkills = skills.length - 2;
             // remove lowest skills violating rule
@@ -458,7 +458,8 @@ function scorePbar(routine) {
                     return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
                 });
 
-                lowestSkill.invalid = true;
+                const index = routine.findIndex(skill => skill == lowestSkill);
+                routine[index].invalid = true;
             }
         }
     }
@@ -487,7 +488,7 @@ function scorePbar(routine) {
     }
 
     // Dismount gains itself requirement
-    requirement += group[3];
+    requirements += groups[3];
 
     const score = execution + difficulty + requirements;
     return {

@@ -232,10 +232,31 @@ describe('Difficulty Calculation Tests', () => {
 
   it('should validate parallel bars routine', () => {
     // testPbarValid
+    const routine = [
+        {"difficulty": 0.4, "group": 3},
+        {"difficulty": 0.3, "group": 2},
+        {"difficulty": 0.3, "group": 2},
+        {"difficulty": 0.2, "group": 3},
+        {"difficulty": 0.1, "group": 2},
+        {"difficulty": 0.2, "group": 2},
+        {"difficulty": 0.1, "group": 1},
+        {"difficulty": 0.5, "group": 4},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.PBAR);
+    expect(result["score"]).toBe(13.9);
   });
 
   it('should detect same type used on parallel bars', () => {
     // testPbarSameType
+        const routine = [
+        {"difficulty": 0.4, "group": 3, "type": PbarSkills.GIANT},
+        {"difficulty": 0.5, "group": 3, "type": PbarSkills.GIANT},
+        {"difficulty": 0.3, "group": 3, "type": PbarSkills.GIANT},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.PBAR);
+    expect(result["difficulty"]).toBe(0.9);
   });
 
   it('should validate horizontal bar routine', () => {
