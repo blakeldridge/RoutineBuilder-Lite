@@ -86,8 +86,10 @@ function invalidateGroups(routine, apparatus) {
     // Floor has no dismount, disregard for rule 2
     if (apparatus !== Apparatus.FLOOR) {
         const dismountIndex = routine.findIndex(skill => skill.group == 4);
-        for (let i = dismountIndex; i < routine.length; i++) {
-            routine[i].invalid = true;
+        if (dismountIndex != -1) {
+            for (let i = dismountIndex + 1; i < routine.length; i++) {
+                routine[i].invalid = true;
+            }
         }
     }
 
@@ -248,10 +250,11 @@ function scorePommel(routine) {
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
-                    return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
+                    return ((skill.type == type && skill.difficulty) < lowest.difficulty) ? skill : lowest;
                 });
 
-                lowestSkill.invalid = true;
+                const index = routine.findIndex(skill => skill == lowestSkill);
+                routine[index].invalid = true;
             }
         }
     }
@@ -261,15 +264,15 @@ function scorePommel(routine) {
         // if more than 1 skills of each sub type present
         // make smallest valued skills invalid
         if (skills.length > 1) {
-
-            const invalidSkills = skills.length - 2;
+            const invalidSkills = skills.length - 1;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
-                    return skill.subtype == subtype && skill.difficulty < lowest.difficulty ? skill : lowest;
+                    return (skill.subtype == subtype && skill.difficulty < lowest.difficulty) ? skill : lowest;
                 });
 
-                lowestSkill.invalid = true;
+                const index = routine.findIndex(skill => skill == lowestSkill);
+                routine[index].invalid = true;
             }
         }
     }
@@ -298,10 +301,11 @@ function scorePommel(routine) {
     }
 
     // Dismount gains itself requirement
-    requirement += group[3];
+    requirements += groups[3];
 
     const score = execution + difficulty + requirements;
     return {
+        "routine":routine,
         "score": score,
         "execution": execution,
         "difficulty": difficulty,

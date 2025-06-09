@@ -76,14 +76,47 @@ describe('Difficulty Calculation Tests', () => {
 
   it('should validate pommel routine', () => {
     // testPommelValid
+    const routine = [{"difficulty": 0.1, "group":1},
+        {"difficulty":0.1, "group": 2},
+        {"difficulty":0.4, "group": 2, "type":PommelSkills.FLOP},
+        {"difficulty":0.4, "group": 2, "type":PommelSkills.FLOP},
+        {"difficulty":0.4, "group": 3, "type":PommelSkills.WENDE_TRAVEL, "subtype":PommelTypeSkills.TONG_FEI},
+        {"difficulty":0.4, "group": 3, "type":PommelSkills.CROSS_TRAVEL},
+        {"difficulty":0.4, "group": 3, "type":PommelSkills.CROSS_TRAVEL},
+        {"difficulty":0.4, "group": 4, "type":PommelSkills.HANDSTAND_DISMOUNT},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.POMMEL);
+    expect(result["score"]).toBe(14.5);
   });
 
   it('should detect too many pommel types', () => {
     // testPommelTooManyType
+    const routine = [
+        {"difficulty":0.4, "group": 2, "type":PommelSkills.FLOP},
+        {"difficulty":0.4, "group": 2, "type":PommelSkills.FLOP},
+        {"difficulty":0.4, "group": 2, "type":PommelSkills.FLOP},
+        {"difficulty":0.4, "group": 3, "type":PommelSkills.WENDE_TRAVEL},
+        {"difficulty":0.4, "group": 3, "type":PommelSkills.WENDE_TRAVEL},
+        {"difficulty":0.4, "group": 3, "type":PommelSkills.WENDE_TRAVEL},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.POMMEL);
+    expect(result["difficulty"]).toBe(1.6);
   });
 
   it('should detect too many pommel subtypes', () => {
     // testPommelTooManySubType
+        const routine = [
+        {"difficulty":0.5, "group": 2, "type":PommelSkills.FLOP, "subtype":PommelTypeSkills.SOHN_BEZ_FLOP},
+        {"difficulty":0.5, "group": 2, "type":PommelSkills.FLOP, "subtype":PommelTypeSkills.SOHN_BEZ_FLOP},
+        {"difficulty":0.4, "group": 3, "type":PommelSkills.WENDE_TRAVEL, "subtype":PommelTypeSkills.TONG_FEI},
+        {"difficulty":0.4, "group": 3, "type":PommelSkills.WENDE_TRAVEL, "subtype":PommelTypeSkills.TONG_FEI},
+
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.POMMEL);
+    expect(result["difficulty"]).toBe(0.9);
   });
 
   it('should validate rings routine', () => {
