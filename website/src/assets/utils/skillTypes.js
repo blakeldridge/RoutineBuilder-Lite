@@ -36,3 +36,12 @@ const RingsSkills = {
     VICTORIAN : "Inverted swallow",
     INVERTED_CROSS : "Inverted cross"
 };
+
+const PbarSkills = {
+    GIANT : "Giant Swings",
+    FELGE : "Felge Swings",
+    UPRISE_HANDSTAND : "Uprise Through Handstand",
+    MORISUE : "Morisue",
+    BELLE : "Belle",
+    STRADDLE : "Straddle Salto",
+}

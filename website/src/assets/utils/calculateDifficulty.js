@@ -1,5 +1,5 @@
 import { Apparatus } from "./apparatus";
-import { FloorSkills, PommelSkills, PommelTypeSkills, RingsSkills } from "./skillTypes";
+import { FloorSkills, PommelSkills, PommelTypeSkills, RingsSkills, PbarSkills } from "./skillTypes";
 
 const SKILL_GROUP_LIMIT = 4;
 
@@ -18,7 +18,7 @@ export default function scoreRoutine(routine, apparatus) {
         case Apparatus.VAULT:
             return scoreVault(routine);
         case Apparatus.PBAR:
-            break;
+            return scorePbar(routine);
         case Apparatus.HBAR:
             break;
         default:
@@ -299,7 +299,6 @@ function scorePommel(routine) {
         "difficulty": difficulty,
         "requirements": requirements,
     };
-
 }
 
 // Function to claculate a rings routine
@@ -309,7 +308,7 @@ function scoreRings(routine) {
 
     // special repetitions
 
-    for (const type of Object.values(PommelSkills)) {
+    for (const type of Object.values(RingsSkills)) {
         const skills = routine.filter(skill => skill.type == type);
         // if more than 2 skills of each type present
         // make smallest valued skills invalid
@@ -421,5 +420,65 @@ function scoreVault(routine) {
         "vault1" : vault1,
         "vault2" : vault2,
         "avg_vault" : average,
+    };
+}
+
+// Function to calculate pbar routine
+function scorePbar(routine) {
+    // mark skills as invalid / uncounted if they violate the rules
+    invalidateGroups(routine, Apparatus.PBAR);
+
+    // check for special repetitions
+
+    for (const type of Object.values(PbarSkills)) {
+        const skills = routine.filter(skill => skill.type == type);
+        // if more than 2 skills of each type present
+        // make smallest valued skills invalid
+        if (skills.length() > 1) {
+
+            const invalidSkills = skills.length() - 2;
+            // remove lowest skills violating rule
+            for (let i = 0; i < invalidSkills; i++) {
+                const lowestSkill = routine.reduce((lowest, skill) => {
+                    return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
+                });
+
+                lowestSkill.invalid = true;
+            }
+        }
+    }
+
+   // calculate the routine score
+
+    const execution = calculateExecution(routine);
+    const difficulty = calculateTotal(routine);
+    const groups = calculateGroups(routine);
+
+    // calculate the requirements
+    let requirements = 0;
+
+    // any skill in group 1 gains 0.5
+    if (groups[0] > 0) {
+        requirements += 0.5;
+    }
+
+    // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
+    for (let i = 1; i < groups.length() - 1; i++) {
+        if (groups[i] >= 0.4) {
+            requirements += 0.5;
+        } else if (groups[i] > 0) {
+            requirements += 0.3;
+        }
+    }
+
+    // Dismount gains itself requirement
+    requirement += group[3];
+
+    const score = execution + difficulty + requirements;
+    return {
+        "score": score,
+        "execution": execution,
+        "difficulty": difficulty,
+        "requirements": requirements,
     };
 }
