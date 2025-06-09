@@ -1,5 +1,5 @@
 import { Apparatus } from "./apparatus";
-import { FloorSkills } from "./skillTypes";
+import { FloorSkills, PommelSkills, PommelTypeSkills } from "./skillTypes";
 
 const SKILL_GROUP_LIMIT = 4;
 
@@ -12,7 +12,7 @@ export default function scoreRoutine(routine, apparatus) {
         case Apparatus.FLOOR:
             return scoreFloor(routine);
         case Apparatus.POMMEL:
-            break;
+            return scorePommel(routine);
         case Apparatus.RINGS:
             break;
         case Apparatus.VAULT:
@@ -25,7 +25,6 @@ export default function scoreRoutine(routine, apparatus) {
             break;
     }
 };
-
 
 // Function to calculate the starting execution of the routine
 function calculateExecution(routine) {
@@ -116,6 +115,7 @@ function invalidateGroups(routine, apparatus) {
     }
 }
 
+// Function to calculate a floor routine
 function scoreFloor(routine) {
     // mark skills as invalid / uncounted if they violate the rules
     invalidateGroups(routine, Apparatus.FLOOR);
@@ -129,6 +129,17 @@ function scoreFloor(routine) {
         });
         routine.map(skill => 
             skill.invalid = skill.type == FloorSkills.STRENGTH && skill != maxSkill ? true : false
+        );
+    }
+
+    // cannot do more than 1 circle skill
+    const circleSkills = routine.filter(skill => skill.type == FloorSkills.CIRCLE); 
+    if (circleSkills.length() > 1) {
+        let maxSkill = circleSkills.reduce((max, skill) => {
+            return skill.difficulty < max.difficulty ? skill : max;
+        });
+        routine.map(skill => 
+            skill.invalid = skill.type == FloorSkills.CIRCLE && skill != maxSkill ? true : false
         );
     }
 
@@ -153,18 +164,6 @@ function scoreFloor(routine) {
         } else if (groups[i] > 0) {
             requirements += 0.3;
         }
-    }
-
-
-    // cannot do more than 1 circle skill
-    const circleSkills = routine.filter(skill => skill.type == FloorSkills.CIRCLE); 
-    if (circleSkills.length() > 1) {
-        let maxSkill = circleSkills.reduce((max, skill) => {
-            return skill.difficulty < max.difficulty ? skill : max;
-        });
-        routine.map(skill => 
-            skill.invalid = skill.type == FloorSkills.CIRCLE && skill != maxSkill ? true : false
-        );
     }
     
     // Calculate bonus
@@ -222,4 +221,83 @@ function scoreFloor(routine) {
         "bonus": bonus,
         "penalties": penalties
     };
+}
+
+// Function to calculate a pommel routine
+function scorePommel(routine) {
+    // mark skills as invalid / uncounted if they violate the rules
+    invalidateGroups(routine, Apparatus.POMMEL);
+
+    // check for special repetitions
+
+    for (const type of Object.values(PommelSkills)) {
+        const skills = routine.filter(skill => skill.type == type);
+        // if more than 2 skills of each type present
+        // make smallest valued skills invalid
+        if (skills.length() > 2) {
+
+            const invalidSkills = skills.length() - 2;
+            // remove lowest skills violating rule
+            for (let i = 0; i < invalidSkills; i++) {
+                const lowestSkill = routine.reduce((lowest, skill) => {
+                    return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
+                });
+
+                lowestSkill.invalid = true;
+            }
+        }
+    }
+
+    for (const subtype of Object.values(PommelTypeSkills)) {
+        const skills = routine.filter(skill => skill.subtype == subtype);
+        // if more than 1 skills of each sub type present
+        // make smallest valued skills invalid
+        if (skills.length() > 1) {
+
+            const invalidSkills = skills.length() - 2;
+            // remove lowest skills violating rule
+            for (let i = 0; i < invalidSkills; i++) {
+                const lowestSkill = routine.reduce((lowest, skill) => {
+                    return skill.subtype == subtype && skill.difficulty < lowest.difficulty ? skill : lowest;
+                });
+
+                lowestSkill.invalid = true;
+            }
+        }
+    }
+
+    // calculate the routine score
+
+    const execution = calculateExecution(routine);
+    const difficulty = calculateTotal(routine);
+    const groups = calculateGroups(routine);
+
+    // calculate the requirements
+    let requirements = 0;
+
+    // any skill in group 1 gains 0.5
+    if (groups[0] > 0) {
+        requirements += 0.5;
+    }
+
+    // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
+    for (let i = 1; i < groups.length() - 1; i++) {
+        if (groups[i] >= 0.4) {
+            requirements += 0.5;
+        } else if (groups[i] > 0) {
+            requirements += 0.3;
+        }
+    }
+
+    // Dismount gains itself requirement
+    requirement += group[3];
+
+    const score = execution + difficulty + requirements;
+    return {
+        "score": score,
+        "execution": execution,
+        "difficulty": difficulty,
+        "requirements": requirements,
+    };
+
 }
