@@ -1,4 +1,5 @@
 import { Apparatus } from "./apparatus";
+import { FloorSkills } from "./skillTypes";
 
 const SKILL_GROUP_LIMIT = 4;
 
@@ -9,7 +10,7 @@ export default function scoreRoutine(routine, apparatus) {
     // each apparatus has a slightly different rule set
     switch (apparatus) {
         case Apparatus.FLOOR:
-            break;
+            return scoreFloor(routine);
         case Apparatus.POMMEL:
             break;
         case Apparatus.RINGS:
@@ -56,6 +57,23 @@ function countGroups(routine) {
     return groups;
 }
 
+// Function to calculate the highest value skill in each group
+function calculateGroups(routine) {
+    let groups = [0, 0, 0, 0];
+    for (let i = 0; i < routine.length(); i++) {
+        // skip uncounted skills
+        if (routine[i] == null || routine[i].invalid) {
+            continue;
+        }
+        // replace highest difficulty if new skill is bigger
+        let skillGroup = routine[i].group - 1;
+        if (routine[i].difficulty > groups[skillGroup]) {
+            groups[skillGroup] = routine[i].difficulty;
+        }
+    }
+    return groups;
+}
+
 // Function to make skills invalid if they fall under the following:
 //  - Too many skills in a specific group
 //  - Come after the dismount
@@ -96,4 +114,112 @@ function invalidateGroups(routine, apparatus) {
             }
         }
     }
+}
+
+function scoreFloor(routine) {
+    // mark skills as invalid / uncounted if they violate the rules
+    invalidateGroups(routine, Apparatus.FLOOR);
+
+    // special repetitions
+    // cannot do more than 1 strength skills
+    const strengthSkills = routine.filter(skill => skill.type == FloorSkills.STRENGTH); 
+    if (strengthSkills.length() > 1) {
+        let maxSkill = strengthSkills.reduce((max, skill) => {
+            return skill.difficulty < max.difficulty ? skill : max;
+        });
+        routine.map(skill => 
+            skill.invalid = skill.type == FloorSkills.STRENGTH && skill != maxSkill ? true : false
+        );
+    }
+
+    // calculate the routine score
+
+    const execution = calculateExecution(routine);
+    const difficulty = calculateTotal(routine);
+    const groups = calculateGroups(routine);
+
+    // calculate the requirements
+    let requirements = 0;
+
+    // any skill in group 1 gains 0.5
+    if (groups[0] > 0) {
+        requirements += 0.5;
+    }
+
+    // D+ skills gain 0.5, <D gains partial requirement in groups 2-4
+    for (let i = 1; i < groups.length(); i++) {
+        if (groups[i] >= 0.4) {
+            requirements += 0.5;
+        } else if (groups[i] > 0) {
+            requirements += 0.3;
+        }
+    }
+
+
+    // cannot do more than 1 circle skill
+    const circleSkills = routine.filter(skill => skill.type == FloorSkills.CIRCLE); 
+    if (circleSkills.length() > 1) {
+        let maxSkill = circleSkills.reduce((max, skill) => {
+            return skill.difficulty < max.difficulty ? skill : max;
+        });
+        routine.map(skill => 
+            skill.invalid = skill.type == FloorSkills.CIRCLE && skill != maxSkill ? true : false
+        );
+    }
+    
+    // Calculate bonus
+    let bonus = 0;
+    for (let i = 0; i < routine.length(); i++) {
+        // cannot connect to invalid skill
+        if (routine[i].invalid || routine[i] == null) {
+            continue;
+        } else if (routine[i].connection) {
+            // cannot connect at end of routine / to invalid skill
+            if (i + 1 <= routine.length() || routine[i + 1].invalid || routine[i + 1] == null){
+                continue;
+            }
+            let skill1 = routine[i];
+            let skill2 = routine[i + 1];
+
+            // check if skills are valid connections (twisting salto into non-twisting)
+            if (skill1.type == FloorSkills.SINGLE_TWIST && skill2.type == FloorSkills.SINGLE_TWIST) {
+                continue;
+            }
+            // check for 0.1 connection
+            if (skill1.difficulty == 0.4 && skill2.difficulty == 0.4 ||
+                skill1.difficulty >= 0.4 && skill2.difficulty >= 0.2 && skill2.difficulty < 0.4||
+                skill1.difficulty >= 0.2 && skill1.difficulty < 0.4 && skill2.difficulty >= 0.4
+            ) {
+                bonus += 0.1;
+            } 
+            // check for 0.2 bonus
+            else if (skill1.difficulty >= 0.4 && skill2.difficulty >= 0.4) {
+                bonus += 0.2;
+            }
+        }
+    }
+
+    // Calculate Penalties
+    // dismount element must be a double salto
+    let penalty = 0.3;
+    for (let i = routine.length - 1; i >= 0; i--) {
+        if (routine[i] != null && routine[i].invalid == false) {
+            if (routine[i].type == FloorSkills.MUTLI ||
+                routine[i].type == FloorSkills.MULTITWIST
+            ) {
+                penalty = 0;
+            }
+            break;
+        }
+    }
+
+    const score = execution + difficulty + requirements + bonus - penalty;
+    return {
+        "score": score,
+        "execution": execution,
+        "difficulty": difficulty,
+        "requirements": requirements,
+        "bonus": bonus,
+        "penalties": penalties
+    };
 }
