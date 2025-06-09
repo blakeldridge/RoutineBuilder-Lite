@@ -98,9 +98,14 @@ function invalidateGroups(routine, apparatus) {
         let currentGroup = i + 1;
         let hbarCondition = false;
         // for high bar, if 2 flights are connected, you can have 5 elements in group 3
-        if (currentGroup == 3 && groups[i] == 5 && apparatus == Apparatus.HBAR) {
-            const flightElements = routine.filter(skill => skill.group == 3);
-            const connectedTotal = flightElements.reduce((total, skill) => { return total + skill.connected ? 1 : 0 }, 0);
+        if (currentGroup == 2 && groups[i] == 5 && apparatus == Apparatus.HBAR) {
+            const flightElements = routine.filter(skill => skill.group == 2);
+            const connectedTotal = routine.reduce((total, skill) => {
+                if (skill.connection) {
+                    total += 1;
+                }
+                return total;
+            }, 0);
             if (connectedTotal >= 2) {
                 hbarCondition = true;
             }
@@ -249,8 +254,8 @@ function scorePommel(routine) {
             const invalidSkills = skills.length - 2;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
-                const lowestSkill = routine.reduce((lowest, skill) => {
-                    return ((skill.type == type && skill.difficulty) < lowest.difficulty) ? skill : lowest;
+                const lowestSkill = skills.reduce((lowest, skill) => {
+                    return (skill.difficulty < lowest.difficulty) ? skill : lowest;
                 });
 
                 const index = routine.findIndex(skill => skill == lowestSkill);
@@ -515,11 +520,13 @@ function scoreHbar(routine) {
             const invalidSkills = skills.length - 2;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
-                const lowestSkill = routine.reduce((lowest, skill) => {
-                    return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
+
+                const lowestSkill = skills.reduce((lowest, skill) => {
+                    return skill.difficulty < lowest.difficulty ? skill : lowest;
                 });
 
-                lowestSkill.invalid = true;
+                const index = routine.findIndex(skill => skill == lowestSkill);
+                routine[index].invalid = true;
             }
         }
     }
@@ -548,7 +555,7 @@ function scoreHbar(routine) {
     }
 
     // Dismount gains itself requirement
-    requirement += group[3];
+    requirements += groups[3];
     
     // Calculate bonus
     let bonus = 0;
@@ -558,7 +565,7 @@ function scoreHbar(routine) {
             continue;
         } else if (routine[i].connection) {
             // cannot connect at end of routine / to invalid skill
-            if (i + 1 <= routine.length || routine[i + 1].invalid || routine[i + 1] == null){
+            if (i + 1 >= routine.length || routine[i + 1].invalid || routine[i + 1] == null){
                 continue;
             }
             let skill1 = routine[i];
@@ -569,7 +576,7 @@ function scoreHbar(routine) {
                 // D+ into D gives 0.1 bonus
                 if (skill1.difficulty >= 0.4 && skill2.difficulty == 0.4) {
                     bonus += 0.1;
-                } else if (skill.difficulty >= 0.4 && skill2.difficulty >= 0.5) {
+                } else if (skill1.difficulty >= 0.4 && skill2.difficulty >= 0.5) {
                     bonus += 0.2;
                 }
             } 
@@ -592,6 +599,6 @@ function scoreHbar(routine) {
         "execution": execution,
         "difficulty": difficulty,
         "requirements": requirements,
-        "bonus": bonus,
+        "bonus": roundTo(bonus, 2),
     };
 }

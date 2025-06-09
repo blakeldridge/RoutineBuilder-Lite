@@ -215,7 +215,6 @@ describe('Difficulty Calculation Tests', () => {
     ];
 
     const result = scoreRoutine(routine, Apparatus.VAULT);
-    console.log(result);
     expect(result["avg_vault"]).toBe(14.6);
   });
 
@@ -261,17 +260,60 @@ describe('Difficulty Calculation Tests', () => {
 
   it('should validate horizontal bar routine', () => {
     // testHbarValid
+    const routine = [
+        {"difficulty": 0.1, "group": 3},
+        {"difficulty": 0.1, "group": 1},
+        {"difficulty": 0.4, "group": 2},
+        {"difficulty": 0.1, "group": 1},
+        {"difficulty": 0.2, "group": 3},
+        {"difficulty": 0.1, "group": 1},
+        {"difficulty": 0.2, "group": 3},
+        {"difficulty": 0.3, "group": 4},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.HBAR);
+    expect(result["score"]).toBe(13.1);
   });
 
   it('should detect same type used on horizontal bar', () => {
     // testHbarSameType
+    const routine = [
+        {"difficulty": 0.3, "group": 2, "type": HbarSkills.TKATCHEV},
+        {"difficulty": 0.4, "group": 2, "type": HbarSkills.TKATCHEV},
+        {"difficulty": 0.7, "group": 2, "type": HbarSkills.TKATCHEV},
+        {"difficulty": 0.4, "group": 3, "type": HbarSkills.STOOP},
+        {"difficulty": 0.4, "group": 3, "type": HbarSkills.STOOP},
+        {"difficulty": 0.5, "group": 3, "type": HbarSkills.STOOP},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.HBAR);
+    expect(result["difficulty"]).toBe(2);
   });
 
   it('should detect valid connection on horizontal bar', () => {
     // testHbarConnection
+    const routine = [
+        {"difficulty": 0.3, "group": 2, "type": HbarSkills.TKATCHEV, "connection" : true},
+        {"difficulty": 0.4, "group": 2, "type": HbarSkills.TKATCHEV},
+        {"difficulty": 0.4, "group": 3, "type": HbarSkills.STOOP, "connection":true},
+        {"difficulty": 0.5, "group": 2, "type": HbarSkills.KOVAC},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.HBAR);
+    expect(result["bonus"]).toBe(0.3);
   });
 
   it('should handle 5 flight elements on high bar', () => {
     // testHbar5flights
+    const routine = [
+        {"difficulty": 0.3, "group": 2, "type": HbarSkills.TKATCHEV, "connection" : true},
+        {"difficulty": 0.4, "group": 2, "type": HbarSkills.TKATCHEV},
+        {"difficulty": 0.4, "group": 2, "type": HbarSkills.KOVAC, "connection":true},
+        {"difficulty": 0.5, "group": 2, "type": HbarSkills.KOVAC},
+        {"difficulty":0.4, "group":2, "type":HbarSkills.GIENGER},
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.HBAR);
+    expect(result["difficulty"]).toBe(2);
   });
 });
