@@ -209,10 +209,25 @@ describe('Difficulty Calculation Tests', () => {
 
   it('should validate vault routine', () => {
     // testVaultValid
+    const routine = [
+        {"difficulty" : 4.8, "group": 4},
+        {"difficulty" : 4.4, "group" : 3}
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.VAULT);
+    console.log(result);
+    expect(result["avg_vault"]).toBe(14.6);
   });
 
   it('should detect vaults from the same group', () => {
     // testVaultSameGroup
+        const routine = [
+        {"difficulty" : 4.8, "group": 4},
+        {"difficulty" : 4.4, "group" : 4}
+    ];
+
+    const result = scoreRoutine(routine, Apparatus.VAULT);
+    expect(result["vault2"]).toBe(0);
   });
 
   it('should validate parallel bars routine', () => {
