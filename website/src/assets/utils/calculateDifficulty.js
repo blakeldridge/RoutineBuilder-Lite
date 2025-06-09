@@ -14,9 +14,9 @@ export default function scoreRoutine(routine, apparatus) {
         case Apparatus.POMMEL:
             return scorePommel(routine);
         case Apparatus.RINGS:
-            break;
+            return scoreRings(routine);
         case Apparatus.VAULT:
-            break;
+            return scoreVault(routine);
         case Apparatus.PBAR:
             break;
         case Apparatus.HBAR:
@@ -401,5 +401,25 @@ function scoreRings(routine) {
         "bonus" : bonus,
         "requirements": requirements,
         "penalty": penalty,
+    };
+}
+
+// Function to calculate a vault routine
+function scoreVault(routine) {
+    // invalidate 2nd vault if it is the same group
+    let vault1 = routine[0] ? routine[0].difficulty : 0;
+    let vault2 = routine[1] ? routine[1].difficulty : 0;
+
+    if (routine[0] && routine[1] && routine[0].group == routine[1].group) {
+        vault2 = 0;
+    }
+
+    // calculate scores
+    let average = (vault1 + vault2) / 2
+
+    return {
+        "vault1" : vault1,
+        "vault2" : vault2,
+        "avg_vault" : average,
     };
 }
