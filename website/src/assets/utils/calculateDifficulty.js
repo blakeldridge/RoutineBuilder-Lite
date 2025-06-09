@@ -1,5 +1,5 @@
 import { Apparatus } from "./apparatus";
-import { FloorSkills, PommelSkills, PommelTypeSkills, RingsSkills, PbarSkills } from "./skillTypes";
+import { FloorSkills, PommelSkills, PommelTypeSkills, RingsSkills, PbarSkills, HbarSkills } from "./skillTypes";
 
 const SKILL_GROUP_LIMIT = 4;
 
@@ -20,9 +20,9 @@ export default function scoreRoutine(routine, apparatus) {
         case Apparatus.PBAR:
             return scorePbar(routine);
         case Apparatus.HBAR:
-            break;
+            return scoreHbar(routine);
         default:
-            break;
+            return null;
     }
 };
 
@@ -480,5 +480,102 @@ function scorePbar(routine) {
         "execution": execution,
         "difficulty": difficulty,
         "requirements": requirements,
+    };
+}
+
+// Function to calculate hbar routine
+function scoreHbar(routine) {
+    // mark skills as invalid / uncounted if they violate the rules
+    invalidateGroups(routine, Apparatus.HBAR);
+
+    // check for special repetitions
+
+    for (const type of Object.values(HbarSkills)) {
+        const skills = routine.filter(skill => skill.type == type);
+        // if more than 2 skills of each type present
+        // make smallest valued skills invalid
+        if (skills.length() > 2) {
+
+            const invalidSkills = skills.length() - 2;
+            // remove lowest skills violating rule
+            for (let i = 0; i < invalidSkills; i++) {
+                const lowestSkill = routine.reduce((lowest, skill) => {
+                    return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
+                });
+
+                lowestSkill.invalid = true;
+            }
+        }
+    }
+
+    // calculate the routine score
+
+    const execution = calculateExecution(routine);
+    const difficulty = calculateTotal(routine);
+    const groups = calculateGroups(routine);
+
+    // calculate the requirements
+    let requirements = 0;
+
+    // any skill in group 1 gains 0.5
+    if (groups[0] > 0) {
+        requirements += 0.5;
+    }
+
+    // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
+    for (let i = 1; i < groups.length() - 1; i++) {
+        if (groups[i] >= 0.4) {
+            requirements += 0.5;
+        } else if (groups[i] > 0) {
+            requirements += 0.3;
+        }
+    }
+
+    // Dismount gains itself requirement
+    requirement += group[3];
+    
+    // Calculate bonus
+    let bonus = 0;
+    for (let i = 0; i < routine.length(); i++) {
+        // cannot connect to invalid skill
+        if (routine[i].invalid || routine[i] == null) {
+            continue;
+        } else if (routine[i].connection) {
+            // cannot connect at end of routine / to invalid skill
+            if (i + 1 <= routine.length() || routine[i + 1].invalid || routine[i + 1] == null){
+                continue;
+            }
+            let skill1 = routine[i];
+            let skill2 = routine[i + 1];
+
+            // non-flight element connected to flight element
+            if ((skill1.group == 1 || skill1.group == 3) && skill2.group == 2) {
+                // D+ into D gives 0.1 bonus
+                if (skill1.difficulty >= 0.4 && skill2.difficulty == 0.4) {
+                    bonus += 0.1;
+                } else if (skill.difficulty >= 0.4 && skill2.difficulty >= 0.5) {
+                    bonus += 0.2;
+                }
+            } 
+            // flight element connected to flight element
+            else if (skill1.group == 2 && skill2.group == 2) {
+                if (skill1.difficulty == 0.3 && skill2.difficulty >= 0.4 ||
+                    skill1.difficulty == 0.4 && skill2.difficulty == 0.4
+                ) {
+                    bonus += 0.1;
+                } else if (skill1.difficulty >= 0.4 && skill2.difficulty >= 0.5) {
+                    bonus += 0.2;
+                }
+            }
+        }
+    }
+
+    const score = execution + difficulty + requirements + bonus;
+    return {
+        "score": score,
+        "execution": execution,
+        "difficulty": difficulty,
+        "requirements": requirements,
+        "bonus": bonus,
     };
 }

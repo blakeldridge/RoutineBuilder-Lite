@@ -44,4 +44,14 @@ const PbarSkills = {
     MORISUE : "Morisue",
     BELLE : "Belle",
     STRADDLE : "Straddle Salto",
-}
+};
+
+const HbarSkills = {
+    STOOP : "Adler elements",
+    TKATCHEV : "Tkatchev / Piatti",
+    KOVAC : "Kovac",
+    GIENGER : "Gienger",
+    JAGER : "Jager",
+    MARKELOV : "Markelov",
+    GAYLORD : "Salto fwd"
+};
