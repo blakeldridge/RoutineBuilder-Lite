@@ -1,0 +1,688 @@
+[
+  {
+    "name": "From hdst. lower to L-sit or strad. L-sit (2 s.).",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "V-sit (2 s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "V-sit with legs horizontal. (2 s.).(Manna)",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "From stand, Swiss press to hdst. (2 s.).",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Piked body,str. arm or str.body, bent arm press to hdst. with legs together (2 s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "V-sit (2 s) and press to hdst. (2 s.). Also final phase with straddle.",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Manna (2 s.) and press to hdst. (2 s.). Also final phase with straddle.",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Rock to hdst. from prone position (2 s.).",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Press from split, L-sit strad. or front sup. (2 s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "From Manna (2 s.), turn over (dislocation) to handstand (2 s.).",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Handstand (2 s.).",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Press or lower or swing to Japanese hdst.(2s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "From split press to Japanese handstand (2 s.).",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Planche, legs straddle (2 s.).",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Planche (2 s.). / Swallow (2 s.).",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "½ or 1/1 turn in handstand or to handstand.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "From straddled planche (2 s.) press hdst. (2 s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "From Planche 2 s. press handstand (2 s.).",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "From Swallow 2 s. press to Japanese hdst.(2s.).(Alvariño)",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "From L-sit, etc., turn over bwd. to stand.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Endo roll to handstand (2 s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Endo roll piked to handstand legs together (2 s.).",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "STRENGTH"
+  },
+  {
+    "name": "Forward walkover.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Cross or side split (stop required).",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Any standing scale (2 s.).",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Any standing scale with 180° straddle,no hand hold (2 s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Jump bwd. to front support.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Jump bwd. with pike-stretch or with 1/1 turn to front support (Endo)",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Butterfly.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Butterfly with 1/1 twist fwd. or bwd. (Tong Fei)",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Butterfly with 2/1 twist.",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "1 circle or flair.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Circles or flair to handstand.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Flair or circle to hdst. continue to flair or circle. (Gogoladze)",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Flair hopping with 360° t. bwd. thr. hdstand back to flair (2 hops).",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Lower from hdst. to flair or circle.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Flair with ½ spindle.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Flair with 1/1 spindle (in 2 circles).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Flairwith >270 spindle (in 2 circles) directly to handstand.",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Flair with ½ spindle to handstand.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Flair with > 270º spindle (in 2 circles) directly to handstand and continue to circle or flair.",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Russian wendeswing with 360° or 540°.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Russian wendeswing with 720° or 900°.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Russian wendeswing with 1080° or more. (Fedorchenko)",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "CIRCLE"
+  },
+  {
+    "name": "Roll bwd. through hdst. with ½ t.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Roll bwd. with hop 1/1 t. through hdst.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Floor",
+    "type": "NON_ACRO"
+  },
+  {
+    "name": "Forward handspring or flyspring.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "SINGLE"
+  },
+  {
+    "name": "Handspring salto fwd. tuck. (Morandi)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "MULTI"
+  },
+  {
+    "name": "Dive roll.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "SINGLE"
+  },
+  {
+    "name": "Salto fwd. tucked or piked, also with ½ t.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "SINGLE"
+  },
+  {
+    "name": "Salto fwd. straight, also with ½ t.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "SINGLE"
+  },
+  {
+    "name": "Double salto fwd. tucked, also with ½ t.",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "MULTI"
+  },
+  {
+    "name": "Double salto fwd. piked, also with ½ t.",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "MULTI"
+  },
+  {
+    "name": "Double salto fwd. tucked with 1/1 turn.",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Salto fwd. t. or p. to front support.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "SINGLE"
+  },
+  {
+    "name": "Double salto fwd. tucked with 3/2 turn. (Zapata)",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Jump fwd. with ½ t. to dbl. salto bwd. Tuck (Deferr)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto fwd. piked or straight with 3/2 turn. (Zapata 2)",
+    "difficulty": 0.7,
+    "group": 2,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Salto backwards tucked or piked.",
+    "difficulty": 0.1,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI"
+  },
+  {
+    "name": "Salto backwards str. or Tempo salto bwd.",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "SINGLE"
+  },
+  {
+    "name": "Double salto bwd. tucked.",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI"
+  },
+  {
+    "name": "Salto bwd. with 1/1 t. and salto bwd. (Tsukahara)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. tucked with 2/1 t. or double salto bwd t. with 3/2 t..or salto bwd. str. 3/2 to fwd. salto tucked.",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. tucked with 3/1 t.(Ri Jong Song))",
+    "difficulty": 0.7,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Salto backwards tucked or piked w. ½ t. or Arabian tucked or piked.",
+    "difficulty": 0.1,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto backwards str. w. ½ t. or or 1/1 t.",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Arabian jump bwd. to double salto fwd tucked, also with ½ t.",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Arabian jump bwd. to double salto fwd piked, also with ½ turn",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. tucked with 5/2 t.",
+    "difficulty": 0.6,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Back handspring.",
+    "difficulty": 0.1,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "SINGLE"
+  },
+  {
+    "name": "Double salto bwd. piked.",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI"
+  },
+  {
+    "name": "Triple salto bwd. tucked. (Liukin)",
+    "difficulty": 0.9,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI"
+  },
+  {
+    "name": "Triple salto bwd. piked. (Nagornyy)",
+    "difficulty": 1,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI"
+  },
+  {
+    "name": "Double salto straddled with 1/1 t. (Lou Yun)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto str w 5/2 t.",
+    "difficulty": 0.8,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Jump bwd. with ½ t. to roll fwd.",
+    "difficulty": 0.1,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "SINGLE"
+  },
+  {
+    "name": "Salto bwd. str. with 1/1 t and salto bwd piked.",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": " MULTI_TWIST"
+  },
+  {
+    "name": "Salto bwd. str. with 2/1 t and salto bwd piked. (Kolyvanov)",
+    "difficulty": 0.6,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. straight or Double salto bwd. straight and with ½ t., or Arabian Jump bwd. to dbl. salto fwd. str. (Tamayo)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. str. with 3/2 t. or Arabian Jump bwd. to dbl. salto fwd. str. with 1/1 t. Also Hypolito",
+    "difficulty": 0.7,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd.straight with 1/1 t. or Arabian jump bwd. to dbl. salto fwd. str. with ½ t. Also Penev",
+    "difficulty": 0.6,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. str. with 2/1 t.",
+    "difficulty": 0.7,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. with 7/2 t. (Minami)",
+    "difficulty": 0.8,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. str. with 3/1 t. (Shirai 3)",
+    "difficulty": 0.9,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Double salto bwd. str. with 7/2 t.(Jarman)",
+    "difficulty": 1,
+    "group": 3,
+    "apparatus": "Floor",
+    "type": "MULTI_TWIST"
+  },
+  {
+    "name": "Salto fwd. tucked with 1/1 t., also with 3/2 t.",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto fwd. str. with 1/1 t., also with 3/2 t.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto fwd. str. with 2/1 t.",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto fwd. str. with 5/2 t.",
+    "difficulty": 0.5,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": ". Salto fwd. str. with 3/1 t. (Shirai 2)",
+    "difficulty": 0.6,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto backwards str. w. 1/1 t",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto bwd. str. with 3/2 t. or 2/1 t.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto bwd. str. with 5/2 t.",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto bwd. str. with 7/2 t (González)",
+    "difficulty": 0.5,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto fwd. str. with 7/2 t. (Goshima)",
+    "difficulty": 0.7,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto backwards tucked w. 3/2 t.",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto bwd. str. with 3/1 t.",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  },
+  {
+    "name": "Salto bwd. str. with 4/1 t. (Shirai / Nguyen)",
+    "difficulty": 0.6,
+    "group": 4,
+    "apparatus": "Floor",
+    "type": "SINGLE_TWIST"
+  }
+]

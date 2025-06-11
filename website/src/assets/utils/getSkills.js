@@ -1,4 +1,4 @@
-import floorSkills from "../data/skills/FloorSkills.json";
+import floorSkills from "../data/skills/FloorSkills.updated.json";
 
 import { Apparatus } from "./apparatus";
 
@@ -12,5 +12,5 @@ export default function getSkills(apparatus) {
 } 
 
 function getFloorSkills() {
-    return floorSkills.Floor;
+    return floorSkills;
 }

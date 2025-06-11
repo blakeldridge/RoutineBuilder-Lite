@@ -56,7 +56,11 @@ function calculateTotal(routine) {
 // Function to count how skills are in each skill group
 function countGroups(routine) {
     let groups = [0, 0, 0, 0];
-    routine.map((skill) => groups[skill.group - 1] = groups[skill.group - 1] + 1);
+    routine.map((skill) => {
+        if (skill) {
+            groups[skill.group - 1] = groups[skill.group - 1] + 1;
+        }
+    });
     return groups;
 }
 
@@ -133,6 +137,7 @@ function invalidateGroups(routine, apparatus) {
 function scoreFloor(routine) {
     // mark skills as invalid / uncounted if they violate the rules
     invalidateGroups(routine, Apparatus.FLOOR);
+    routine = routine.filter(skill => skill != null);
 
     // special repetitions
     // cannot do more than 1 strength skills
