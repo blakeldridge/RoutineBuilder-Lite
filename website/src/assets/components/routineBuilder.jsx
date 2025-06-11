@@ -1,16 +1,11 @@
 import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { fromUrlSlug } from '../utils/navigatePrep';
 import { Apparatus } from '../utils/apparatus';
+import getSkills from '../utils/getSkills';
 
 const RoutineBuilder = () => {
     const navigate = useNavigate();
     const { apparatus } = useParams();
-
-    const getSkills = () => {
-        return [];
-    };
-
-    const skills = getSkills();
 
     const routine = [null, null, null, null, null, null, null, null];
 
@@ -19,6 +14,8 @@ const RoutineBuilder = () => {
     }
 
     const apparatusName = fromUrlSlug(apparatus);
+
+    const skills = getSkills(apparatusName);
 
     return (
         <div>
@@ -29,8 +26,8 @@ const RoutineBuilder = () => {
                     return (
                         <select key={index} id={`select-${index}`} value={element}>
                             <option value={null}>-- Select --</option>
-                            {skills.map((skill => (
-                                <option value={skill}>{skill}</option>
+                            {skills.map(((skill, index) => (
+                                <option key={index} value={skill.Name}>{skill.Name}</option>
                             )))}
                         </select>
                     );
