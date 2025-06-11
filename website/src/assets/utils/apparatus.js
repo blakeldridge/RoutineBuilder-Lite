@@ -1,8 +1,8 @@
 export const Apparatus = {
-    FLOOR : 'floor',
-    POMMEL : 'pommel horse',
-    RINGS : 'still rings',
-    VAULT : 'vault',
-    PBAR : 'parallel bars',
-    HBAR : 'high bar'
+    FLOOR : 'Floor',
+    POMMEL : 'Pommel Horse',
+    RINGS : 'Still Rings',
+    VAULT : 'Vault',
+    PBAR : 'Parallel Bars',
+    HBAR : 'Horizontal Bar'
 };
