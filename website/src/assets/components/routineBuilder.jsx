@@ -1,11 +1,12 @@
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import { fromUrlSlug } from '../utils/navigatePrep';
 import { Apparatus } from '../utils/apparatus';
 
 const RoutineBuilder = () => {
+    const navigate = useNavigate();
     const { apparatus } = useParams();
 
-    if (!apparatus || Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {
+    if (!apparatus || !Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {
         return <Navigate to="/404" replace />
     }
 
