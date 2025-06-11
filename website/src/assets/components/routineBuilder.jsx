@@ -4,6 +4,7 @@ import { Apparatus } from '../utils/apparatus';
 import getSkills from '../utils/getSkills';
 import scoreRoutine from '../utils/calculateDifficulty';
 import { useState } from 'react';
+import { FloorSkills } from '../utils/skillTypes';
 
 const RoutineBuilder = () => {
     const navigate = useNavigate();
@@ -24,11 +25,15 @@ const RoutineBuilder = () => {
             i === index ? skill : rskill
         );
 
-        const scoringRoutine = updatedRoutine.map((skill, i) => 
-            JSON.parse(skill)
-        );
+        const scoringRoutine = updatedRoutine.map(rskill => {
+            if (rskill) {
+                rskill = JSON.parse(rskill);
+                rskill.type = FloorSkills[rskill.type];
+            } 
+            return rskill;
+        });
+
         const newScore = scoreRoutine(scoringRoutine, apparatusName);
-        console.log(newScore);
         setScore(newScore);
         setRoutine(updatedRoutine);
     };
