@@ -17,13 +17,14 @@ export const PommelSkills = {
     WENDE_TRAVEL : "Russian Travel",
     SPINDLE : "Spindle",
     SPINDLE_TRAVEL : "Spindle Travel",
+    SOHN_BEZ : "Sohn/Bezugo"
 };
 
 export const PommelTypeSkills = {
     TONG_FEI : "Tong Fei Travels",
     NIN_REYES : "Nin Reyes Travels",
     RUSSIAN_TRAVEL : "Russian style travels",
-    SOHN_BEZ_FLOP : "Sohn/Bezugo",
+    SOHN_BEZ_FLOP : "Sohn/Bezugo flops",
 };
 
 export const RingsSkills = {

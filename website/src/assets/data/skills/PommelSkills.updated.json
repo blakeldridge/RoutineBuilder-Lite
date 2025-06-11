@@ -1,0 +1,850 @@
+[
+  {
+    "name": "Scissor forward.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Scissor forward with travel sideways (also with 1/2 t.)",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Scissor fwd. with hop sideways from one end tothe other (3/3).",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Scissor forward with ½ t.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Double scissor fwd. (¼ t. fwd. a. ¼ t. bwd.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Double scissor fwd.(¼t.fwd. a.¼t.bwd.)withtravel sideways.",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Double scissor forward sideways from one end tothe other (3/3). (Mikulak)",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Double Scissor fwd. with travel sideways through handstand.(Stepanyan)",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Leg cut or undercut bwd. through handstandand lower to support with straddle legs.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Scissorfwd. with ¼ t. through handstand on 1pommel, lower to support with straddle legs on theother arm (with legs changing) (Li Ning)(Bryan)",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND",
+    "subtype": ""
+  },
+  {
+    "name": "Scissor backward.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Scissor bwd. with travel sideways (also with ½ t.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Scissor bwd. with hop sideways from one end tothe other (1-2 to 4-5).",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Scissor backward with ½ turn.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Double scissor bwd. (¼ t. fwd. a. ¼ t. bwd).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Swing bwd. w. ¼ t. through handstand on 1pommel (also with ¼ t. after), lower to support withstraddle legs (with legs changing)",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND",
+    "subtype": ""
+  },
+  {
+    "name": "Any circle or flair in side support.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Circle in side support outside pommels or between the pommels.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Circles in cross support frontways on end.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Circles in crosssupport on 1 pommel (from or to ¼t. fwd.).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Circles in cross support rearways on end.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Circles in cross support between the pommels.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Any ¼ spindle",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE",
+    "subtype": ""
+  },
+  {
+    "name": "Any ½ spindle (Keikha 2)",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE",
+    "subtype": ""
+  },
+  {
+    "name": "Any side support pommel between hands 1/1spindle w. legs straddle inside max. 2 circles.",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE",
+    "subtype": ""
+  },
+  {
+    "name": "Any side support 1/1 spindle with hand support tothe otherside and return (max. 2 flairs or circles) (Eichorn)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE",
+    "subtype": ""
+  },
+  {
+    "name": "Any 1/1 spindlewith both pommels between thehands (flair or circle).(Keikha 1)(Keikha 5)",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE",
+    "subtype": ""
+  },
+  {
+    "name": "Any 1/1 spindle withinmax. 2 circles on the end.(Magyar)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE",
+    "subtype": ""
+  },
+  {
+    "name": "1/1 spindle w. legs straddle or together on thepommels inside max. 2 circles. (Berki)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE",
+    "subtype": ""
+  },
+  {
+    "name": "Cross support, 1/1 spindle with hands between the pommels max. 2 circles.",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE",
+    "subtype": ""
+  },
+  {
+    "name": "Direct Stöckli A (DSA) on the pommels or pommel between hands.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Direct Stöckli A (DSA) outside pommels. (Keikha 3) (Keikha 6)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Direct Stöckli B (DSB).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Flair or circle through handstand (with orwithout ½ t.) and lower to flair or circle.(Tippelt)",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND",
+    "subtype": ""
+  },
+  {
+    "name": "Flair with hop travel bwd. through handstand andlower to circles or flairs",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND",
+    "subtype": ""
+  },
+  {
+    "name": "Reverse Stöckli, DSA or pommel circle straddlethrough handstand, 3/3 travel (fwd.- bwd), 360° turnto flairs.(Busnari)",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND",
+    "subtype": ""
+  },
+  {
+    "name": "Double rear (kehr).",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SOHN_BEZ",
+    "subtype": ""
+  },
+  {
+    "name": "Kehr with 270°t. on 1 p.(Sohn technique)fromcross to side support.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SOHN_BEZ",
+    "subtype": ""
+  },
+  {
+    "name": "Kehr with 270° t. on 1 pommel (Sohn technique)from side to cross support. (Bertoncelj)",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SOHN_BEZ",
+    "subtype": ""
+  },
+  {
+    "name": "Kehr with 1/1 turn on 1 pommel. (Sohn)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SOHN_BEZ",
+    "subtype": ""
+  },
+  {
+    "name": "Direct Tramlot.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Reverse Stöckli 180° (or 270° from one pommel) turn in one circle.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SOHN_BEZ",
+    "subtype": ""
+  },
+  {
+    "name": "Reverse Stöckli with 270°t. (Bezugo technique) from 2 pommels to crosssupport on 1 pommel (Davtyan)",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SOHN_BEZ",
+    "subtype": ""
+  },
+  {
+    "name": "Reverse Stöckli with 360° t. on 1 pommel. (Bezugo_",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "SOHN_BEZ",
+    "subtype": ""
+  },
+  {
+    "name": "Schwabenflank.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Czechkehre on the pommels or pommel betweenhands.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Czechkehre outside pommels (Pinheiro)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Wendeswing fwd. with ½ t. to support fwd. on the end, from side support using 1 or 2 pommels.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "Russian wendeswing with 180° or 270°.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "Russian wendeswing with 360° or 540°.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "Russian wendeswing with 720° or 900°.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "Russian wendeswing with 1080° or more.",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "On the leather,Russian wendeswing with 180°,or 270° also with travel.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "On the leather, Russian wendeswing with 360° or540°.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "Onthe leather, Russianwendeswing with 720° or900°.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "On the leather, Russian wendeswing with 1080°or more.",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "Russian wendeswing with 180° or 270° on 1pommel or between the pommels.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "Russian wendeswing with 360° or 540° on 1pommel or between the pommels.",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "720° or 900° Russian wendeswing on 1 pommel orbetween the pommels.",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "1080° Russian wendeswing or more on 1pommel or between the pommels.",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Pommel Horse",
+    "type": "RUSSIAN",
+    "subtype": ""
+  },
+  {
+    "name": "Circles with any travel inside support(1/3)(also with¼ t.).",
+    "difficulty": 0.1,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Circles with any travel in side support (3/3).",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Any travel in side support(3/3), hands between pommels.",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Any travel in side support (3/3) over both pommels(also with hop).",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Circles with any hop travel in side support (1/3)",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Circles with any hop travel 2x in side support(3/3).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "From side support beside the pommel, travelhop over 2 pommels to support fwd on other end(1-1 to 5-5). (Yamawaki)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Travel fwd. or bwd. with ¼ spindle to side support on2 pommels.",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "All travels with ½ spindle in side support.",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "From an end side travel with 2x ½ spindleto other end.",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE_TRAVEL",
+    "subtype": ""
+  },
+  {
+    "name": "Any travel fwd. 3/3 with ½ Spindle from one pommel over the other pommel. (Nin Reyes) (Titov)",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE_TRAVEL",
+    "subtype": "NIN_REYES"
+  },
+  {
+    "name": "Travel 3/3 over both pommels with½ Spindle. (Nin Reyes 2) (keikha 4)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE_TRAVEL",
+    "subtype": "NIN_REYES"
+  },
+  {
+    "name": "Any 3/3 travel in flairs with 1/1 Spindle inside 2 circles. (Urzica 2) (Burkhart)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "SPINDLE_TRAVEL",
+    "subtype": ""
+  },
+  {
+    "name": "Travel fwd. in cross support (1/2 or 2/3).",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Travel fwd. in cross support with support onleather, pommel, pommel,leather (3/3)(1-2-4-5).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "CROSS_TRAVEL",
+    "subtype": ""
+  },
+  {
+    "name": "Any other travel fwd. in cross support to otherend (3/3).(Magyar)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "CROSS_TRAVEL",
+    "subtype": ""
+  },
+  {
+    "name": "Travel forward in cross support over bothpommels (also with hop). (Driggs)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "CROSS_TRAVEL",
+    "subtype": ""
+  },
+  {
+    "name": "Travel bwd. in cross support from one horse partor pommel to another (⅓).",
+    "difficulty": 0.1,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Travel bwd. in cross support (1/2 or 2/3).",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Travel bwd. in cross sup with support on leather,pommel, pommel, leather (3/3) (5-4-2-1).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "CROSS_TRAVEL",
+    "subtype": ""
+  },
+  {
+    "name": "Any other travel bwd. in cross support to otherend (3/3).(Sivado)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "CROSS_TRAVEL",
+    "subtype": ""
+  },
+  {
+    "name": "Travel backward in cross support over bothpommels (also with hop). (Kurbanov) (Reid)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "CROSS_TRAVEL",
+    "subtype": ""
+  },
+  {
+    "name": "Kehre fwd., reverse Stöckli, kehre fwd. (Moguilny)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Kehre bwd., kehre fwd., kehre bwd. (Belenki)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "From support on 1 pommel, Russian wendeswingfwd. to other end withoutsupport on or between thepommels(side to side support, side to cross support).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "WENDE_TRAVEL",
+    "subtype": "TONG_FEI"
+  },
+  {
+    "name": "From support on end, Russian wendeswing forward to other end without support on or between the pommels (Tong Fei)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "WENDE_TRAVEL",
+    "subtype": "TONG_FEI"
+  },
+  {
+    "name": "On the leather, from cross support, Russianwendeswing with 360° or more over bothpommels. (Vammen)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "WENDE_TRAVEL",
+    "subtype": "TONG_FEI"
+  },
+  {
+    "name": "From support 1-2, 3/3 travel in Russian typewendeswing with 630° or more turning.",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "WENDE_TRAVEL",
+    "subtype": "RUSSIAN_TRAVEL"
+  },
+  {
+    "name": "Any 3/3 travel inRussian type wendeswing with720° or more turning w. two hands betweenpommels(Wu Guonian)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "WENDE_TRAVEL",
+    "subtype": "RUSSIAN_TRAVEL"
+  },
+  {
+    "name": "Any Russian wendeswing with 360°t. and 3/3 travel. (Roth)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "WENDE_TRAVEL",
+    "subtype": "RUSSIAN_TRAVEL"
+  },
+  {
+    "name": "Reverse Stöckli from cross support on end to thefar pommel (Romero)",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Reverse Stöcklifrom crosssupport on one end to theother. (Abu Alsoud)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Wende from circle (also from Russian wendeswing180° or 270°)",
+    "difficulty": 0.1,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "Chaguinian to wende.",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "From side support on end, circle or flair to handstandand travel 3/3 with 450° or more turn.(Kolyvanov)",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND_DISMOUNT",
+    "subtype": ""
+  },
+  {
+    "name": "DSA to handstand 3/3 with 450° or more turn.",
+    "difficulty": 0.5,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND_DISMOUNT",
+    "subtype": ""
+  },
+  {
+    "name": "On the end, Russianwendeswing with 360° or 540°",
+    "difficulty": 0.1,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "On the end, Russian wendeswing with 720° or 900°.",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "On the end, Russianwendeswing with 1080° ormore.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "From pommels, circle with 1/4 turn to Russianwendeswing 270° on one pommel to handstand. (Dolidze)",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND_DISMOUNT",
+    "subtype": ""
+  },
+  {
+    "name": "From side support wendeswing fwd. with ½ t. tosupport followed by wende.",
+    "difficulty": 0.1,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "",
+    "subtype": ""
+  },
+  {
+    "name": "DSA, reverse Stöckli or circle on one pommelthrough handstand.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND_DISMOUNT",
+    "subtype": ""
+  },
+  {
+    "name": "DSA with hop bwd. through handstand on otherend. (Jessen) (Loos)",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND_DISMOUNT",
+    "subtype": ""
+  },
+  {
+    "name": "Circle or flair through handstand (also with ¾ t.with or without travel).",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND_DISMOUNT",
+    "subtype": ""
+  },
+  {
+    "name": "Circle or flair with hop travel bwd. through handstand.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND_DISMOUNT",
+    "subtype": ""
+  },
+  {
+    "name": "180° Russian from one end of the horse to theother end through handstand to dismount",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Pommel Horse",
+    "type": "HANDSTAND_DISMOUNT",
+    "subtype": ""
+  }
+]

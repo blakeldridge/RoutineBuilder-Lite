@@ -89,7 +89,7 @@ function invalidateGroups(routine, apparatus) {
 
     // Floor has no dismount, disregard for rule 2
     if (apparatus !== Apparatus.FLOOR) {
-        const dismountIndex = routine.findIndex(skill => skill.group == 4);
+        const dismountIndex = routine.findIndex(skill => skill && skill.group == 4);
         if (dismountIndex != -1) {
             for (let i = dismountIndex + 1; i < routine.length; i++) {
                 routine[i].invalid = true;
@@ -247,6 +247,7 @@ function scoreFloor(routine) {
 function scorePommel(routine) {
     // mark skills as invalid / uncounted if they violate the rules
     invalidateGroups(routine, Apparatus.POMMEL);
+    routine = routine.filter(skill => skill != null);
 
     // check for special repetitions
 
