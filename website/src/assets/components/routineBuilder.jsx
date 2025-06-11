@@ -3,11 +3,13 @@ import { fromUrlSlug } from '../utils/navigatePrep';
 import { Apparatus } from '../utils/apparatus';
 import getSkills from '../utils/getSkills';
 import scoreRoutine from '../utils/calculateDifficulty';
-import { useState } from 'react';
+import { useState, useRef  } from 'react';
 import { FloorSkills } from '../utils/skillTypes';
+import RoutineResult from './routineResult';
 
 const RoutineBuilder = () => {
     const navigate = useNavigate();
+    const scoreTableRef = useRef(null);
     const { apparatus } = useParams();
     const [ score, setScore ] = useState(0);
     const [ routine, setRoutine ] = useState([null, null, null, null, null, null, null, null]);
@@ -34,6 +36,7 @@ const RoutineBuilder = () => {
         });
 
         const newScore = scoreRoutine(scoringRoutine, apparatusName);
+        scoreTableRef.current.updateResult(newScore);
         setScore(newScore);
         setRoutine(updatedRoutine);
     };
@@ -54,7 +57,7 @@ const RoutineBuilder = () => {
                     );
                 })}
             </div>
-            <h3>{score != 0 ? score.score : 0}</h3>
+            <RoutineResult ref={scoreTableRef} apparatus={apparatusName} />
         </div>
     );
 };
