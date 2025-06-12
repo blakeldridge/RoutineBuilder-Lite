@@ -49,7 +49,7 @@ const RoutineBuilder = () => {
         setScore(newScore);
         setRoutine(updatedRoutine);
     };
-
+    
     return (
         <div>
             <button onClick={() => navigate('/')}>Return</button>
@@ -66,7 +66,7 @@ const RoutineBuilder = () => {
                                     <option value={routine[index]}>{JSON.parse(routine[index]).name}</option>
                                 ) : null}
                                 {skills.map((skill, i) => {
-                                    if (routine[index] && routine[index] == JSON.stringify(skill)) {
+                                    if (routine.includes(JSON.stringify(skill)) || (routine[index] && routine[index] == JSON.stringify(skill))) {
                                         return null;
                                     }
                                     return  (
