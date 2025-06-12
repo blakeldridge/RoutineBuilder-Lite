@@ -58,20 +58,25 @@ const RoutineBuilder = () => {
             <div className="flex flex-col">
                 {routine.map((element, index) => {
                     return (
-                        <select key={index} id={`select-${index}`} value={element} onChange={(event) => handleEditRoutine(index, event)}>
-                            <option  value={null}>-- Select --</option>
-                            {routine[index] ? (
-                                <option value={routine[index]}>{JSON.parse(routine[index]).name}</option>
-                            ) : null}
-                            {skills.map((skill, i) => {
-                                if (routine[index] && routine[index] == JSON.stringify(skill)) {
-                                    return null;
-                                }
-                                return  (
-                                    <option key={i} value={JSON.stringify(skill)}>{skill.name}</option>
-                                )
-                            })}
-                        </select>
+                        <div className="flex flex-row" style={{"gap":"2em"}}>
+                            <p>{index + 1}</p>
+                            <select key={index} id={`select-${index}`} value={element} onChange={(event) => handleEditRoutine(index, event)}>
+                                <option  value={null}>-- Select --</option>
+                                {routine[index] ? (
+                                    <option value={routine[index]}>{JSON.parse(routine[index]).name}</option>
+                                ) : null}
+                                {skills.map((skill, i) => {
+                                    if (routine[index] && routine[index] == JSON.stringify(skill)) {
+                                        return null;
+                                    }
+                                    return  (
+                                        <option key={i} value={JSON.stringify(skill)}>{skill.name}</option>
+                                    )
+                                })}
+                            </select>
+                            <p>Group : {routine[index] ? JSON.parse(routine[index]).group : "-"}  </p>
+                            <p>Difficulty : {routine[index] ? JSON.parse(routine[index]).difficulty: "-"}</p>
+                        </div>
                     );
                 })}
             </div>
