@@ -2,7 +2,7 @@ import { useState, useEffect, useImperativeHandle, forwardRef } from "react";
 import getSkills from "../utils/getSkills";
 
 const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
-    const skills = getSkills(apparatus);
+    const [ skills, setSkills ] = useState(getSkills(apparatus))
 
     const [ groupFilter, setGroupFilter ] = useState(0);
     const [ difficultyFilter, setDifficultyFilter ] = useState(0);
@@ -18,21 +18,29 @@ const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
     useImperativeHandle(ref, () => ({
         getFilteredSkills : () => {
             return filteredSkills;
+        },
+
+        addSkill : (skill) => {
+            setSkills([...skills, skill]);
         }
     }));
 
     useEffect(() => {
+        filterSkills();
+    }, [groupFilter, difficultyFilter, nameFilter, skills]);
+
+    useEffect(() => {
+        filterUpdated();
+    }, [filteredSkills])
+
+    const filterSkills = () => {
         const skillSet = skills.filter(skill => 
             (groupFilter == 0 || skill.group == groupFilter) && 
             (difficultyFilter == 0 || skill.difficulty == difficultyFilter) && 
             (nameFilter == '' || nameFilter.toLowerCase().split(" ").every(word => skill.name.toLowerCase().includes(word)))
         );
         setFilteredSkills(skillSet);
-    }, [groupFilter, difficultyFilter, nameFilter]);
-
-    useEffect(() => {
-        filterUpdated();
-    }, [filteredSkills])
+    };
 
     const handleSearch = (event) => {
         event.preventDefault();

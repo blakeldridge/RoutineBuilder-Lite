@@ -7,6 +7,7 @@ import { useState, useRef  } from 'react';
 import { FloorSkills } from '../utils/skillTypes';
 import RoutineResult from './routineResult';
 import SkillFilterForm from './skillFilterForm';
+import FlopForm from './flopForm';
 
 const RoutineBuilder = () => {
     const navigate = useNavigate();
@@ -16,6 +17,7 @@ const RoutineBuilder = () => {
     const [ score, setScore ] = useState(0);
     const [ routine, setRoutine ] = useState([null, null, null, null, null, null, null, null]);
     const [ skills, setSkills ] = useState([]);
+    const [ isOpen, setIsOpen ] = useState(false);
 
     if (!apparatus || !Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {
         return <Navigate to="/404" replace />
@@ -29,6 +31,12 @@ const RoutineBuilder = () => {
 
     const updateSkills = () => {
         setSkills(skillFilterRef.current.getFilteredSkills());
+    };
+
+    const addSkill = (skill) => {
+        console.log(skill);
+        setIsOpen(false);
+        skillFilterRef.current.addSkill(skill);
     };
 
     const handleEditRoutine = (index, event) => {
@@ -49,12 +57,14 @@ const RoutineBuilder = () => {
         setScore(newScore);
         setRoutine(updatedRoutine);
     };
-    
+
     return (
         <div>
             <button onClick={() => navigate('/')}>Return</button>
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} apparatus={apparatusName} filterUpdated={() => updateSkills()} />
+
+            <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
             <div className="flex flex-col">
                 {routine.map((element, index) => {
                     return (
@@ -81,6 +91,8 @@ const RoutineBuilder = () => {
                 })}
             </div>
             <RoutineResult ref={scoreTableRef} apparatus={apparatusName} />
+
+            <FlopForm isOpen={isOpen} handleAddSkill={(skill) => addSkill(skill)} />
         </div>
     );
 };
