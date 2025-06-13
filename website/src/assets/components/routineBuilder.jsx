@@ -43,6 +43,14 @@ const RoutineBuilder = () => {
         skillFilterRef.current.addSkill(skill);
     };
 
+    const connectSkills = (index) => {
+        if (routine[index].conection) {
+            routine[index].connection = false;
+        } else {
+            routine[index].connection = true;
+        }
+    };
+
     const handleEditRoutine = (index, event) => {
         const skill = event.target.value;
 
@@ -92,6 +100,9 @@ const RoutineBuilder = () => {
                             </select>
                             <p>Group : {routine[index] ? JSON.parse(routine[index]).group : "-"}  </p>
                             <p>Difficulty : {routine[index] ? JSON.parse(routine[index]).difficulty: "-"}</p>
+                            {routine[index] && index + 1 < routine.length && routine[index + 1] && apparatusName == Apparatus.FLOOR ? (
+                                <button onClick={() => connectSkills(index)}>{routine[index].connection ? "-" : "+"}</button>
+                            ) : null}
                         </div>
                     );
                 })}
