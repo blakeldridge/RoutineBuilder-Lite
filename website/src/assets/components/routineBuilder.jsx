@@ -18,6 +18,7 @@ const RoutineBuilder = () => {
     const [ routine, setRoutine ] = useState([null, null, null, null, null, null, null, null]);
     const [ skills, setSkills ] = useState([]);
     const [ isOpen, setIsOpen ] = useState(false);
+    const [ isAlertOpen, setAlertOpen ] = useState(false);
 
     if (!apparatus || !Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {
         return <Navigate to="/404" replace />
@@ -33,8 +34,11 @@ const RoutineBuilder = () => {
         setSkills(skillFilterRef.current.getFilteredSkills());
     };
 
+    const checkSkillExistsByName = (skillName) => {
+        return skillFilterRef.current.skillExistsByName(skillName);
+    };
+
     const addSkill = (skill) => {
-        console.log(skill);
         setIsOpen(false);
         skillFilterRef.current.addSkill(skill);
     };
@@ -92,7 +96,7 @@ const RoutineBuilder = () => {
             </div>
             <RoutineResult ref={scoreTableRef} apparatus={apparatusName} />
 
-            <FlopForm isOpen={isOpen} handleAddSkill={(skill) => addSkill(skill)} />
+            <FlopForm isOpen={isOpen} handleAddSkill={(skill) => addSkill(skill)} skillExists={checkSkillExistsByName}/>
         </div>
     );
 };

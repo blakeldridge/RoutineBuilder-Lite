@@ -22,6 +22,18 @@ const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
 
         addSkill : (skill) => {
             setSkills([...skills, skill]);
+        },
+
+        skillExistsByName : (skillName) => {
+            let skillExists = false;
+            for (let i = skills.length - 1; i >= 0; i--) {
+                if (skillName == skills[i].name) {
+                    skillExists = true;
+                    break;
+                }
+            }  
+
+            return skillExists;
         }
     }));
 

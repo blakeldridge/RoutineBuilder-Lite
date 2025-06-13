@@ -3,12 +3,13 @@ import { Apparatus } from "../utils/apparatus";
 import { PommelSkills, PommelTypeSkills } from "../utils/skillTypes";
 import { convertDifficultyLetterToValue } from "../utils/skillInfo";
 
-const FlopForm = ({ isOpen, handleAddSkill }) => {
+const FlopForm = ({ isOpen, handleAddSkill, skillExists }) => {
     const [ skills, setSkills ] = useState(["", "", "", "", ""]);
     const [ flopValue, setFlopValue ] = useState("N/A");
     const [ visibleDropdowns, setVisibleDropdowns ] = useState(3);
     const [ addDisabled, setAddDisabled ] = useState(true);
     const [ style, setStyle ] = useState("");
+    const [ isAlertOpen, setAlertOpen ] = useState(false);
 
     const skillOptions = [
         ["Bertonceji", "Davtyan", "Circle", "DSB"],
@@ -19,6 +20,7 @@ const FlopForm = ({ isOpen, handleAddSkill }) => {
     ];
 
     const handleSkillAdded = (index, skill) => {
+        setAlertOpen(false);
         const updatedSkills = [...skills];
         updatedSkills[index] = skill;
         setSkills(updatedSkills);
@@ -27,23 +29,29 @@ const FlopForm = ({ isOpen, handleAddSkill }) => {
     };
 
     const resetFlop = () => {
+        setAlertOpen(false);
         setSkills(["", "", "", "", ""]);
     };
     
     const addFlop = () => {
         // get flop name
         const flopName = createFlopName();
-        // create flop skill#
-        const flop = {
-            name: flopName,
-            difficulty: convertDifficultyLetterToValue(flopValue),
-            group : 2,
-            apparatus: Apparatus.POMMEL,
-            type: PommelSkills.FLOP,
-            subtype : skills[0] === "Bertonceji" ||  skills[0] === "Davtyan" ? PommelTypeSkills.SOHN_BEZ_FLOP : "",
-        };
-        // call parent function to add skill
-        handleAddSkill(flop)
+
+        if (skillExists(flopName)) {
+            setAlertOpen(true);
+        } else {
+            // create flop skill#
+            const flop = {
+                name: flopName,
+                difficulty: convertDifficultyLetterToValue(flopValue),
+                group : 2,
+                apparatus: Apparatus.POMMEL,
+                type: PommelSkills.FLOP,
+                subtype : skills[0] === "Bertonceji" ||  skills[0] === "Davtyan" ? PommelTypeSkills.SOHN_BEZ_FLOP : "",
+            };
+            // call parent function to add skill
+            handleAddSkill(flop)
+        }
     };
 
     const createFlopName = () => {
@@ -162,6 +170,12 @@ const FlopForm = ({ isOpen, handleAddSkill }) => {
                 })}
 
                 <p>Flop Value : {flopValue}</p>
+                {isAlertOpen ? (
+                    <div>
+                        <h3>Flop Already Exits!</h3>
+                        <p>Please try a different combination of skills.</p>
+                    </div>
+                ) : null }
 
                 <div>
                     <button onClick={resetFlop}>Clear</button>
