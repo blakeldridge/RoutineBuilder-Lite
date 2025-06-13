@@ -68,7 +68,9 @@ const RoutineBuilder = () => {
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} apparatus={apparatusName} filterUpdated={() => updateSkills()} />
 
-            <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
+            {apparatusName === Apparatus.POMMEL ? (
+                <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
+            ) : null}
             <div className="flex flex-col">
                 {routine.map((element, index) => {
                     return (
