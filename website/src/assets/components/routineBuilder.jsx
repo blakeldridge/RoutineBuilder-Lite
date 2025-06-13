@@ -4,7 +4,7 @@ import { fromUrlSlug } from '../utils/navigatePrep';
 import { Apparatus } from '../utils/apparatus';
 import scoreRoutine from '../utils/calculateDifficulty';
 import { useState, useRef  } from 'react';
-import { FloorSkills } from '../utils/skillTypes';
+import { FloorSkills, RingsSkills } from '../utils/skillTypes';
 import RoutineResult from './routineResult';
 import SkillFilterForm from './skillFilterForm';
 import FlopForm from './flopForm';
@@ -43,11 +43,16 @@ const RoutineBuilder = () => {
     };
 
     const connectSkills = (index) => {
-        if (routine[index].conection) {
+        console.log(routine[index]);
+        if (routine[index].connection) {
             routine[index].connection = false;
         } else {
             routine[index].connection = true;
         }
+
+        const newScore = scoreRoutine(routine, apparatusName);
+        scoreTableRef.current.updateResult(newScore);
+        setScore(newScore);
     };
 
     const handleEditRoutine = (index, event) => {
@@ -56,12 +61,21 @@ const RoutineBuilder = () => {
 
         routine[index] = skill;
 
-        console.log(routine);
-
-
         const newScore = scoreRoutine(routine, apparatusName);
         scoreTableRef.current.updateResult(newScore);
         setScore(newScore);
+    };
+
+    const canConnect = (index) => {
+        if (apparatusName == Apparatus.FLOOR) {
+            return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 1 && routine[index + 1].group != 1;
+        } else if (apparatusName == Apparatus.RINGS) {
+            return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].type == RingsSkills.YAMA_JON;
+        } else if (apparatusName == Apparatus.HBAR) {
+            return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 4 && routine[index + 1].group != 4;
+        } else {
+            return false;
+        }
     };
 
     return (
@@ -94,7 +108,7 @@ const RoutineBuilder = () => {
                             </select>
                             <p>Group : {routine[index] ? routine[index].group : "-"}  </p>
                             <p>Difficulty : {routine[index] ? routine[index].difficulty: "-"}</p>
-                            {routine[index] && index + 1 < routine.length && routine[index + 1] && apparatusName == Apparatus.FLOOR ? (
+                            {canConnect(index) ? (
                                 <button onClick={() => connectSkills(index)}>{routine[index].connection ? "-" : "+"}</button>
                             ) : null}
                         </div>
