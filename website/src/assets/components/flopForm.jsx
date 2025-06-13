@@ -47,7 +47,7 @@ const FlopForm = ({ isOpen, handleAddSkill }) => {
     };
 
     const createFlopName = () => {
-        const flopName = skills.map((name, skill) => {return name + " + "  + skill}, "");
+        const flopName = skills.filter(skill => skill != "").slice(1).reduce((name, skill) => {return name + " + "  + skill}, skills[0]);
         return flopName;
     };
 
