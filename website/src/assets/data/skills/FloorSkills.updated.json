@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "name": "From hdst. lower to L-sit or strad. L-sit (2 s.).",
     "difficulty": 0.1,
     "group": 1,
@@ -7,6 +8,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 1,
     "name": "V-sit (2 s.).",
     "difficulty": 0.2,
     "group": 1,
@@ -14,6 +16,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 2,
     "name": "V-sit with legs horizontal. (2 s.).(Manna)",
     "difficulty": 0.3,
     "group": 1,
@@ -21,6 +24,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 3,
     "name": "From stand, Swiss press to hdst. (2 s.).",
     "difficulty": 0.1,
     "group": 1,
@@ -28,6 +32,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 4,
     "name": "Piked body,str. arm or str.body, bent arm press to hdst. with legs together (2 s.).",
     "difficulty": 0.2,
     "group": 1,
@@ -35,6 +40,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 5,
     "name": "V-sit (2 s) and press to hdst. (2 s.). Also final phase with straddle.",
     "difficulty": 0.3,
     "group": 1,
@@ -42,6 +48,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 6,
     "name": "Manna (2 s.) and press to hdst. (2 s.). Also final phase with straddle.",
     "difficulty": 0.4,
     "group": 1,
@@ -49,6 +56,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 7,
     "name": "Rock to hdst. from prone position (2 s.).",
     "difficulty": 0.1,
     "group": 1,
@@ -56,6 +64,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 8,
     "name": "Press from split, L-sit strad. or front sup. (2 s.).",
     "difficulty": 0.2,
     "group": 1,
@@ -63,6 +72,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 9,
     "name": "From Manna (2 s.), turn over (dislocation) to handstand (2 s.).",
     "difficulty": 0.4,
     "group": 1,
@@ -70,6 +80,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 10,
     "name": "Handstand (2 s.).",
     "difficulty": 0.1,
     "group": 1,
@@ -77,6 +88,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 11,
     "name": "Press or lower or swing to Japanese hdst.(2s.).",
     "difficulty": 0.2,
     "group": 1,
@@ -84,6 +96,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 12,
     "name": "From split press to Japanese handstand (2 s.).",
     "difficulty": 0.3,
     "group": 1,
@@ -91,6 +104,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 13,
     "name": "Planche, legs straddle (2 s.).",
     "difficulty": 0.1,
     "group": 1,
@@ -98,6 +112,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 14,
     "name": "Planche (2 s.). / Swallow (2 s.).",
     "difficulty": 0.3,
     "group": 1,
@@ -105,6 +120,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 15,
     "name": "½ or 1/1 turn in handstand or to handstand.",
     "difficulty": 0.1,
     "group": 1,
@@ -112,6 +128,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 16,
     "name": "From straddled planche (2 s.) press hdst. (2 s.).",
     "difficulty": 0.2,
     "group": 1,
@@ -119,6 +136,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 17,
     "name": "From Planche 2 s. press handstand (2 s.).",
     "difficulty": 0.4,
     "group": 1,
@@ -126,6 +144,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 18,
     "name": "From Swallow 2 s. press to Japanese hdst.(2s.).(Alvariño)",
     "difficulty": 0.4,
     "group": 1,
@@ -133,6 +152,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 19,
     "name": "From L-sit, etc., turn over bwd. to stand.",
     "difficulty": 0.1,
     "group": 1,
@@ -140,6 +160,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 20,
     "name": "Endo roll to handstand (2 s.).",
     "difficulty": 0.2,
     "group": 1,
@@ -147,6 +168,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 21,
     "name": "Endo roll piked to handstand legs together (2 s.).",
     "difficulty": 0.3,
     "group": 1,
@@ -154,6 +176,7 @@
     "type": "STRENGTH"
   },
   {
+    "id": 22,
     "name": "Forward walkover.",
     "difficulty": 0.1,
     "group": 1,
@@ -161,6 +184,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 23,
     "name": "Cross or side split (stop required).",
     "difficulty": 0.1,
     "group": 1,
@@ -168,6 +192,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 24,
     "name": "Any standing scale (2 s.).",
     "difficulty": 0.1,
     "group": 1,
@@ -175,6 +200,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 25,
     "name": "Any standing scale with 180° straddle,no hand hold (2 s.).",
     "difficulty": 0.2,
     "group": 1,
@@ -182,6 +208,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 26,
     "name": "Jump bwd. to front support.",
     "difficulty": 0.1,
     "group": 1,
@@ -189,6 +216,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 27,
     "name": "Jump bwd. with pike-stretch or with 1/1 turn to front support (Endo)",
     "difficulty": 0.2,
     "group": 1,
@@ -196,6 +224,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 28,
     "name": "Butterfly.",
     "difficulty": 0.1,
     "group": 1,
@@ -203,6 +232,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 29,
     "name": "Butterfly with 1/1 twist fwd. or bwd. (Tong Fei)",
     "difficulty": 0.2,
     "group": 1,
@@ -210,6 +240,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 30,
     "name": "Butterfly with 2/1 twist.",
     "difficulty": 0.3,
     "group": 1,
@@ -217,6 +248,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 31,
     "name": "1 circle or flair.",
     "difficulty": 0.1,
     "group": 1,
@@ -224,6 +256,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 32,
     "name": "Circles or flair to handstand.",
     "difficulty": 0.2,
     "group": 1,
@@ -231,6 +264,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 33,
     "name": "Flair or circle to hdst. continue to flair or circle. (Gogoladze)",
     "difficulty": 0.3,
     "group": 1,
@@ -238,6 +272,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 34,
     "name": "Flair hopping with 360° t. bwd. thr. hdstand back to flair (2 hops).",
     "difficulty": 0.4,
     "group": 1,
@@ -245,6 +280,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 35,
     "name": "Lower from hdst. to flair or circle.",
     "difficulty": 0.2,
     "group": 1,
@@ -252,6 +288,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 36,
     "name": "Flair with ½ spindle.",
     "difficulty": 0.1,
     "group": 1,
@@ -259,6 +296,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 37,
     "name": "Flair with 1/1 spindle (in 2 circles).",
     "difficulty": 0.2,
     "group": 1,
@@ -266,6 +304,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 38,
     "name": "Flairwith >270 spindle (in 2 circles) directly to handstand.",
     "difficulty": 0.3,
     "group": 1,
@@ -273,6 +312,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 39,
     "name": "Flair with ½ spindle to handstand.",
     "difficulty": 0.2,
     "group": 1,
@@ -280,6 +320,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 40,
     "name": "Flair with > 270º spindle (in 2 circles) directly to handstand and continue to circle or flair.",
     "difficulty": 0.4,
     "group": 1,
@@ -287,6 +328,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 41,
     "name": "Russian wendeswing with 360° or 540°.",
     "difficulty": 0.1,
     "group": 1,
@@ -294,6 +336,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 42,
     "name": "Russian wendeswing with 720° or 900°.",
     "difficulty": 0.2,
     "group": 1,
@@ -301,6 +344,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 43,
     "name": "Russian wendeswing with 1080° or more. (Fedorchenko)",
     "difficulty": 0.3,
     "group": 1,
@@ -308,6 +352,7 @@
     "type": "CIRCLE"
   },
   {
+    "id": 44,
     "name": "Roll bwd. through hdst. with ½ t.",
     "difficulty": 0.1,
     "group": 1,
@@ -315,6 +360,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 45,
     "name": "Roll bwd. with hop 1/1 t. through hdst.",
     "difficulty": 0.2,
     "group": 1,
@@ -322,6 +368,7 @@
     "type": "NON_ACRO"
   },
   {
+    "id": 46,
     "name": "Forward handspring or flyspring.",
     "difficulty": 0.1,
     "group": 2,
@@ -329,6 +376,7 @@
     "type": "SINGLE"
   },
   {
+    "id": 47,
     "name": "Handspring salto fwd. tuck. (Morandi)",
     "difficulty": 0.4,
     "group": 2,
@@ -336,6 +384,7 @@
     "type": "MULTI"
   },
   {
+    "id": 48,
     "name": "Dive roll.",
     "difficulty": 0.1,
     "group": 2,
@@ -343,6 +392,7 @@
     "type": "SINGLE"
   },
   {
+    "id": 49,
     "name": "Salto fwd. tucked or piked, also with ½ t.",
     "difficulty": 0.1,
     "group": 2,
@@ -350,6 +400,7 @@
     "type": "SINGLE"
   },
   {
+    "id": 50,
     "name": "Salto fwd. straight, also with ½ t.",
     "difficulty": 0.2,
     "group": 2,
@@ -357,6 +408,7 @@
     "type": "SINGLE"
   },
   {
+    "id": 51,
     "name": "Double salto fwd. tucked, also with ½ t.",
     "difficulty": 0.4,
     "group": 2,
@@ -364,6 +416,7 @@
     "type": "MULTI"
   },
   {
+    "id": 52,
     "name": "Double salto fwd. piked, also with ½ t.",
     "difficulty": 0.5,
     "group": 2,
@@ -371,6 +424,7 @@
     "type": "MULTI"
   },
   {
+    "id": 53,
     "name": "Double salto fwd. tucked with 1/1 turn.",
     "difficulty": 0.6,
     "group": 2,
@@ -378,6 +432,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 54,
     "name": "Salto fwd. t. or p. to front support.",
     "difficulty": 0.2,
     "group": 2,
@@ -385,6 +440,7 @@
     "type": "SINGLE"
   },
   {
+    "id": 55,
     "name": "Double salto fwd. tucked with 3/2 turn. (Zapata)",
     "difficulty": 0.6,
     "group": 2,
@@ -392,6 +448,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 56,
     "name": "Jump fwd. with ½ t. to dbl. salto bwd. Tuck (Deferr)",
     "difficulty": 0.4,
     "group": 2,
@@ -399,6 +456,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 57,
     "name": "Double salto fwd. piked or straight with 3/2 turn. (Zapata 2)",
     "difficulty": 0.7,
     "group": 2,
@@ -406,6 +464,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 58,
     "name": "Salto backwards tucked or piked.",
     "difficulty": 0.1,
     "group": 3,
@@ -413,6 +472,7 @@
     "type": "MULTI"
   },
   {
+    "id": 59,
     "name": "Salto backwards str. or Tempo salto bwd.",
     "difficulty": 0.2,
     "group": 3,
@@ -420,6 +480,7 @@
     "type": "SINGLE"
   },
   {
+    "id": 60,
     "name": "Double salto bwd. tucked.",
     "difficulty": 0.3,
     "group": 3,
@@ -427,6 +488,7 @@
     "type": "MULTI"
   },
   {
+    "id": 61,
     "name": "Salto bwd. with 1/1 t. and salto bwd. (Tsukahara)",
     "difficulty": 0.4,
     "group": 3,
@@ -434,6 +496,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 62,
     "name": "Double salto bwd. tucked with 2/1 t. or double salto bwd t. with 3/2 t..or salto bwd. str. 3/2 to fwd. salto tucked.",
     "difficulty": 0.5,
     "group": 3,
@@ -441,6 +504,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 63,
     "name": "Double salto bwd. tucked with 3/1 t.(Ri Jong Song))",
     "difficulty": 0.7,
     "group": 3,
@@ -448,6 +512,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 64,
     "name": "Salto backwards tucked or piked w. ½ t. or Arabian tucked or piked.",
     "difficulty": 0.1,
     "group": 3,
@@ -455,6 +520,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 65,
     "name": "Salto backwards str. w. ½ t. or or 1/1 t.",
     "difficulty": 0.2,
     "group": 3,
@@ -462,6 +528,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 66,
     "name": "Arabian jump bwd. to double salto fwd tucked, also with ½ t.",
     "difficulty": 0.4,
     "group": 3,
@@ -469,6 +536,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 67,
     "name": "Arabian jump bwd. to double salto fwd piked, also with ½ turn",
     "difficulty": 0.5,
     "group": 3,
@@ -476,6 +544,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 68,
     "name": "Double salto bwd. tucked with 5/2 t.",
     "difficulty": 0.6,
     "group": 3,
@@ -483,6 +552,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 69,
     "name": "Back handspring.",
     "difficulty": 0.1,
     "group": 3,
@@ -490,6 +560,7 @@
     "type": "SINGLE"
   },
   {
+    "id": 70,
     "name": "Double salto bwd. piked.",
     "difficulty": 0.4,
     "group": 3,
@@ -497,6 +568,7 @@
     "type": "MULTI"
   },
   {
+    "id": 71,
     "name": "Triple salto bwd. tucked. (Liukin)",
     "difficulty": 0.9,
     "group": 3,
@@ -504,6 +576,7 @@
     "type": "MULTI"
   },
   {
+    "id": 72,
     "name": "Triple salto bwd. piked. (Nagornyy)",
     "difficulty": 1,
     "group": 3,
@@ -511,6 +584,7 @@
     "type": "MULTI"
   },
   {
+    "id": 73,
     "name": "Double salto straddled with 1/1 t. (Lou Yun)",
     "difficulty": 0.5,
     "group": 3,
@@ -518,6 +592,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 74,
     "name": "Double salto str w 5/2 t.",
     "difficulty": 0.8,
     "group": 3,
@@ -525,6 +600,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 75,
     "name": "Jump bwd. with ½ t. to roll fwd.",
     "difficulty": 0.1,
     "group": 3,
@@ -532,6 +608,7 @@
     "type": "SINGLE"
   },
   {
+    "id": 76,
     "name": "Salto bwd. str. with 1/1 t and salto bwd piked.",
     "difficulty": 0.5,
     "group": 3,
@@ -539,6 +616,7 @@
     "type": " MULTI_TWIST"
   },
   {
+    "id": 77,
     "name": "Salto bwd. str. with 2/1 t and salto bwd piked. (Kolyvanov)",
     "difficulty": 0.6,
     "group": 3,
@@ -546,6 +624,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 78,
     "name": "Double salto bwd. straight or Double salto bwd. straight and with ½ t., or Arabian Jump bwd. to dbl. salto fwd. str. (Tamayo)",
     "difficulty": 0.5,
     "group": 3,
@@ -553,6 +632,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 79,
     "name": "Double salto bwd. str. with 3/2 t. or Arabian Jump bwd. to dbl. salto fwd. str. with 1/1 t. Also Hypolito",
     "difficulty": 0.7,
     "group": 3,
@@ -560,6 +640,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 80,
     "name": "Double salto bwd.straight with 1/1 t. or Arabian jump bwd. to dbl. salto fwd. str. with ½ t. Also Penev",
     "difficulty": 0.6,
     "group": 3,
@@ -567,6 +648,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 81,
     "name": "Double salto bwd. str. with 2/1 t.",
     "difficulty": 0.7,
     "group": 3,
@@ -574,6 +656,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 82,
     "name": "Double salto bwd. with 7/2 t. (Minami)",
     "difficulty": 0.8,
     "group": 3,
@@ -581,6 +664,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 83,
     "name": "Double salto bwd. str. with 3/1 t. (Shirai 3)",
     "difficulty": 0.9,
     "group": 3,
@@ -588,6 +672,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 84,
     "name": "Double salto bwd. str. with 7/2 t.(Jarman)",
     "difficulty": 1,
     "group": 3,
@@ -595,6 +680,7 @@
     "type": "MULTI_TWIST"
   },
   {
+    "id": 85,
     "name": "Salto fwd. tucked with 1/1 t., also with 3/2 t.",
     "difficulty": 0.2,
     "group": 4,
@@ -602,6 +688,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 86,
     "name": "Salto fwd. str. with 1/1 t., also with 3/2 t.",
     "difficulty": 0.3,
     "group": 4,
@@ -609,6 +696,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 87,
     "name": "Salto fwd. str. with 2/1 t.",
     "difficulty": 0.4,
     "group": 4,
@@ -616,6 +704,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 88,
     "name": "Salto fwd. str. with 5/2 t.",
     "difficulty": 0.5,
     "group": 4,
@@ -623,6 +712,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 89,
     "name": ". Salto fwd. str. with 3/1 t. (Shirai 2)",
     "difficulty": 0.6,
     "group": 4,
@@ -630,6 +720,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 90,
     "name": "Salto backwards str. w. 1/1 t",
     "difficulty": 0.2,
     "group": 4,
@@ -637,6 +728,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 91,
     "name": "Salto bwd. str. with 3/2 t. or 2/1 t.",
     "difficulty": 0.3,
     "group": 4,
@@ -644,6 +736,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 92,
     "name": "Salto bwd. str. with 5/2 t.",
     "difficulty": 0.4,
     "group": 4,
@@ -651,6 +744,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 93,
     "name": "Salto bwd. str. with 7/2 t (González)",
     "difficulty": 0.5,
     "group": 4,
@@ -658,6 +752,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 94,
     "name": "Salto fwd. str. with 7/2 t. (Goshima)",
     "difficulty": 0.7,
     "group": 4,
@@ -665,6 +760,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 95,
     "name": "Salto backwards tucked w. 3/2 t.",
     "difficulty": 0.2,
     "group": 4,
@@ -672,6 +768,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 96,
     "name": "Salto bwd. str. with 3/1 t.",
     "difficulty": 0.4,
     "group": 4,
@@ -679,6 +776,7 @@
     "type": "SINGLE_TWIST"
   },
   {
+    "id": 97,
     "name": "Salto bwd. str. with 4/1 t. (Shirai / Nguyen)",
     "difficulty": 0.6,
     "group": 4,

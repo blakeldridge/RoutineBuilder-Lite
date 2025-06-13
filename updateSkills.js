@@ -7,15 +7,16 @@ const groupMap = {
   "IV": 4
 };
 
-const inputFile = './website/src/assets/data/skills/PommelSkills.json';
-const outputFile = './website/src/assets/data/skills/PommelSkills.updated.json';
+const inputFile = './website/src/assets/data/skills/FloorSkills.json';
+const outputFile = './website/src/assets/data/skills/FloorSkills.updated.json';
 
 // 1. Read the file
 const rawData = fs.readFileSync(inputFile, 'utf-8');
 const data = JSON.parse(rawData);
 
 // 2. Transform the data
-const updatedData = data["Pommel Horse"].map((item) => ({
+const updatedData = data["Floor"].map((item, index) => ({
+  id : index,
   name: item.Name,
   difficulty: item.difficulty,
   group: groupMap[item.group],

@@ -18,7 +18,6 @@ const RoutineBuilder = () => {
     const [ routine, setRoutine ] = useState([null, null, null, null, null, null, null, null]);
     const [ skills, setSkills ] = useState([]);
     const [ isOpen, setIsOpen ] = useState(false);
-    const [ isAlertOpen, setAlertOpen ] = useState(false);
 
     if (!apparatus || !Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {
         return <Navigate to="/404" replace />
@@ -27,7 +26,7 @@ const RoutineBuilder = () => {
     const apparatusName = fromUrlSlug(apparatus);
 
     useEffect(() => {
-        setSkills(skillFilterRef.current.getFilteredSkills());
+        updateSkills();
     }, [skillFilterRef])
 
     const updateSkills = () => {
@@ -52,22 +51,17 @@ const RoutineBuilder = () => {
     };
 
     const handleEditRoutine = (index, event) => {
-        const skill = event.target.value;
+        const skillId = parseInt(event.target.value, 10);
+        const skill = skills.find(skill => skill.id === skillId);
 
         routine[index] = skill;
 
-        const scoringRoutine = routine.map(rskill => {
-            if (rskill) {
-                rskill = JSON.parse(rskill);
-                rskill.type = FloorSkills[rskill.type];
-            } 
-            return rskill;
-        });
+        console.log(routine);
 
-        const newScore = scoreRoutine(scoringRoutine, apparatusName);
+
+        const newScore = scoreRoutine(routine, apparatusName);
         scoreTableRef.current.updateResult(newScore);
         setScore(newScore);
-        setRoutine(updatedRoutine);
     };
 
     return (
@@ -84,22 +78,22 @@ const RoutineBuilder = () => {
                     return (
                         <div className="flex flex-row" style={{"gap":"2em"}}>
                             <p>{index + 1}</p>
-                            <select key={index} id={`select-${index}`} value={element} onChange={(event) => handleEditRoutine(index, event)}>
-                                <option  value={null}>-- Select --</option>
+                            <select key={index} id={`select-${index}`} value={routine[index]? routine[index].id.toString() : -1} onChange={(event) => handleEditRoutine(index, event)}>
+                                <option  value={-1}>-- Select --</option>
                                 {routine[index] ? (
-                                    <option value={routine[index]}>{JSON.parse(routine[index]).name}</option>
+                                    <option key={routine[index].id} value={routine[index].id}>{routine[index].name}</option>
                                 ) : null}
                                 {skills.map((skill, i) => {
-                                    if (routine.includes(JSON.stringify(skill)) || (routine[index] && routine[index] == JSON.stringify(skill))) {
+                                    if (routine.includes(skill) || (routine[index] && routine[index] == skill)) {
                                         return null;
                                     }
                                     return  (
-                                        <option key={i} value={JSON.stringify(skill)}>{skill.name}</option>
+                                        <option key={skill.id} value={skill.id}>{skill.name}</option>
                                     )
                                 })}
                             </select>
-                            <p>Group : {routine[index] ? JSON.parse(routine[index]).group : "-"}  </p>
-                            <p>Difficulty : {routine[index] ? JSON.parse(routine[index]).difficulty: "-"}</p>
+                            <p>Group : {routine[index] ? routine[index].group : "-"}  </p>
+                            <p>Difficulty : {routine[index] ? routine[index].difficulty: "-"}</p>
                             {routine[index] && index + 1 < routine.length && routine[index + 1] && apparatusName == Apparatus.FLOOR ? (
                                 <button onClick={() => connectSkills(index)}>{routine[index].connection ? "-" : "+"}</button>
                             ) : null}
