@@ -4,20 +4,23 @@ import { fromUrlSlug } from '../utils/navigatePrep';
 import { Apparatus } from '../utils/apparatus';
 import scoreRoutine from '../utils/calculateDifficulty';
 import { useState, useRef  } from 'react';
-import { FloorSkills, RingsSkills } from '../utils/skillTypes';
+import { FloorSkills, PommelSkills, RingsSkills } from '../utils/skillTypes';
 import RoutineResult from './routineResult';
 import SkillFilterForm from './skillFilterForm';
 import FlopForm from './flopForm';
+import HandstandDismountForm from './handstandDismountForm';
 
 const RoutineBuilder = () => {
     const navigate = useNavigate();
     const scoreTableRef = useRef(null);
     const skillFilterRef = useRef(null);
+    const handstandDismountRef = useRef(null);
     const { apparatus } = useParams();
     const [ score, setScore ] = useState(0);
     const [ routine, setRoutine ] = useState([null, null, null, null, null, null, null, null]);
     const [ skills, setSkills ] = useState([]);
     const [ isOpen, setIsOpen ] = useState(false);
+    const [ isHdstOpen, setIsHdstOpen ] = useState(false);
 
     if (!apparatus || !Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {
         return <Navigate to="/404" replace />
@@ -43,7 +46,6 @@ const RoutineBuilder = () => {
     };
 
     const connectSkills = (index) => {
-        console.log(routine[index]);
         if (routine[index].connection) {
             routine[index].connection = false;
         } else {
@@ -59,6 +61,21 @@ const RoutineBuilder = () => {
         const skillId = parseInt(event.target.value, 10);
         const skill = skills.find(skill => skill.id === skillId);
 
+        if (apparatusName == Apparatus.POMMEL && PommelSkills[skill.type] == PommelSkills.HANDSTAND_DISMOUNT) {
+            console.log("we are opening");
+            handstandDismountRef.current.setThisSkill(index, skill);
+            setIsHdstOpen(true);
+        } else {
+            routine[index] = skill;
+
+            const newScore = scoreRoutine(routine, apparatusName);
+            scoreTableRef.current.updateResult(newScore);
+            setScore(newScore);
+        }
+    };
+
+    const placeHandstandDismount = (index, skill) => {
+        setIsHdstOpen(false);
         routine[index] = skill;
 
         const newScore = scoreRoutine(routine, apparatusName);
@@ -118,6 +135,8 @@ const RoutineBuilder = () => {
             <RoutineResult ref={scoreTableRef} apparatus={apparatusName} />
 
             <FlopForm isOpen={isOpen} handleAddSkill={(skill) => addSkill(skill)} skillExists={checkSkillExistsByName}/>
+
+            <HandstandDismountForm ref={handstandDismountRef} isOpen={isHdstOpen} addSkill={placeHandstandDismount} />
         </div>
     );
 };
