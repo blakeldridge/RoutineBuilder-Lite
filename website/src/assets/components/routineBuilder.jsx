@@ -60,7 +60,6 @@ const RoutineBuilder = () => {
     const handleEditRoutine = (index, event) => {
         const skillId = parseInt(event.target.value, 10);
         const skill = skills.find(skill => skill.id === skillId);
-        console.log(skill);
 
         if (apparatusName == Apparatus.POMMEL && PommelSkills[skill.type] == PommelSkills.HANDSTAND_DISMOUNT) {
             handstandDismountRef.current.setThisSkill(index, skill);
@@ -72,6 +71,14 @@ const RoutineBuilder = () => {
             scoreTableRef.current.updateResult(newScore);
             setScore(newScore);
         }
+    };
+
+    const removeSkill = (index) => {
+        routine[index] = null;
+
+        const newScore = scoreRoutine(routine, apparatusName);
+        scoreTableRef.current.updateResult(newScore);
+        setScore(newScore);
     };
 
     const placeHandstandDismount = (index, skill) => {
@@ -125,9 +132,11 @@ const RoutineBuilder = () => {
                             </select>
                             <p>Group : {routine[index] ? routine[index].group : "-"}  </p>
                             <p>Difficulty : {routine[index] ? routine[index].difficulty: "-"}</p>
+                            <button disabled={!routine[index]} onClick={() => removeSkill(index)}>x</button>
                             {canConnect(index) ? (
                                 <button onClick={() => connectSkills(index)}>{routine[index].connection ? "-" : "+"}</button>
                             ) : null}
+
                         </div>
                     );
                 })}

@@ -11,7 +11,7 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
         }
     }));
 
-    if (!result) {
+    if (!result || result.execution == 0) {
         return (
             <div>
                 Add Skills to the routine to see your score.

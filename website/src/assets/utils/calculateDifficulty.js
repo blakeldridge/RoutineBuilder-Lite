@@ -300,7 +300,6 @@ function scorePommel(routine) {
 
     for (const type of Object.values(PommelSkills)) {
         const skills = routine.filter(skill => PommelSkills[skill.type] == type);
-        console.log(skills);
         // if more than 2 skills of each type present
         // make smallest valued skills invalid
         if (skills.length > 2) {
