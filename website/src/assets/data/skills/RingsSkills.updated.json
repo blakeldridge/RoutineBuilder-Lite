@@ -1,0 +1,1098 @@
+[
+  {
+    "id": 0,
+    "name": "Uprise fwd. to support.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 1,
+    "name": "From any support scale, swallow or swing bwd in support, roll forward to bwd swing in hang.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 2,
+    "name": "Uprise fwd and counter salto fwd. to bwd swingin hang.(Chechi)",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 3,
+    "name": "From hang, felge upward to support.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 4,
+    "name": "Swing fwd. through hdst.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 5,
+    "name": "Tucked double salto bwd. to hang(Guczoghy)",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 6,
+    "name": "Piked or straight double salto bwd. to hang.",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 7,
+    "name": "Dislocate bwd. piked or straight.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 8,
+    "name": "Uprise bwd. to support.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 9,
+    "name": "Uprise bwd.str. through handstand.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 10,
+    "name": "Inlocate piked orstraight.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 11,
+    "name": "Backward swing to salto fwd. piked to support (Honma)",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 12,
+    "name": "Honma straight.",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 13,
+    "name": "Slow inlocate from hang.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 14,
+    "name": "Double salto fwd. tucked to hang. (Yamawaki)",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": "YAMA_JON"
+  },
+  {
+    "id": 15,
+    "name": "Double salto fwd. piked or straight to hang.(Jonasson)",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": "YAMA_JON"
+  },
+  {
+    "id": 16,
+    "name": "Kip to support.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 17,
+    "name": "Back kip with bent arms to support.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 18,
+    "name": "Back kip to support.",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 19,
+    "name": "Fwd. swing to swing bwd. in hang.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 20,
+    "name": "Bwd. swing, salto piked to support.",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 21,
+    "name": "From support or cross, felge bwd. piked orstraight with bent arms to support.",
+    "difficulty": 0.1,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 22,
+    "name": "Back kip or roll bwd str. with bent arms to handstand (2 s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": "SWING_HANDSTAND"
+  },
+  {
+    "id": 23,
+    "name": "Swing fwd. to handstand or giant swing bwdto handstand (2 s.).",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": "SWING_HANDSTAND"
+  },
+  {
+    "id": 24,
+    "name": "Uprise bwd. to handstand or giant swing fwd to handstand (2 s.).",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": "SWING_HANDSTAND"
+  },
+  {
+    "id": 25,
+    "name": "From support swing bwd. to handstand (2 s.).",
+    "difficulty": 0.2,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": "SWING_HANDSTAND"
+  },
+  {
+    "id": 26,
+    "name": "Honma and swing bwd. to handstand (2 s.).",
+    "difficulty": 0.3,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": "SWING_HANDSTAND"
+  },
+  {
+    "id": 27,
+    "name": "Honma str. and swing bwd. to handstand (2 s.).",
+    "difficulty": 0.4,
+    "group": 1,
+    "apparatus": "Rings",
+    "type": "SWING_HANDSTAND"
+  },
+  {
+    "id": 28,
+    "name": "L-sit (2 s.) or straddled L-sit (2 s.).",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 29,
+    "name": "V-sit (2 s.).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 30,
+    "name": "Inverted cross (2 s.)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 31,
+    "name": "Hanging scale rearways(back lever) (2 s.).",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 32,
+    "name": "Supportscale (planche)(2 s.).",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 33,
+    "name": "Support scale at ring height(swallow o rmaltese cross) (2 s.).(Hirondelle)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 34,
+    "name": "Inverted swallow (2 s.).",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 35,
+    "name": "Hanging scale frontways(front lever) (2 s.).",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 36,
+    "name": "Any cross (2 s.)or V cross (2 s.).",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 37,
+    "name": "Support scale straddled (2 s.).",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 38,
+    "name": "V Cross, press to V-sit (2 sec.). (Tsukhara 3)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 39,
+    "name": "Vertical pull up with str. armsto V-cross(2 s.). (Colak)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 40,
+    "name": "Press to hdst. with bent body and bent arms(2 s)",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 41,
+    "name": "Press to hdst. with str. body a. bent arms or b.body. a.str. arms, orfr.strad.sup. lever(2 s.).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 42,
+    "name": "Press to hdst. with str. body and str. armsfromsupport or support scale (2 s.).",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 43,
+    "name": "Press to hdst. with str. body and str. arms froms wallow (2 s.).",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 44,
+    "name": "Slow roll fwd. piked with bent arms, to support.",
+    "difficulty": 0.1,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 45,
+    "name": "Slow roll fwd.straight with bent arms, to support.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 46,
+    "name": "Slow roll bwd.slowly and straight. body to L sit(2 s.).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 47,
+    "name": "Slow roll fwd.straightto cross or L-cross(2 s.).",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 48,
+    "name": "Vertical pull up with bent arms to hanging scale rearways (2 s.).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 49,
+    "name": "Vertical pull up with straight arms to hanging scale rearways (2 s.).",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 50,
+    "name": "Slow Roll bwd. with straight body to cross, Lcross or V cross (2 s.). (Azarian) (Tay)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 51,
+    "name": "Fr. cross or L-cr., move fwd.to back lever(2 s.).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 52,
+    "name": "Vertical pull up to L-sit (2 s.).",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 53,
+    "name": "From or through hanging scale rearways pullto cross, L-cross, or V cross (2 s.). (Nakayama) (NG Kiu Chung)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 54,
+    "name": "Through hanging scale rearways pull with str. body through crossto inv. swallow (2 s.).(Zahran)",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 55,
+    "name": "From hdst., lower horiz. to back lever (2 s.).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 56,
+    "name": "From sup. or cross, lower slowly to hang, and pull with str. arms to cross (2 s.). (Li Xiaoshuang)",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 57,
+    "name": "Vertical pull up to cross or L-cross (2 s.).",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 58,
+    "name": "From planche, lower horiz. and slowly tohanging scale rw. and pressto swallow (2 s.) orfromswallow same to planche or planche to planche. (Van Gelder)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 59,
+    "name": "From hang vertical pull up, slowly with straightarms through cross to inverted swallow (2 s.). (Tulloch 2)",
+    "difficulty": 0.7,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 60,
+    "name": "From handstand, lowerslowly through invertedcross to inverted hang.",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 61,
+    "name": "From swallow, press to support scale (2 s.).",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 62,
+    "name": "From swallow, lower slowly to hanging scale,press to swallow (2 s.).",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 63,
+    "name": "From hanging scale rw. press to swallow (also toSupport Scale) (2 s.). (Zanetti)",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 64,
+    "name": "From cross or L-cross, press to L-sit (2 s.).",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 65,
+    "name": "From L-cross, press to inverted cross (2 s.).",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 66,
+    "name": "From cross, press with straight body to invertedcross (2 s.).",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 67,
+    "name": "From swallow, press to inverted cross (2 s.).",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 68,
+    "name": "From cross, press to planche without first goingto support (2 s.).",
+    "difficulty": 0.3,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 69,
+    "name": "From cross, press to swallow (2 s.).",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 70,
+    "name": "Through hang rearways press and straight body toinverted cross (2 s.) (Carmona)",
+    "difficulty": 0.7,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 71,
+    "name": "From inverted cross lower slowly to invertedhang and felge bwd. slowly to cross (2 s.) (Vorobiov/Zou)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 72,
+    "name": "From inverted cross lower slowly to invertedhang and felge bwd. slowly to swallow (2 s.) or tosupport scale (2 s.) (Jotchev)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 73,
+    "name": "Roll bwd.slowly with str. arms and body to freesup. scale (2 s.). (Yan Mijayoung)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 74,
+    "name": "Slow Roll bwd. with str. body to swallow (2 s.).",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 75,
+    "name": "Roll backward slowly with straight arms and bodyto inverted cross through swallow.(Simonov)",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 76,
+    "name": "Slow roll fwd. with straight body through crossand press to support scale without first going tosupport (2 s.). (Ng Kiu Chung 2)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 77,
+    "name": "Slow roll fwd. with straight body through crossto inverted cross (2 s.). (Wynn)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 78,
+    "name": "Azarian to inverted Swallow (2 s.). (Tulloch)",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 79,
+    "name": "Slow roll fwd. with str. body toCross or L-Cross (2 s.), also from inverted hang. (Davtyan)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 80,
+    "name": "Slow roll forward with straight body throughcross to swallow (2 sec). (Pham 2)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 81,
+    "name": "From hang vertical pull up support and pressto hdst. with straight body and straight arms. (Cingolani)",
+    "difficulty": 0.4,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 82,
+    "name": "From hang vertical pull up to swallow (2 s.). (Balandin 1)",
+    "difficulty": 0.6,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 83,
+    "name": "From hang vertical pull up thr.swallow to sup.scale (2 s.). (Balandin 3)",
+    "difficulty": 0.5,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 84,
+    "name": "From hang vertical pull up to inv. cross(2 s.).(Balandin 2)",
+    "difficulty": 0.7,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 85,
+    "name": "Uprise fwd. to L-sit, (2 s.).",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 86,
+    "name": "Uprise fwd. to V-sit (2 s.).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 87,
+    "name": "Kip to L-sit (2 s.).",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 88,
+    "name": "Kip to V-sit (2 s.).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 89,
+    "name": "Honma to L-sit (2 s.).",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 90,
+    "name": "Homna to V-sit (2 s.).(Gracia)",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 91,
+    "name": "Honma to cross / L-cross (2 s.).",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 92,
+    "name": "Honma to V cross(2 s.).(Tanaka)",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 93,
+    "name": "Bwd.swing,salto fwd p.to cross or L-cross(2s.).",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 94,
+    "name": "Uprise fwd. to cross or L-cross (2 s.).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 95,
+    "name": "Uprise bwd. to cross or L-cross (2 s.).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 96,
+    "name": "Kip to cross, or L-cross (2 s.).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 97,
+    "name": "Kip to V cross (2 s.).(Molinari)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 98,
+    "name": "Kip to inverted swallow (2 s.).",
+    "difficulty": 0.6,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 99,
+    "name": "Back kip to cross or L-cross (2 s.).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 100,
+    "name": "Back kip to support scale (2 s.).",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 101,
+    "name": "Back kip to swallow (2 s.).",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 102,
+    "name": "Felge upward to support with straddled legs supported above the rings (2 s.).(Delchev)",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 103,
+    "name": "Back kip to inverted cross (2 s.).",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 104,
+    "name": "Felge upward to supportscale straddled (2 s.)",
+    "difficulty": 0.2,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 105,
+    "name": "Felge upward to cross or L-cross (2 s.).",
+    "difficulty": 0.3,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 106,
+    "name": "Felge upward to support scale (2 s.).",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 107,
+    "name": "Felge upward to Swallow (2 s.).",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 108,
+    "name": "Uprise forward to inverted swallow (2 s.).(Rodrigues)",
+    "difficulty": 0.6,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 109,
+    "name": "Felge upward to invert. cross (2 s.).",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 110,
+    "name": "Uprise bwd. to support scale straddled (2 s.).",
+    "difficulty": 0.2,
+    "group": 2,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 111,
+    "name": "Uprise bwd. to support scale (2 s.).",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 112,
+    "name": "Uprise bwd. to sup.scale at ring height (2 s.).",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 113,
+    "name": "Uprise bwd. to inverted cross (2 s.).",
+    "difficulty": 0.5,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 114,
+    "name": "Felge bwd. straight to free sup.scale. (2 s.)",
+    "difficulty": 0.4,
+    "group": 3,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 115,
+    "name": "Salto fwd. piked or straight, also with ½ t.",
+    "difficulty": 0.1,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 116,
+    "name": "Salto fwd. piked or straight with 1/1 t.",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 117,
+    "name": "Salto fwd. piked or straight with 3/2 t.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 118,
+    "name": "Salto fwd. piked orstraight with 2/1 t.",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 119,
+    "name": "Double salto fwd. tucked or tucked with ½ t.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 120,
+    "name": "Double salto fwd. tucked with 3/2 t (also 1/1 t.)(Fischer)",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 121,
+    "name": "Double salto fwd. piked or piked with ½ t. (Balabanov)",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 122,
+    "name": "Double salto fwd. piked with 3/2 t. (also 1/1 t.).",
+    "difficulty": 0.5,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 123,
+    "name": "Salto bwd. piked or straight also with ½.",
+    "difficulty": 0.1,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 124,
+    "name": "Salto bwd. straight with 1/1 t.",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 125,
+    "name": "Salto bwd. straight with 2/1 t. or 3/2 t.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 126,
+    "name": "Salto bwd. straight with 3/1 t.",
+    "difficulty": 0.5,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 127,
+    "name": "Double salto bwd. tucked or piked.",
+    "difficulty": 0.2,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 128,
+    "name": "Double salto bwd. straight.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 129,
+    "name": "Triple salto bwd. tucked.",
+    "difficulty": 0.7,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 130,
+    "name": "Triple salto bwd. piked. (Whittenburg)",
+    "difficulty": 0.9,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 131,
+    "name": "Double salto bwd. t. with ½ or 1/1 t. or with 3/2 t.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 132,
+    "name": "Double salto bwd. t. with 2/1 t.",
+    "difficulty": 0.5,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 133,
+    "name": "Double salto bwd. t. with 5/2 t.(Tuuha)",
+    "difficulty": 0.6,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 134,
+    "name": "Salto bwd. str. with 1/1 t. and salto t.",
+    "difficulty": 0.3,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 135,
+    "name": "Double salto bwd. straight with ½ or 1/1 t.",
+    "difficulty": 0.4,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  },
+  {
+    "id": 136,
+    "name": "Double salto bwd. straight with 3/2 or 2/1 t.",
+    "difficulty": 0.6,
+    "group": 4,
+    "apparatus": "Rings",
+    "type": ""
+  }
+]
