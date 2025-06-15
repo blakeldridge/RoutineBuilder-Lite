@@ -250,16 +250,18 @@ function scoreFloor(routine) {
     // dismount element must be a double salto
     let penalty = 0.3;
     for (let i = routine.length - 1; i >= 0; i--) {
-        if (routine[i] != null && !routine[i].invalid) {
-            if (routine[i].type == FloorSkills.MULTI ||
-                routine[i].type == FloorSkills.MULTI_TWIST
+        if (routine[i] && !routine[i].invalid) {
+            if (FloorSkills[routine[i].type] == FloorSkills.MULTI ||
+                FloorSkills[routine[i].type] == FloorSkills.MULTI_TWIST
             ) {
                 penalty = 0;
-            } else {
-                corrections.push("Receives 0.3 penalty for not ending on a double salto");
             }
             break;
         }
+    }
+
+    if (penalty == 0.3) {
+        corrections.push("Receives 0.3 penalty for not ending on a double salto");
     }
 
     const score = roundTo(execution + difficulty + requirements + bonus - penalty, 2);

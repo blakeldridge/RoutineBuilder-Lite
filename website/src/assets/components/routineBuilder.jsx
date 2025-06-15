@@ -40,6 +40,13 @@ const RoutineBuilder = () => {
         return skillFilterRef.current.skillExistsByName(skillName);
     };
 
+    const resetRoutine = () => {
+        setRoutine([null, null, null, null, null, null, null, null]);
+        const newScore = scoreRoutine(routine, apparatusName);
+        scoreTableRef.current.updateResult(newScore);
+        setScore(newScore);
+    };
+
     const addSkill = (skill) => {
         setIsOpen(false);
         skillFilterRef.current.addSkill(skill);
@@ -111,6 +118,8 @@ const RoutineBuilder = () => {
             {apparatusName === Apparatus.POMMEL ? (
                 <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
             ) : null}
+            <button onClick={resetRoutine}>Clear Routine</button>
+
             <div className="flex flex-col">
                 {routine.map((element, index) => {
                     return (
