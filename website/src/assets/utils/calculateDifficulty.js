@@ -123,9 +123,10 @@ function invalidateGroups(routine, apparatus) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
                     if (skill && !skill.invalid) {
                         return skill.group == currentGroup && skill.difficulty < lowest.difficulty ? skill : lowest;
+                    } else {
+                        return lowest;
                     }
-                });
-
+                }, null);
                 let index = routine.findIndex(skill => skill == lowestSkill);
                 routine[index].invalid = true;
             }
@@ -135,9 +136,17 @@ function invalidateGroups(routine, apparatus) {
 
 // Function to calculate a floor routine
 function scoreFloor(routine) {
+    let corrections = [];
     // mark skills as invalid / uncounted if they violate the rules
     invalidateGroups(routine, Apparatus.FLOOR);
     routine = routine.filter(skill => skill != null);
+
+    // add any uncounted skills to corrections
+    for (let i = 0; i < routine.length; i++) {
+        if (routine[i].invalid) {
+            corrections.push(`Skill ${i + 1} is not counted due to too many skills in group ${routine[i].group}`);
+        }
+    }
 
     // special repetitions
     // cannot do more than 1 strength skills
@@ -174,6 +183,8 @@ function scoreFloor(routine) {
     // any skill in group 1 gains 0.5
     if (groups[0] > 0) {
         requirements += 0.5;
+    } else {
+        corrections.push("Add a group I element to fill requirement (+0.5)");
     }
 
     // D+ skills gain 0.5, <D gains partial requirement in groups 2-4
@@ -182,6 +193,9 @@ function scoreFloor(routine) {
             requirements += 0.5;
         } else if (groups[i] > 0) {
             requirements += 0.3;
+            corrections.push(`Group ${i + 1} only gains partial requirement, improve to a D+ rated skill (+0.2)`);
+        } else {
+            corrections.push(`Add a group ${i + 1} element to fill requirement (+0.5)`)
         }
     }
     
@@ -225,6 +239,8 @@ function scoreFloor(routine) {
                 routine[i].type == FloorSkills.MULTI_TWIST
             ) {
                 penalty = 0;
+            } else {
+                corrections.push("Receives 0.3 penalty for not ending on a double salto");
             }
             break;
         }
@@ -239,7 +255,8 @@ function scoreFloor(routine) {
         "difficulty": difficulty,
         "requirements": requirements,
         "bonus": roundTo(bonus, 2),
-        "penalty": penalty
+        "penalty": penalty,
+        "corrections" : corrections
     };
 }
 
