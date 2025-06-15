@@ -126,7 +126,7 @@ function invalidateGroups(routine, apparatus) {
                     } else {
                         return lowest;
                     }
-                }, null);
+                }, {"difficulty":2});
                 let index = routine.findIndex(skill => skill == lowestSkill);
                 routine[index].invalid = true;
             }
@@ -137,6 +137,12 @@ function invalidateGroups(routine, apparatus) {
 // Function to calculate a floor routine
 function scoreFloor(routine) {
     let corrections = [];
+    routine = routine.map(skill => {
+        if (skill && skill.hasOwnProperty("invalid")) {
+            delete skill.invalid;
+        }
+        return skill;
+    })
     // mark skills as invalid / uncounted if they violate the rules
     invalidateGroups(routine, Apparatus.FLOOR);
     routine = routine.filter(skill => skill != null);
@@ -150,25 +156,31 @@ function scoreFloor(routine) {
 
     // special repetitions
     // cannot do more than 1 strength skills
-    const strengthSkills = routine.filter(skill => skill.type == FloorSkills.STRENGTH); 
+    const strengthSkills = routine.filter(skill => FloorSkills[skill.type] == FloorSkills.STRENGTH && !skill.invalid); 
     if (strengthSkills.length > 1) {
         let maxSkill = strengthSkills.reduce((max, skill) => {
-            return skill.difficulty < max.difficulty ? skill : max;
+            return skill.difficulty > max.difficulty ? skill : max;
         });
-        routine.map(skill => 
-            skill.invalid = (skill.type == FloorSkills.STRENGTH && skill != maxSkill) ? true : false
-        );
+        routine.map((skill, index) => {
+            if (skill && !skill.invalid && (FloorSkills[skill.type] == FloorSkills.STRENGTH && skill.id != maxSkill.id)) {
+                skill.invalid = true;
+                corrections.push(`Skill ${index + 1} is not counted due to too many strength elements performed`);
+            }
+        });
     }
 
     // cannot do more than 1 circle skill
-    const circleSkills = routine.filter(skill => skill.type == FloorSkills.CIRCLE); 
+    const circleSkills = routine.filter(skill => FloorSkills[skill.type] == FloorSkills.CIRCLE);
     if (circleSkills.length > 1) {
         let maxSkill = circleSkills.reduce((max, skill) => {
-            return skill.difficulty < max.difficulty ? skill : max;
+            return skill.difficulty > max.difficulty ? skill : max;
         });
-        routine.map(skill => 
-            skill.invalid = skill.type == FloorSkills.CIRCLE && skill != maxSkill ? true : false
-        );
+        routine.map((skill, index) => {
+            if (skill && !skill.invalid && (FloorSkills[skill.type] == FloorSkills.CIRCLE && skill.id != maxSkill.id)) {
+                skill.invalid = true;
+                corrections.push(`Skill ${index + 1} is not counted due to too many circle elements performed`);
+            }
+        });
     }
 
     // calculate the routine score
