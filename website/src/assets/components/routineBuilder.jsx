@@ -9,6 +9,7 @@ import RoutineResult from './routineResult';
 import SkillFilterForm from './skillFilterForm';
 import FlopForm from './flopForm';
 import HandstandDismountForm from './handstandDismountForm';
+import DownloadPDFButton from './downloadButton';
 
 const RoutineBuilder = () => {
     const navigate = useNavigate();
@@ -30,7 +31,7 @@ const RoutineBuilder = () => {
 
     useEffect(() => {
         updateSkills();
-    }, [skillFilterRef])
+    }, [skillFilterRef]);
 
     const updateSkills = () => {
         setSkills(skillFilterRef.current.getFilteredSkills());
@@ -119,6 +120,7 @@ const RoutineBuilder = () => {
                 <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
             ) : null}
             <button onClick={resetRoutine}>Clear Routine</button>
+            <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} />
 
             <div className="flex flex-col">
                 {routine.map((element, index) => {
