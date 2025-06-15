@@ -35,11 +35,13 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
                     {tipsOpen ? (
                         <div>
                             <ul>
-                                {result.corrections.map(correction => {
+                                {result.corrections.length > 0 ? result.corrections.map(correction => {
                                     return (
                                         <li>{correction}</li>
                                     );
-                                })}
+                                }) : (
+                                    <p>No suggested corrections</p>
+                                )}
                             </ul>
 
                             <button onClick={() => setTipsOpen(false)}>Close corrections</button>
