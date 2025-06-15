@@ -60,6 +60,7 @@ const RoutineBuilder = () => {
     const handleEditRoutine = (index, event) => {
         const skillId = parseInt(event.target.value, 10);
         const skill = skills.find(skill => skill.id === skillId);
+        console.log(skill);
 
         if (apparatusName == Apparatus.POMMEL && PommelSkills[skill.type] == PommelSkills.HANDSTAND_DISMOUNT) {
             handstandDismountRef.current.setThisSkill(index, skill);

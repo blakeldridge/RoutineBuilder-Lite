@@ -21,6 +21,7 @@ const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
         },
 
         addSkill : (skill) => {
+            skill.id = skills.length + 1;
             setSkills([...skills, skill]);
         },
 

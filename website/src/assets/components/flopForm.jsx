@@ -46,8 +46,8 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists }) => {
                 difficulty: convertDifficultyLetterToValue(flopValue),
                 group : 2,
                 apparatus: Apparatus.POMMEL,
-                type: PommelSkills.FLOP,
-                subtype : skills[0] === "Bertonceji" ||  skills[0] === "Davtyan" ? PommelTypeSkills.SOHN_BEZ_FLOP : "",
+                type: "FLOP",
+                subtype : skills[0] === "Bertonceji" ||  skills[0] === "Davtyan" ? "SOHN_BEZ_FLOP" : "",
             };
             // call parent function to add skill
             handleAddSkill(flop)
