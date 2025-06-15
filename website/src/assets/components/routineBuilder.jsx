@@ -116,11 +116,17 @@ const RoutineBuilder = () => {
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} apparatus={apparatusName} filterUpdated={() => updateSkills()} />
 
-            {apparatusName === Apparatus.POMMEL ? (
-                <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
-            ) : null}
-            <button onClick={resetRoutine}>Clear Routine</button>
-            <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} />
+            <div className="flex flex-row justify-between">
+                <div></div>
+                <div></div>
+                <div className="flex flex-row">
+                    {apparatusName === Apparatus.POMMEL ? (
+                        <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
+                    ) : null}
+                    <button onClick={resetRoutine}>Clear Routine</button>
+                </div>
+                <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} />
+            </div>
 
             <div className="flex flex-col">
                 {routine.map((element, index) => {

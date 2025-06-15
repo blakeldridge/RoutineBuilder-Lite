@@ -1,45 +1,59 @@
 import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas";
+import { useState } from "react";
 
 function DownloadPDFButton({ apparatus, routine, routineResult }) {
-  const handleDownload = async () => {
-    const doc = new jsPDF({
-        orientation: "landscape",
-        unit: "mm",
-        format: "a4"
-    });
+    const [ fileName, setFileName ] = useState("");
 
-    routine = routine.filter(skill => skill != null);
+    const handleDownload = async (e) => {
+        e.preventDefault();
 
-    doc.setFontSize(12);
+        let saveName;
+        if (fileName == "") {
+            saveName = "unnamed";
+        } else {
+            saveName = fileName.replace(/\s/g, "-");
+        }
 
-    // Add text content
-    doc.text(apparatus, 10, 10);
+        const doc = new jsPDF({
+            orientation: "landscape",
+            unit: "mm",
+            format: "a4"
+        });
 
-    doc.text(`Start Value : ${routineResult.score}`, 10, 20);
-    doc.text(`Difficulty : ${routineResult.difficulty}`, 10, 30);
-    doc.text(`Requirements : ${routineResult.requirements}`, 10, 40);
-    if (routineResult.bonus) {
-        doc.text(`Bonus : ${routineResult.bonus}`, 10, 50);
-    }
+        routine = routine.filter(skill => skill != null);
 
-    if (routineResult.penalty) {
-        doc.text(`Penalty : ${routineResult.penalty}`, 10, 60);
-    }
+        doc.setFontSize(12);
 
-    for (let i = 0; i < routine.length; i++) {
-        doc.text(`${i + 1}  ${routine[i].name}     Group : ${routine[i].group}  Difficulty : ${routine[i].difficulty}`, 10, 70 + (i * 10));
-    }
+        // Add text content
+        doc.text(apparatus, 10, 10);
 
-    // Save the PDF to user's device
-    doc.save("example.pdf");
-  };
+        doc.text(`Start Value : ${routineResult.score}`, 10, 20);
+        doc.text(`Difficulty : ${routineResult.difficulty}`, 10, 30);
+        doc.text(`Requirements : ${routineResult.requirements}`, 10, 40);
+        if (routineResult.bonus) {
+            doc.text(`Bonus : ${routineResult.bonus}`, 10, 50);
+        }
 
-  return (
-    <button onClick={handleDownload}>
-      Download Routine
-    </button>
-  );
+        if (routineResult.penalty) {
+            doc.text(`Penalty : ${routineResult.penalty}`, 10, 60);
+        }
+
+        for (let i = 0; i < routine.length; i++) {
+            doc.text(`${i + 1}  ${routine[i].name}     Group : ${routine[i].group}  Difficulty : ${routine[i].difficulty}`, 10, 70 + (i * 10));
+        }
+
+        // Save the PDF to user's device
+        doc.save(saveName + ".pdf");
+    };
+
+    return (
+        <div className="flex flex-row">
+            <form onSubmit={handleDownload}>
+                <input type="text" placeholder="File Name..." value={fileName} onChange={(event) => setFileName(event.target.value)} />
+                <button type="submit">Download Routine</button>
+            </form>
+        </div>
+    );
 }
 
 export default DownloadPDFButton;
