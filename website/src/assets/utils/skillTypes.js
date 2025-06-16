@@ -46,6 +46,8 @@ export const PbarSkills = {
     MORISUE : "Morisue",
     BELLE : "Belle",
     STRADDLE : "Straddle Salto",
+    SALTO_FWD : "Double salto fwd to upperarm",
+    GIANT_SUAREZ : "Giant into back salto 1/2"
 };
 
 export const HbarSkills = {

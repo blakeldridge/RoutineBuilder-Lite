@@ -515,26 +515,49 @@ function scoreVault(routine) {
 
 // Function to calculate pbar routine
 function scorePbar(routine) {
+    let corrections = [];
+    routine = routine.map(skill => {
+        if (skill && skill.hasOwnProperty("invalid")) {
+            delete skill.invalid;
+        }
+        return skill;
+    });
     // mark skills as invalid / uncounted if they violate the rules
-    invalidateGroups(routine, Apparatus.PBAR);
+    invalidateGroups(routine, Apparatus.POMMEL);
+    routine = routine.filter(skill => skill != null);
+
+    // add any uncounted skills to corrections
+    for (let i = 0; i < routine.length; i++) {
+        if (routine[i].invalid) {
+            corrections.push(`Skill ${i + 1} is not counted due to too many skills in group ${routine[i].group}`);
+        }
+    }
 
     // check for special repetitions
 
     for (const type of Object.values(PbarSkills)) {
-        const skills = routine.filter(skill => skill.type == type);
+        const skills = routine.filter(skill => PbarSkills[skill.type] == type);
+        let allowed;
+        if (type == PbarSkills.FELGE || type == PbarSkills.GIANT || type == PbarSkills.UPRISE_HANDSTAND) {
+            allowed = 2;
+        } else {
+            allowed = 1;
+        }
         // if more than 2 skills of each type present
         // make smallest valued skills invalid
-        if (skills.length > 2) {
+        if (skills.length > allowed) {
 
-            const invalidSkills = skills.length - 2;
+            const invalidSkills = skills.length - allowed;
             // remove lowest skills violating rule
             for (let i = 0; i < invalidSkills; i++) {
                 const lowestSkill = routine.reduce((lowest, skill) => {
-                    return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
-                });
+                    return PbarSkills[skill.type] == type && skill.difficulty < lowest.difficulty ? skill : lowest;
+                }, {"difficulty": 2});
 
                 const index = routine.findIndex(skill => skill == lowestSkill);
                 routine[index].invalid = true;
+
+                corrections.push(`Skill ${index + 1} is not counted as you have more than ${allowed} ${type} type skills`);
             }
         }
     }
@@ -551,19 +574,29 @@ function scorePbar(routine) {
     // any skill in group 1 gains 0.5
     if (groups[0] > 0) {
         requirements += 0.5;
+    } else {
+        corrections.push("Add a group I element to fill requirement (+0.5)");
     }
 
-    // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
+    // D+ skills gain 0.5, <D gains partial requirement in groups 2-4
     for (let i = 1; i < groups.length - 1; i++) {
         if (groups[i] >= 0.4) {
             requirements += 0.5;
         } else if (groups[i] > 0) {
             requirements += 0.3;
+            corrections.push(`Group ${i + 1} only gains partial requirement, improve to a D+ rated skill (+0.2)`);
+        } else {
+            corrections.push(`Add a group ${i + 1} element to fill requirement (+0.5)`)
         }
     }
 
     // Dismount gains itself requirement
     requirements += groups[3];
+    if (groups[3] == 0) {
+        corrections.push("Add a dismount to gain extra requirment.");
+    } else if (groups[3] < 0.3) {
+        corrections.push("Improve to a C+ dismount to be able to get stick bonus");
+    }
 
     const score = execution + difficulty + requirements;
     return {
@@ -571,6 +604,7 @@ function scorePbar(routine) {
         "execution": execution,
         "difficulty": difficulty,
         "requirements": requirements,
+        "corrections": corrections,
     };
 }
 
@@ -650,7 +684,7 @@ function scoreHbar(routine) {
     requirements += groups[3];
     if (groups[3] == 0) {
         corrections.push("Add a dismount to gain extra requirment.");
-    } else if (group[3] < 0.3) {
+    } else if (groups[3] < 0.3) {
         corrections.push("Improve to a C+ dismount to be able to get stick bonus");
     }
     
