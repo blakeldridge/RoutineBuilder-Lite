@@ -18,7 +18,6 @@ const RoutineBuilder = () => {
     const handstandDismountRef = useRef(null);
     const { apparatus } = useParams();
     const [ score, setScore ] = useState(0);
-    const [ routine, setRoutine ] = useState([null, null, null, null, null, null, null, null]);
     const [ skills, setSkills ] = useState([]);
     const [ isOpen, setIsOpen ] = useState(false);
     const [ isHdstOpen, setIsHdstOpen ] = useState(false);
@@ -28,6 +27,8 @@ const RoutineBuilder = () => {
     }
 
     const apparatusName = fromUrlSlug(apparatus);
+
+    const [ routine, setRoutine ] = useState(apparatusName == Apparatus.VAULT ? [null, null] : [null, null, null, null, null, null, null, null]);
 
     useEffect(() => {
         updateSkills();
@@ -42,7 +43,7 @@ const RoutineBuilder = () => {
     };
 
     const resetRoutine = () => {
-        setRoutine([null, null, null, null, null, null, null, null]);
+        setRoutine(apparatusName == Apparatus.VAULT ? [null, null] : [null, null, null, null, null, null, null, null]);
         const newScore = scoreRoutine(routine, apparatusName);
         scoreTableRef.current.updateResult(newScore);
         setScore(newScore);

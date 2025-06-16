@@ -1,5 +1,6 @@
 import { jsPDF } from "jspdf";
 import { useState } from "react";
+import { Apparatus } from "../utils/apparatus";
 
 function DownloadPDFButton({ apparatus, routine, routineResult }) {
     const [ fileName, setFileName ] = useState("");
@@ -27,15 +28,21 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
         // Add text content
         doc.text(apparatus, 10, 10);
 
-        doc.text(`Start Value : ${routineResult.score}`, 10, 20);
-        doc.text(`Difficulty : ${routineResult.difficulty}`, 10, 30);
-        doc.text(`Requirements : ${routineResult.requirements}`, 10, 40);
-        if (routineResult.bonus) {
-            doc.text(`Bonus : ${routineResult.bonus}`, 10, 50);
-        }
+        if (apparatus == Apparatus.VAULT) {
+            doc.text(`Average Vault : ${routineResult.average}`, 10, 20);
+            doc.text(`Vault 1 : ${routineResult.vault1} (Counted in the all around competition)`, 10, 30);
+            doc.text(`Vault 2 : ${routineResult.vault2}`, 10, 40);
+        } else {
+            doc.text(`Start Value : ${routineResult.score}`, 10, 20);
+            doc.text(`Difficulty : ${routineResult.difficulty}`, 10, 30);
+            doc.text(`Requirements : ${routineResult.requirements}`, 10, 40);
+            if (routineResult.bonus) {
+                doc.text(`Bonus : ${routineResult.bonus}`, 10, 50);
+            }
 
-        if (routineResult.penalty) {
-            doc.text(`Penalty : ${routineResult.penalty}`, 10, 60);
+            if (routineResult.penalty) {
+                doc.text(`Penalty : ${routineResult.penalty}`, 10, 60);
+            }
         }
 
         for (let i = 0; i < routine.length; i++) {

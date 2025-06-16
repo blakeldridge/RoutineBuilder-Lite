@@ -1,0 +1,569 @@
+[
+  {
+    "id": 0,
+    "name": "Hdspr. fwd. and salto fwd. t. w.½ t.(or Cuervo t.) ",
+    "difficulty": "2.4",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 1,
+    "name": "Hdspr. fwd. and salto fwd. t. w. 1/1 t.(Cuervo t. w. ½ t.).",
+    "difficulty": "2.8",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 2,
+    "name": "Hdspr. fwd. and salto fwd. t. w. 3/2 t.(Cuervo t. w. 1/1 t.). (Kroll)",
+    "difficulty": "3.2",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 3,
+    "name": "Hdspr.fwd. and salto fwd. t. w. 2/1 t.(or Cuervo t. w. 3/2 t.).(Canbas)",
+    "difficulty": "3.6",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 4,
+    "name": "Hdspr. fwd. and salto fwd. p. w. ½ t. (Cuervo p.). ",
+    "difficulty": "2.8",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 5,
+    "name": "Hdspr. fwd. and salto fwd. p. w. 1/1 t.(Cuervo p. w. ½ t.).",
+    "difficulty": "3.2",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 6,
+    "name": "Hdspr. fwd. and salto fwd. p. w. 3/2 t.(Cuervo p. w. 1/1 t.).",
+    "difficulty": "3.6",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 7,
+    "name": "Hdspr. fwd. and salto fwd.str. w. ½ t.(Cuervo str.).",
+    "difficulty": "3.6",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 8,
+    "name": "Hdspr.fwd. and salto fwd.str. w. 1/1 t.(Cuervo str. ½ t.).",
+    "difficulty": "4.0",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 9,
+    "name": "Hdspr.fwd. and salto fwd.str. w. 3/2 t.(Cuervo str. w. 1/1 t.). Lou Yun",
+    "difficulty": "4.4",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 10,
+    "name": "Hdspr.fwd. and salto fwd.str. w. 2/1 t.(Cuervo str. 3/2 t.).",
+    "difficulty": "4.8",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 11,
+    "name": "Handspring fwd. and salto fwd. str. w. 5/2 t. (Yeo 2)",
+    "difficulty": "5.2",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 12,
+    "name": "Handspring fwd. and salto fwd.str. w. 3/1 t.(Yang Hak Seon)",
+    "difficulty": "5.6",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 13,
+    "name": "Hdspr. sw. w. ¼ t. a. salto fwd. t. w. ½ t. orTsuk. t. w. 1/1 t.(Kasamatsu)",
+    "difficulty": "2.4",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 14,
+    "name": "Tsukahara t. w. 3/2 t.or Kasamatsu t. ½ t ",
+    "difficulty": "2.8",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 15,
+    "name": "Tsukahara t. with 2/1 t.(Barbieri)",
+    "difficulty": "3.2",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 16,
+    "name": "Tsukahara t. with 5/2 t. ",
+    "difficulty": "3.6",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 17,
+    "name": "Tsukahara str. w. 1/1 t. or Kasamatsu str. ",
+    "difficulty": "3.6",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 18,
+    "name": "Kasamatsu str. with½ t. or Tsukahara str. w. 3/2 t. ",
+    "difficulty": "4.0",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 19,
+    "name": "Kasamatsu str. w. 1/1 t. or Tsukahara str. w. 2/1 t(Akopian)",
+    "difficulty": "4.4",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 20,
+    "name": "Kasamatsu str. with 3/2 t.(Driggs)",
+    "difficulty": "4.8",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 21,
+    "name": "Kasamatsu str. with 2/1 t.(López)",
+    "difficulty": "5.2",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 22,
+    "name": "Kasamatsu str. with 5/2 t. or Tsukahara str. with7/2 t.(Yonekura)",
+    "difficulty": "5.6",
+    "group": 1,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 23,
+    "name": "Forward handspring. ",
+    "difficulty": "1.2",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 24,
+    "name": "Forward handspring with ½ t. ",
+    "difficulty": "1.4",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 25,
+    "name": "Forward handspring with 1/1 t. ",
+    "difficulty": "1.6",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 26,
+    "name": "Forward handspring with 3/2 t. ",
+    "difficulty": "1.8",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 27,
+    "name": "Forward handspring with 2/1 t. ",
+    "difficulty": "2.0",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 28,
+    "name": "Forward handspring with 5/2 t.(Tsygankov)",
+    "difficulty": "2.2",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 29,
+    "name": "Handspring fwd. and salto fwd. tucked. ",
+    "difficulty": "2.0",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 30,
+    "name": "Handspring fwd. and salto fwd. piked. ",
+    "difficulty": "2.4",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 31,
+    "name": "Handspring fwd. and salto fwd. str. ",
+    "difficulty": "3.2",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 32,
+    "name": "Handspring fwd. and dbl.salto fwd. t.(Roche)",
+    "difficulty": "4.8",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 33,
+    "name": "Roche with ½ turn.(Dragulescu)",
+    "difficulty": "5.2",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 34,
+    "name": "Handspring fwd. and salto fwd. t. w. ½ t. andsalto bwd. t.(Zimmerman)",
+    "difficulty": "5.2",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 35,
+    "name": "Handspring fwd. and dbl. salto fwd. piked.(Blanik)",
+    "difficulty": "5.2",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 36,
+    "name": "Dragulescu piked.(RI Se Gwang 2)",
+    "difficulty": "5.6",
+    "group": 2,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 37,
+    "name": "Handspring sw. with ¼ t. ",
+    "difficulty": "1.2",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 38,
+    "name": "Handspring sw. with 3/4 t. ",
+    "difficulty": "1.4",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 39,
+    "name": "Handspring sw. with 5/4 t. ",
+    "difficulty": "1.6",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 40,
+    "name": "Handspring sw. w. ¼ t. a. salto bwd. t.(Tsukahara) ",
+    "difficulty": "1.8",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 41,
+    "name": "Tsukahara piked. ",
+    "difficulty": "2.0",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 42,
+    "name": "Tsukahara t. with ½ t. ",
+    "difficulty": "2.0",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 43,
+    "name": "Tsukahara straight. ",
+    "difficulty": "2.8",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 44,
+    "name": "Tsukahara str. with ½ t. ",
+    "difficulty": "3.2",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 45,
+    "name": "Tsukahara with salto bwd. t.(Yeo)",
+    "difficulty": "4.8",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 46,
+    "name": "Tsukahara with salto bwd. piked.(Lu Yu Fu)",
+    "difficulty": "5.2",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 47,
+    "name": "Double Tsukahara with 1/1 twist.(Ri Se Gwang)",
+    "difficulty": "5.6",
+    "group": 3,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 48,
+    "name": "Yurchenko t. with 1/1 t. ",
+    "difficulty": "2.4",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 49,
+    "name": "Yurchenko t. with 3/2 t. ",
+    "difficulty": "2.8",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 50,
+    "name": "Yurchenko t. with 2/1 t. ",
+    "difficulty": "3.2",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 51,
+    "name": "Yurchenko straight with 1/1 t. ",
+    "difficulty": "3.6",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 52,
+    "name": "Yurchenko straight with 3/2 t. ",
+    "difficulty": "4.0",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 53,
+    "name": "Yurchenko straight with 2/1 t.",
+    "difficulty": "4.4",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 54,
+    "name": "Yurchenko straight with 5/2 t.(Shewfelt)",
+    "difficulty": "4.8",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 55,
+    "name": "Yurchenko Straight 3/1 t.(Shirai - KIM Hee Hoon)",
+    "difficulty": "5.2",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 56,
+    "name": "Yurchenko Straight 7/2 t.(Shirai 2)",
+    "difficulty": "5.6",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 57,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.tucked with ½ t.",
+    "difficulty": "2.6",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 58,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.p. with ½ t.(Nemov)",
+    "difficulty": "3.0",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 59,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.str. with ½ t.(Hutcheon)",
+    "difficulty": "3.8",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 60,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.str. with 1/1 t.",
+    "difficulty": "4.2",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 61,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.straight with 3/2 t.",
+    "difficulty": "4.6",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 62,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.straight with 2/1 t.",
+    "difficulty": "5.0",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 63,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.str. with 5/2 t.(Li Xiao Peng)",
+    "difficulty": "5.4",
+    "group": 4,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 64,
+    "name": "Round off, handspring bwd. ",
+    "difficulty": "1.2",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 65,
+    "name": "Round off, handspring bwd. with ½ turn. ",
+    "difficulty": "1.4",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 66,
+    "name": "Round off, handspring bwd. with 1/1 turn. ",
+    "difficulty": "1.6",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 67,
+    "name": "Round off, hdspr. bwd. and salto bwd. t.(Yurchenko)",
+    "difficulty": "1.8",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 68,
+    "name": "Yurchenko t. with ½ t. ",
+    "difficulty": "2.0",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 69,
+    "name": "Yurchenko piked. ",
+    "difficulty": "2.0",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 70,
+    "name": "Yurchenko straight. ",
+    "difficulty": "2.8",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 71,
+    "name": "Yurchenko straight with½t. ",
+    "difficulty": "3.2",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 72,
+    "name": "Round off, ½ t. and handspring fwd. ",
+    "difficulty": "1.4",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 73,
+    "name": "Round off, ½ t. and hdspr. fwd. with ½ t. ",
+    "difficulty": "1.6",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 74,
+    "name": "Round off, ½ t. and hdspr. fwd. with 1/1 t. ",
+    "difficulty": "1.8",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 75,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.tucked.",
+    "difficulty": "2.2",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 76,
+    "name": "Round off, ½ t. a. hdspr. fwd. and salto fwd. p. ",
+    "difficulty": "2.6",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 77,
+    "name": "Round off, ½ t. and hdspr. fwd. and salto fwd.str.",
+    "difficulty": "3.4",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 78,
+    "name": "Yurchenko and salto bwd.tucked.(Melissanidis)",
+    "difficulty": "4.8",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 79,
+    "name": "Melissanidis piked.(Yang Wei)",
+    "difficulty": "5.2",
+    "group": 5,
+    "apparatus": "Vault"
+  },
+  {
+    "id": 80,
+    "name": "Round off, ½ t. a. hdspr. fwd. and double saltofwd.tucked.",
+    "difficulty": "5.0",
+    "group": 5,
+    "apparatus": "Vault"
+  }
+]

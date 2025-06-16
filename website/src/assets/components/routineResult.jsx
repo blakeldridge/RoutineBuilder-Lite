@@ -1,4 +1,4 @@
-import { useState, forwardRef, useRef, useImperativeHandle } from 'react';
+import { useState, forwardRef, useRef, useImperativeHandle, useEffect } from 'react';
 import { Apparatus } from '../utils/apparatus';
 
 const RoutineResult = forwardRef(({ apparatus }, ref) => {
@@ -22,7 +22,9 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
         <div>
             {apparatus == Apparatus.VAULT ? (
                 <div>
-                    Not implemented
+                    <p>Average Vault : {result.average}</p>
+                    <p>Vault 1 : {result.vault1}</p>
+                    <p>Vault 2 : {result.vault2}</p>
                 </div>
             ) : (
                 <div>
@@ -31,26 +33,25 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
                     <p>Requirements : {result.requirements}</p>
                     {result.bonus ? (<p>Bonus : {result.bonus}</p>) : null} 
                     {result.penalty ? (<p>Penalties : {result.penalty}</p>) : null}
+                </div>
+            )}
+            {tipsOpen ? (
+                <div>
+                    <ul>
+                        {result.corrections.length > 0 ? result.corrections.map(correction => {
+                            return (
+                                <li>{correction}</li>
+                            );
+                        }) : (
+                            <p>No suggested corrections</p>
+                        )}
+                    </ul>
 
-                    {tipsOpen ? (
-                        <div>
-                            <ul>
-                                {result.corrections.length > 0 ? result.corrections.map(correction => {
-                                    return (
-                                        <li>{correction}</li>
-                                    );
-                                }) : (
-                                    <p>No suggested corrections</p>
-                                )}
-                            </ul>
-
-                            <button onClick={() => setTipsOpen(false)}>Close corrections</button>
-                        </div>
-                    ) : (
-                        <div>
-                            <button onClick={() => setTipsOpen(true)}>See corrections</button>
-                        </div>
-                    )}
+                    <button onClick={() => setTipsOpen(false)}>Close corrections</button>
+                </div>
+            ) : (
+                <div>
+                    <button onClick={() => setTipsOpen(true)}>See corrections</button>
                 </div>
             )}
         </div>

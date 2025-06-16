@@ -1,5 +1,6 @@
 import { useState, useEffect, useImperativeHandle, forwardRef } from "react";
 import getSkills from "../utils/getSkills";
+import { Apparatus } from "../utils/apparatus";
 
 const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
     const [ skills, setSkills ] = useState(getSkills(apparatus))
@@ -70,21 +71,26 @@ const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
                     <option value={2}>Group II</option>
                     <option value={3}>Group III</option>
                     <option value={4}>Group IV</option>
+                    {apparatus == Apparatus.VAULT && (
+                        <option value={5}>Group V</option>
+                    )}
                 </select>
 
-                <select value={difficultyFilter} onChange={(event) => setDifficultyFilter(event.target.value)}>
-                    <option value={0}>All Difficulties</option>
-                    <option value={0.1}>A</option>
-                    <option value={0.2}>B</option>
-                    <option value={0.3}>C</option>
-                    <option value={0.4}>D</option>
-                    <option value={0.5}>E</option>
-                    <option value={0.6}>F</option>
-                    <option value={0.7}>G</option>
-                    <option value={0.8}>H</option>
-                    <option value={0.9}>I</option>
-                    <option value={1.0}>J</option>
-                </select>
+                {apparatus !== Apparatus.VAULT && (
+                    <select value={difficultyFilter} onChange={(event) => setDifficultyFilter(event.target.value)}>
+                        <option value={0}>All Difficulties</option>
+                        <option value={0.1}>A</option>
+                        <option value={0.2}>B</option>
+                        <option value={0.3}>C</option>
+                        <option value={0.4}>D</option>
+                        <option value={0.5}>E</option>
+                        <option value={0.6}>F</option>
+                        <option value={0.7}>G</option>
+                        <option value={0.8}>H</option>
+                        <option value={0.9}>I</option>
+                        <option value={1.0}>J</option>
+                    </select>
+                )}
             </div>
 
             <form onSubmit={handleSearch}>
