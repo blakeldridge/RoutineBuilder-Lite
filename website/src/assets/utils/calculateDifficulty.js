@@ -267,16 +267,21 @@ function scoreFloor(routine) {
     }
 
     const score = roundTo(execution + difficulty + requirements + bonus - penalty, 2);
+
+    const invalidIndexes = routine.reduce((acc, skill, index) => {
+        if (skill.invalid) acc.push(skill.id);
+        return acc;
+    }, []);
     
     return {
-        "routine" : routine,
         "score": score,
         "execution": execution,
         "difficulty": difficulty,
         "requirements": requirements,
         "bonus": roundTo(bonus, 2),
         "penalty": penalty,
-        "corrections" : corrections
+        "corrections" : corrections,
+        "invalid" : invalidIndexes
     };
 }
 
@@ -375,6 +380,12 @@ function scorePommel(routine) {
         corrections.push("Add a dismount to gain extra requirment.");
     }
 
+    const invalidIndexes = routine.reduce((acc, skill, index) => {
+        if (skill.invalid) acc.push(skill.id);
+        return acc;
+    }, []);
+    
+
     const score = execution + difficulty + requirements;
     return {
         "routine":routine,
@@ -383,6 +394,7 @@ function scorePommel(routine) {
         "difficulty": difficulty,
         "requirements": requirements,
         "corrections" : corrections,
+        "invalid" : invalidIndexes
     };
 }
 
@@ -508,6 +520,12 @@ function scoreRings(routine) {
         corrections.push("You have no swing to handstand skill, leading to a 0.3 penalty");
     }
 
+    const invalidIndexes = routine.reduce((acc, skill, index) => {
+        if (skill.invalid) acc.push(skill.id);
+        return acc;
+    }, []);
+    
+
     const score = execution + difficulty + requirements + bonus - penalty;
     return {
         "score": score,
@@ -516,7 +534,8 @@ function scoreRings(routine) {
         "bonus" : bonus,
         "requirements": requirements,
         "penalty": penalty,
-        "corrections" : corrections
+        "corrections" : corrections,
+        "invalid": invalidIndexes
     };
 }
 
@@ -536,11 +555,17 @@ function scoreVault(routine) {
     // calculate scores
     let average = roundTo((vault1 + vault2) / 2, 2);
 
+    const invalidIndexes = routine.reduce((acc, skill, index) => {
+        if (skill.invalid) acc.push(skill.id);
+        return acc;
+    }, []);
+    
     return {
         "vault1" : vault1,
         "vault2" : vault2,
         "average" : average,
-        "corrections" : corrections
+        "corrections" : corrections,
+        "invalid":invalidIndexes
     };
 }
 
@@ -629,6 +654,11 @@ function scorePbar(routine) {
         corrections.push("Improve to a C+ dismount to be able to get stick bonus");
     }
 
+    const invalidIndexes = routine.reduce((acc, skill, index) => {
+        if (skill.invalid) acc.push(skill.id);
+        return acc;
+    }, []);
+    
     const score = execution + difficulty + requirements;
     return {
         "score": score,
@@ -636,6 +666,7 @@ function scorePbar(routine) {
         "difficulty": difficulty,
         "requirements": requirements,
         "corrections": corrections,
+        "invalid":invalidIndexes
     };
 }
 
@@ -755,6 +786,12 @@ function scoreHbar(routine) {
         }
     }
 
+    const invalidIndexes = routine.reduce((acc, skill, index) => {
+        if (skill.invalid) acc.push(skill.id);
+        return acc;
+    }, []);
+    
+
     const score = execution + difficulty + requirements + bonus;
     return {
         "score": score,
@@ -762,6 +799,7 @@ function scoreHbar(routine) {
         "difficulty": difficulty,
         "requirements": requirements,
         "bonus": roundTo(bonus, 2),
-        "corrections" : corrections
+        "corrections" : corrections,
+        "invalid":invalidIndexes
     };
 }

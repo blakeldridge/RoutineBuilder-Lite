@@ -44,9 +44,7 @@ const RoutineBuilder = () => {
 
     const resetRoutine = () => {
         setRoutine(apparatusName == Apparatus.VAULT ? [null, null] : [null, null, null, null, null, null, null, null]);
-        const newScore = scoreRoutine(routine, apparatusName);
-        scoreTableRef.current.updateResult(newScore);
-        setScore(newScore);
+        calculateScore();
     };
 
     const addSkill = (skill) => {
@@ -61,9 +59,7 @@ const RoutineBuilder = () => {
             routine[index].connection = true;
         }
 
-        const newScore = scoreRoutine(routine, apparatusName);
-        scoreTableRef.current.updateResult(newScore);
-        setScore(newScore);
+        calculateScore();
     };
 
     const handleEditRoutine = (index, event) => {
@@ -76,25 +72,37 @@ const RoutineBuilder = () => {
         } else {
             routine[index] = skill;
 
-            const newScore = scoreRoutine(routine, apparatusName);
-            scoreTableRef.current.updateResult(newScore);
-            setScore(newScore);
+            calculateScore();
         }
     };
 
     const removeSkill = (index) => {
         routine[index] = null;
 
-        const newScore = scoreRoutine(routine, apparatusName);
-        scoreTableRef.current.updateResult(newScore);
-        setScore(newScore);
+        calculateScore();
     };
 
     const placeHandstandDismount = (index, skill) => {
         setIsHdstOpen(false);
         routine[index] = skill;
 
+        calculateScore();
+    };
+
+    const calculateScore = () => {
         const newScore = scoreRoutine(routine, apparatusName);
+        console.log(newScore.invalid);
+
+        for (let skill of routine) {
+            if (skill) {
+                if (newScore.invalid.includes(skill.id)) {
+                    skill.invalid = true;
+                } else {
+                    skill.invalid = false;
+                }
+            }
+        }
+
         scoreTableRef.current.updateResult(newScore);
         setScore(newScore);
     };
@@ -103,7 +111,7 @@ const RoutineBuilder = () => {
         if (apparatusName == Apparatus.FLOOR) {
             return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 1 && routine[index + 1].group != 1;
         } else if (apparatusName == Apparatus.RINGS) {
-            return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].type == RingsSkills.YAMA_JON;
+            return routine[index] && index + 1 < routine.length && routine[index + 1] && RingsSkills[routine[index].type] == RingsSkills.YAMA_JON;
         } else if (apparatusName == Apparatus.HBAR) {
             return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 4 && routine[index + 1].group != 4;
         } else {
@@ -149,7 +157,7 @@ const RoutineBuilder = () => {
                                 })}
                             </select>
                             <p>Group : {routine[index] ? routine[index].group : "-"}  </p>
-                            <p>Difficulty : {routine[index] ? routine[index].difficulty: "-"}</p>
+                            <p>Difficulty : {routine[index] ? (routine[index].invalid ? "uncounted" : routine[index].difficulty): "-"}</p>
                             <button disabled={!routine[index]} onClick={() => removeSkill(index)}>x</button>
                             {canConnect(index) ? (
                                 <button onClick={() => connectSkills(index)}>{routine[index].connection ? "-" : "+"}</button>
