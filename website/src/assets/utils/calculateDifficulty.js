@@ -92,7 +92,9 @@ function invalidateGroups(routine, apparatus) {
         const dismountIndex = routine.findIndex(skill => skill && skill.group == 4);
         if (dismountIndex != -1) {
             for (let i = dismountIndex + 1; i < routine.length; i++) {
-                routine[i].invalid = true;
+                if (routine[i]) {
+                    routine[i].invalid = true;
+                }
             }
         }
     }
@@ -386,14 +388,29 @@ function scorePommel(routine) {
 
 // Function to claculate a rings routine
 function scoreRings(routine) {
+    let corrections = [];
+    routine = routine.map(skill => {
+        if (skill && skill.hasOwnProperty("invalid")) {
+            delete skill.invalid;
+        }
+        return skill;
+    });
     // mark skills as invalid / uncounted if they violate the rules
-    invalidateGroups(routine, Apparatus.RINGS);
+    invalidateGroups(routine, Apparatus.POMMEL);
+    routine = routine.filter(skill => skill != null);
+
+    // add any uncounted skills to corrections
+    for (let i = 0; i < routine.length; i++) {
+        if (routine[i].invalid) {
+            corrections.push(`Skill ${i + 1} is not counted due to too many skills in group ${routine[i].group}`);
+        }
+    }
 
     // special repetitions
 
     for (const type of Object.values(RingsSkills)) {
         for (let j = 0; j < 2; j++) {
-            const skills = routine.filter(skill => skill.type == type && skill.group == j + 1);
+            const skills = routine.filter(skill => RingsSkills[skill.type] == type && skill.group == j + 2);
             // if more than 2 skills of each type present
             // make smallest valued skills invalid
             if (skills.length > 1) {
@@ -402,11 +419,12 @@ function scoreRings(routine) {
                 // remove lowest skills violating rule
                 for (let i = 0; i < invalidSkills; i++) {
                     const lowestSkill = routine.reduce((lowest, skill) => {
-                        return skill.type == type && skill.difficulty < lowest.difficulty ? skill : lowest;
-                    });
+                        return skill && !skill.invalid && RingsSkills[skill.type] == type && skill.difficulty < lowest.difficulty ? skill : lowest;
+                    }, {"difficulty": 2});
 
                     const index = routine.findIndex(skill => skill == lowestSkill);
                     routine[index].invalid = true;
+                    corrections.push(`Skill ${index + 1} is not counted as you have more than 1 skill ending in ${type} in group ${j + 1}`);
                 }
             }
         }
@@ -436,22 +454,32 @@ function scoreRings(routine) {
     // calculate the requirements
     let requirements = 0;
 
-    // any skill in group 1 gains 0.5
+        // any skill in group 1 gains 0.5
     if (groups[0] > 0) {
         requirements += 0.5;
+    } else {
+        corrections.push("Add a group I element to fill requirement (+0.5)");
     }
 
-    // D+ skills gain 0.5, <D gains partial requirement in groups 2-3
+    // D+ skills gain 0.5, <D gains partial requirement in groups 2-4
     for (let i = 1; i < groups.length - 1; i++) {
         if (groups[i] >= 0.4) {
             requirements += 0.5;
         } else if (groups[i] > 0) {
             requirements += 0.3;
+            corrections.push(`Group ${i + 1} only gains partial requirement, improve to a D+ rated skill (+0.2)`);
+        } else {
+            corrections.push(`Add a group ${i + 1} element to fill requirement (+0.5)`)
         }
     }
 
     // Dismount gains itself requirement
     requirements += groups[3];
+    if (groups[3] == 0) {
+        corrections.push("Add a dismount to gain extra requirment.");
+    } else if (groups[3] < 0.3) {
+        corrections.push("Improve to a C+ dismount to be able to get stick bonus");
+    }
 
     // calculate jonasson or yamawaki bonus
     let bonus = 0.0;
@@ -464,7 +492,7 @@ function scoreRings(routine) {
             if (i + 1 >= routine.length || routine[i + 1] == null || routine[i + 1].invalid) {
                 continue;
             }
-            if (routine[i].type == RingsSkills.YAMA_JON && routine[i + 1].type == RingsSkills.SWING_HANDSTAND) {
+            if (RingsSkills[routine[i].type] == RingsSkills.YAMA_JON && RingsSkills[routine[i + 1].type] == RingsSkills.SWING_HANDSTAND) {
                 bonus += 0.1;
             } 
         }
@@ -473,9 +501,11 @@ function scoreRings(routine) {
     // calculate penalties
     // if there is no swing to handstand element in the counting elements, 0.3 penalty
     let penalty = 0.3;
-    const handstandSkills = routine.filter(skill => skill.type == RingsSkills.SWING_HANDSTAND);
+    const handstandSkills = routine.filter(skill => RingsSkills[skill.type] == RingsSkills.SWING_HANDSTAND);
     if (handstandSkills.length > 0) {
         penalty = 0;
+    } else {
+        corrections.push("You have no swing to handstand skill, leading to a 0.3 penalty");
     }
 
     const score = execution + difficulty + requirements + bonus - penalty;
@@ -486,6 +516,7 @@ function scoreRings(routine) {
         "bonus" : bonus,
         "requirements": requirements,
         "penalty": penalty,
+        "corrections" : corrections
     };
 }
 

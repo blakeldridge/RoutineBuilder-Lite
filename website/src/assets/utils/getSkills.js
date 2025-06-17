@@ -1,5 +1,6 @@
 import floorSkills from "../data/skills/FloorSkills.updated.json";
 import pommelSkills from "../data/skills/PommelSkills.updated.json";
+import ringsSkills from "../data/skills/RingsSkills.updated.json";
 import vaultSkills from "../data/skills/VaultSkills.updated.json";
 import pbarSkills from "../data/skills/PbarSkills.updated.json";
 import hbarSkills from "../data/skills/HbarSkills.updated.json";
@@ -12,6 +13,8 @@ export default function getSkills(apparatus) {
             return getFloorSkills();
         case Apparatus.POMMEL:
             return getPommelSkills();
+        case Apparatus.RINGS:
+            return getRingsSkills();
         case Apparatus.VAULT:
             return getVaultSkills();
         case Apparatus.PBAR:
@@ -29,6 +32,10 @@ function getFloorSkills() {
 
 function getPommelSkills() {
     return pommelSkills;
+}
+
+function getRingsSkills() {
+    return ringsSkills
 }
 
 function getVaultSkills() {

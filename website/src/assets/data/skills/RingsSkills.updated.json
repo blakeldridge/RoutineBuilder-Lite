@@ -229,7 +229,7 @@
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "LSIT"
   },
   {
     "id": 29,
@@ -237,7 +237,7 @@
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VSIT"
   },
   {
     "id": 30,
@@ -245,7 +245,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 31,
@@ -253,7 +253,7 @@
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "BACK_LEVER"
   },
   {
     "id": 32,
@@ -261,7 +261,7 @@
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 33,
@@ -269,7 +269,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 34,
@@ -277,7 +277,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VICTORIAN"
   },
   {
     "id": 35,
@@ -293,7 +293,7 @@
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 37,
@@ -301,7 +301,7 @@
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 38,
@@ -309,7 +309,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 39,
@@ -317,7 +317,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 40,
@@ -345,7 +345,7 @@
   },
   {
     "id": 43,
-    "name": "Press to hdst. with str. body and str. arms froms wallow (2 s.).",
+    "name": "Press to hdst. with str. body and str. arms from swallow (2 s.).",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
@@ -373,7 +373,7 @@
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "LSIT"
   },
   {
     "id": 47,
@@ -381,7 +381,7 @@
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 48,
@@ -389,7 +389,7 @@
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "BACK_LEVER"
   },
   {
     "id": 49,
@@ -397,7 +397,7 @@
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "BACK_LEVER"
   },
   {
     "id": 50,
@@ -405,7 +405,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 51,
@@ -413,7 +413,7 @@
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "BACK_LEVER"
   },
   {
     "id": 52,
@@ -421,7 +421,7 @@
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "LSIT"
   },
   {
     "id": 53,
@@ -429,7 +429,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 54,
@@ -437,7 +437,7 @@
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VICTORIAN"
   },
   {
     "id": 55,
@@ -445,7 +445,7 @@
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "BACK_LEVER"
   },
   {
     "id": 56,
@@ -453,7 +453,7 @@
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 57,
@@ -461,7 +461,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 58,
@@ -469,7 +469,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 59,
@@ -477,7 +477,7 @@
     "difficulty": 0.7,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VICTORIAN"
   },
   {
     "id": 60,
@@ -493,7 +493,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 62,
@@ -501,7 +501,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 63,
@@ -509,7 +509,7 @@
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 64,
@@ -517,7 +517,7 @@
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "LSIT"
   },
   {
     "id": 65,
@@ -525,7 +525,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 66,
@@ -533,7 +533,7 @@
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 67,
@@ -541,7 +541,7 @@
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 68,
@@ -549,7 +549,7 @@
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 69,
@@ -557,7 +557,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 70,
@@ -565,7 +565,7 @@
     "difficulty": 0.7,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 71,
@@ -573,7 +573,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 72,
@@ -581,7 +581,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 73,
@@ -589,7 +589,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 74,
@@ -597,7 +597,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 75,
@@ -605,7 +605,7 @@
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 76,
@@ -613,7 +613,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 77,
@@ -621,7 +621,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 78,
@@ -629,7 +629,7 @@
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VICTORIAN"
   },
   {
     "id": 79,
@@ -637,7 +637,7 @@
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 80,
@@ -645,7 +645,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 81,
@@ -661,7 +661,7 @@
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 83,
@@ -669,7 +669,7 @@
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 84,
@@ -677,7 +677,7 @@
     "difficulty": 0.7,
     "group": 2,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 85,
@@ -685,7 +685,7 @@
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "LSIT"
   },
   {
     "id": 86,
@@ -693,7 +693,7 @@
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VSIT"
   },
   {
     "id": 87,
@@ -701,7 +701,7 @@
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "LSIT"
   },
   {
     "id": 88,
@@ -709,7 +709,7 @@
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VSIT"
   },
   {
     "id": 89,
@@ -717,7 +717,7 @@
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "LSIT"
   },
   {
     "id": 90,
@@ -725,7 +725,7 @@
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VSIT"
   },
   {
     "id": 91,
@@ -733,7 +733,7 @@
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 92,
@@ -741,7 +741,7 @@
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 93,
@@ -749,7 +749,7 @@
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 94,
@@ -757,7 +757,7 @@
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 95,
@@ -765,7 +765,7 @@
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 96,
@@ -773,7 +773,7 @@
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 97,
@@ -781,7 +781,7 @@
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 98,
@@ -789,7 +789,7 @@
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VICTORIAN"
   },
   {
     "id": 99,
@@ -797,7 +797,7 @@
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 100,
@@ -805,7 +805,7 @@
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 101,
@@ -813,7 +813,7 @@
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 102,
@@ -829,7 +829,7 @@
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 104,
@@ -837,7 +837,7 @@
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 105,
@@ -845,7 +845,7 @@
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "CROSS"
   },
   {
     "id": 106,
@@ -853,7 +853,7 @@
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 107,
@@ -861,7 +861,7 @@
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 108,
@@ -869,7 +869,7 @@
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "VICTORIAN"
   },
   {
     "id": 109,
@@ -877,15 +877,15 @@
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 110,
     "name": "Uprise bwd. to support scale straddled (2 s.).",
     "difficulty": 0.2,
-    "group": 2,
+    "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 111,
@@ -893,7 +893,7 @@
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 112,
@@ -901,7 +901,7 @@
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "MALTESE"
   },
   {
     "id": 113,
@@ -909,7 +909,7 @@
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "INVERTED_CROSS"
   },
   {
     "id": 114,
@@ -917,7 +917,7 @@
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
-    "type": ""
+    "type": "PLANCHE"
   },
   {
     "id": 115,
