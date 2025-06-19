@@ -542,23 +542,19 @@ function scoreRings(routine) {
 // Function to calculate a vault routine
 function scoreVault(routine) {
     let corrections = [];
-    console.log(routine);
+    let invalidIndexes = []
     // invalidate 2nd vault if it is the same group
     let vault1 = routine[0] ? 10 + roundTo(routine[0].difficulty, 1) : 0;
     let vault2 = routine[1] ? 10 + roundTo(routine[1].difficulty, 1) : 0;
 
     if (routine[0] && routine[1] && routine[0].group == routine[1].group) {
         vault2 = 0;
+        invalidIndexes.push(routine[1].id);
         corrections.push("You cannot have 2 vaults from the same group.");
     }
 
     // calculate scores
     let average = roundTo((vault1 + vault2) / 2, 2);
-
-    const invalidIndexes = routine.reduce((acc, skill, index) => {
-        if (skill.invalid) acc.push(skill.id);
-        return acc;
-    }, []);
     
     return {
         "vault1" : vault1,
