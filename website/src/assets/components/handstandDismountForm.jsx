@@ -1,5 +1,10 @@
 import { useState, forwardRef, useImperativeHandle } from "react";
 
+function roundTo(num, decimals) {
+  const factor = 10 ** decimals;
+  return Math.round(num * factor) / factor;
+}
+
 const HandstandDismountForm = forwardRef(({ isOpen, addSkill, handleClose }, ref) => {
     const [ skill, setSkill ] = useState(null);
     const [ index, setIndex ] = useState(-1); 
@@ -24,9 +29,10 @@ const HandstandDismountForm = forwardRef(({ isOpen, addSkill, handleClose }, ref
     };
 
     const addTurns = () => {
-        skill.difficulty = skill.difficulty + value;
-        skill.name = skill.name + turns;
-        addSkill(index, skill);
+        const newSkill = { ...skill };
+        newSkill.difficulty = roundTo(skill.difficulty + value, 1);
+        newSkill.name = skill.name + " + " +  turns;
+        addSkill(index, newSkill);
         resetForm();
     };
 
@@ -57,7 +63,7 @@ const HandstandDismountForm = forwardRef(({ isOpen, addSkill, handleClose }, ref
                 </select>
 
                 <p className="p-2">Dismount Value : {skill ? skill.difficulty: 0}</p>
-                <p className="p-2">New Value : {skill ? skill.difficulty + value : 0}</p>
+                <p className="p-2">New Value : {skill ? roundTo(skill.difficulty + value, 1) : 0}</p>
                 <div className="flex flex-row gap-2 justify-center items-center">
                     <button onClick={handleCancel}>Cancel</button>
                     <button onClick={addTurns}>Add</button>
