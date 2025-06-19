@@ -12,7 +12,7 @@ const ApparatusSelector = () => {
     };
 
     return (
-        <div>
+        <div className="grid grid-cols-3 gap-4 text-lg">
             <button data-apparatus={Apparatus.FLOOR} onClick={handleClick}>{Apparatus.FLOOR}</button>
             <button data-apparatus={Apparatus.POMMEL} onClick={handleClick}>{Apparatus.POMMEL}</button>
             <button data-apparatus={Apparatus.RINGS} onClick={handleClick}>{Apparatus.RINGS}</button>

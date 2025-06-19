@@ -61,11 +61,10 @@ const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
     };
 
     return (
-        <div className="flex flex-row justify-center items-center" style={{"gap":"1em", "margin":"1em"}}>
-            <span>Filter Skills : </span>
+        <div className="flex flex-row justify-center items-center gap-4 mb-4">
 
-            <div className="flex flex-col">
-                <select value={groupFilter} onChange={(event) => setGroupFilter(event.target.value)}>
+            <div className="flex flex-row gap-2">
+                <select className="w-full min-w-[10-rem] sm:min-w-[5rem] md:min-w-[10rem] truncate px-2 py-1 border border-gray-300 rounded text-sm" value={groupFilter} onChange={(event) => setGroupFilter(event.target.value)}>
                     <option value={0}>All Groups</option>
                     <option value={1}>Group I</option>
                     <option value={2}>Group II</option>
@@ -77,7 +76,7 @@ const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
                 </select>
 
                 {apparatus !== Apparatus.VAULT && (
-                    <select value={difficultyFilter} onChange={(event) => setDifficultyFilter(event.target.value)}>
+                    <select className="w-full min-w-[10-rem] sm:min-w-[5rem] md:min-w-[10rem] truncate px-2 py-1 border border-gray-300 rounded text-sm" value={difficultyFilter} onChange={(event) => setDifficultyFilter(event.target.value)}>
                         <option value={0}>All Difficulties</option>
                         <option value={0.1}>A</option>
                         <option value={0.2}>B</option>
@@ -93,12 +92,12 @@ const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
                 )}
             </div>
 
-            <form onSubmit={handleSearch}>
+            <form onSubmit={handleSearch} className="flex flex-row gap-2">
                 <input type="text" placeholder="Search..." value={nameFilter} onChange={(event) => setNameFilter(event.target.value)} />
                 <button type="submit">Search</button>
             </form>
 
-            <button onClick={resetFilter}>Clear Filters</button>
+            <button className="truncate" onClick={resetFilter}>Clear Filters</button>
         </div>
     );
 });

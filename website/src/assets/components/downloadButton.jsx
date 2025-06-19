@@ -54,10 +54,10 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
     };
 
     return (
-        <div className="flex flex-row">
-            <form onSubmit={handleDownload}>
-                <input type="text" placeholder="File Name..." value={fileName} onChange={(event) => setFileName(event.target.value)} />
-                <button type="submit">Download Routine</button>
+        <div>
+            <form onSubmit={handleDownload} className="flex flex-row items-center gap-2">
+                <input className="px-2 py-1 border rounded text-sm" type="text" placeholder="File Name..." value={fileName} onChange={(event) => setFileName(event.target.value)} />
+                <button className="px-4 py-2 rounded bg-blue-600 text-white text-sm hover:bg-blue-500" type="submit">Download</button>
             </form>
         </div>
     );

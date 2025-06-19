@@ -121,14 +121,12 @@ const RoutineBuilder = () => {
 
     return (
         <div>
-            <button onClick={() => navigate('/')}>Return</button>
+            <button className="absolute top-10 left-10 p-4" onClick={() => navigate('/')}>Return</button>
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} apparatus={apparatusName} filterUpdated={() => updateSkills()} />
 
-            <div className="flex flex-row justify-between">
-                <div></div>
-                <div></div>
-                <div className="flex flex-row">
+            <div className="flex flex-row justify-between items-center">
+                <div className="flex flex-row items-center gap-4">
                     {apparatusName === Apparatus.POMMEL ? (
                         <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
                     ) : null}
@@ -137,12 +135,12 @@ const RoutineBuilder = () => {
                 <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} />
             </div>
 
-            <div className="flex flex-col">
+            <div className="w-full min-w-full flex flex-col mt-4">
                 {routine.map((element, index) => {
                     return (
-                        <div className="flex flex-row" style={{"gap":"2em"}}>
+                        <div className="mb-4 flex flex-row text-center items-center gap-8">
                             <p>{index + 1}</p>
-                            <select key={index} id={`select-${index}`} value={routine[index]? routine[index].id.toString() : -1} onChange={(event) => handleEditRoutine(index, event)}>
+                            <select className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" key={index} id={`select-${index}`} value={routine[index]? routine[index].id.toString() : -1} onChange={(event) => handleEditRoutine(index, event)}>
                                 <option  value={-1}>-- Select --</option>
                                 {routine[index] ? (
                                     <option key={routine[index].id} value={routine[index].id}>{routine[index].name}</option>
@@ -152,13 +150,21 @@ const RoutineBuilder = () => {
                                         return null;
                                     }
                                     return  (
-                                        <option key={skill.id} value={skill.id}>{skill.name}</option>
+                                        <option key={skill.id} value={skill.id} title={skill.name}>
+                                            {skill.name.length > 99 ? skill.name.slice(0, 97) + '...' : skill.name}
+                                        </option>
                                     )
                                 })}
                             </select>
-                            <p>Group : {routine[index] ? routine[index].group : "-"}  </p>
-                            <p>Difficulty : {routine[index] ? (routine[index].invalid ? "uncounted" : routine[index].difficulty): "-"}</p>
-                            <button disabled={!routine[index]} onClick={() => removeSkill(index)}>x</button>
+                            <p className="flex flex-col text-left">
+                                <span className="text-xs font-semibold text-gray-500">Group</span>
+                                <span>{routine[index] ? routine[index].group : "-"}</span>
+                            </p>
+                            <p className="flex flex-col text-left">
+                                <span className="text-xs font-semibold text-gray-500">Difficulty</span>
+                                <span>{routine[index] ? (routine[index].invalid ? "N/A" : routine[index].difficulty) : "-"}</span>
+                            </p>
+                            <button className="items-center justify-center" disabled={!routine[index]} onClick={() => removeSkill(index)}>X</button>
                             {canConnect(index) ? (
                                 <button onClick={() => connectSkills(index)}>{routine[index].connection ? "-" : "+"}</button>
                             ) : null}
@@ -169,9 +175,9 @@ const RoutineBuilder = () => {
             </div>
             <RoutineResult ref={scoreTableRef} apparatus={apparatusName} />
 
-            <FlopForm isOpen={isOpen} handleAddSkill={(skill) => addSkill(skill)} skillExists={checkSkillExistsByName}/>
+            <FlopForm isOpen={isOpen} handleAddSkill={(skill) => addSkill(skill)} skillExists={checkSkillExistsByName} handleClose={() => setIsOpen(false)}/>
 
-            <HandstandDismountForm ref={handstandDismountRef} isOpen={isHdstOpen} addSkill={placeHandstandDismount} />
+            <HandstandDismountForm ref={handstandDismountRef} isOpen={isHdstOpen} addSkill={placeHandstandDismount} handleClose={() => setIsHdstOpen(false)} />
         </div>
     );
 };

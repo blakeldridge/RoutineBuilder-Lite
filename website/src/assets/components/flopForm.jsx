@@ -3,7 +3,7 @@ import { Apparatus } from "../utils/apparatus";
 import { PommelSkills, PommelTypeSkills } from "../utils/skillTypes";
 import { convertDifficultyLetterToValue } from "../utils/skillInfo";
 
-const FlopForm = ({ isOpen, handleAddSkill, skillExists }) => {
+const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
     const [ skills, setSkills ] = useState(["", "", "", "", ""]);
     const [ flopValue, setFlopValue ] = useState("N/A");
     const [ visibleDropdowns, setVisibleDropdowns ] = useState(3);
@@ -50,8 +50,14 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists }) => {
                 subtype : skills[0] === "Bertonceji" ||  skills[0] === "Davtyan" ? "SOHN_BEZ_FLOP" : "",
             };
             // call parent function to add skill
-            handleAddSkill(flop)
+            handleAddSkill(flop);
+            resetFlop();
         }
+    };
+
+    const handleCancel = () => {
+        resetFlop();
+        handleClose();
     };
 
     const createFlopName = () => {
@@ -154,11 +160,11 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists }) => {
     }
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 w-vw h-vh" style={{"backgroundColor":"black"}}>
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded shadow-lg z-50" style={{"backgroundColor":"#222222"}}>
+        <div className="fixed inset-0 z-40 w-screen h-screen" style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
+            <div className="fixed top-1/2 left-1/2 bg-[#242424] transform -translate-x-1/2 -translate-y-1/2 p-6 rounded shadow-lg z-50">
                 {skillOptions.map((options, index) => {
                     return (
-                        <select key={index} value={skills[index]} onChange={(e) => handleSkillAdded(index, e.target.value)}>
+                        <select className="mb-2" key={index} value={skills[index]} onChange={(e) => handleSkillAdded(index, e.target.value)}>
                             <option value={""}>-- Select --</option>
                             {options.map((option, i) => {
                                 return (
@@ -169,15 +175,16 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists }) => {
                     );
                 })}
 
-                <p>Flop Value : {flopValue}</p>
+                <h5 className="p-2">Flop Value : {flopValue}</h5>
                 {isAlertOpen ? (
                     <div>
-                        <h3>Flop Already Exits!</h3>
+                        <h6>Flop Already Exits!</h6>
                         <p>Please try a different combination of skills.</p>
                     </div>
                 ) : null }
 
-                <div>
+                <div className="flex flex-row items-center justify-center gap-2">
+                    <button onClick={handleCancel}>Cancel</button>
                     <button onClick={resetFlop}>Clear</button>
                     <button onClick={addFlop}>Add Flop</button>
                 </div>
