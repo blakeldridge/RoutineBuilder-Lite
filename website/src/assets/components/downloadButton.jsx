@@ -1,4 +1,5 @@
 import { jsPDF } from "jspdf";
+import { autoTable } from "jspdf-autotable";
 import { useState } from "react";
 import { Apparatus } from "../utils/apparatus";
 
@@ -8,12 +9,7 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
     const handleDownload = async (e) => {
         e.preventDefault();
 
-        let saveName;
-        if (fileName == "") {
-            saveName = "unnamed";
-        } else {
-            saveName = fileName.replace(/\s/g, "-");
-        }
+        let saveName = fileName.trim() === "" ? "unnamed" : fileName.replace(/\s/g, "-");
 
         const doc = new jsPDF({
             orientation: "landscape",
@@ -21,37 +17,79 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
             format: "a4"
         });
 
-        routine = routine.filter(skill => skill != null);
+        const marginLeft = 10;
+        let y = 15;
 
-        doc.setFontSize(12);
+        // Title
+        doc.setFontSize(32);
+        doc.text(apparatus, marginLeft, y);
+        y += 10;
 
-        // Add text content
-        doc.text(apparatus, 10, 10);
-
-        if (apparatus == Apparatus.VAULT) {
-            doc.text(`Average Vault : ${routineResult.average}`, 10, 20);
-            doc.text(`Vault 1 : ${routineResult.vault1} (Counted in the all around competition)`, 10, 30);
-            doc.text(`Vault 2 : ${routineResult.vault2}`, 10, 40);
+        // Score Summary
+        doc.setFontSize(14);
+        if (apparatus === Apparatus.VAULT) {
+            doc.text(`Average Vault: ${routineResult.average}`, marginLeft, y);
+            y += 8;
+            doc.setFontSize(12);
+            doc.text(`Vault 1: ${routineResult.vault1} (Counted in all-around)`, marginLeft, y);
+            y += 6;
+            doc.text(`Vault 2: ${routineResult.vault2}`, marginLeft, y);
+            y += 10;
         } else {
-            doc.text(`Start Value : ${routineResult.score}`, 10, 20);
-            doc.text(`Difficulty : ${routineResult.difficulty}`, 10, 30);
-            doc.text(`Requirements : ${routineResult.requirements}`, 10, 40);
-            if (routineResult.bonus) {
-                doc.text(`Bonus : ${routineResult.bonus}`, 10, 50);
-            }
+            let baseX = 10;
+            // Set base positions
+            doc.setFontSize(20); // Bigger font for "Start Value"
+            doc.setTextColor(0, 0, 0);
+            doc.text(`SV: ${routineResult.score}`, baseX, y);
+            y += 8;
 
-            if (routineResult.penalty) {
-                doc.text(`Penalty : ${routineResult.penalty}`, 10, 60);
-            }
+            // Smaller blue labels + values below
+            doc.setFontSize(10);
+            doc.setTextColor(107, 114, 128); // light blue
+
+            const labels = ['Difficulty', 'Requirements', 'Bonus', 'Penalty'];
+            const values = [
+                routineResult.difficulty ?? '-',
+                routineResult.requirements ?? '-',
+                routineResult.bonus ?? '-',
+                routineResult.penalty ?? '-',
+            ];
+            const spacing = [0, 18, 26, 14];
+
+            let x = baseX;
+            // Draw each label + value in a column
+            labels.forEach((label, i) => {
+                x += spacing[i];
+                doc.text(label, x, y);         // label above
+                doc.setTextColor(0);               // black for value
+                doc.text(values[i].toString(), x, y + 6); // value below
+                doc.setTextColor(107, 114, 128);   // reset color for next label
+            });
+            y += 10
         }
 
-        for (let i = 0; i < routine.length; i++) {
-            doc.text(`${i + 1}  ${routine[i].name}     Group : ${routine[i].group}  Difficulty : ${routine[i].difficulty}`, 10, 70 + (i * 10));
-        }
+        // Table of Skills
+        const filteredRoutine = routine.filter(skill => skill != null);
 
-        // Save the PDF to user's device
+        const tableBody = filteredRoutine.map((skill, index) => [
+            index + 1,
+            skill.name,
+            skill.group,
+            skill.difficulty
+        ]);
+
+        autoTable(doc, {
+            startY: y,
+            head: [["#", "Skill Name", "Group", "Difficulty"]],
+            body: tableBody,
+            theme: "striped",
+            styles: { fontSize: 10 },
+            headStyles: { fillColor: [41, 128, 185] } // Optional: blue header
+        });
+
         doc.save(saveName + ".pdf");
     };
+
 
     return (
         <div>
