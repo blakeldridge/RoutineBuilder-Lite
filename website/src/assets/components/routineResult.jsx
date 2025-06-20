@@ -21,14 +21,18 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
     return (
         <div className="flex flex-row justify-between gap-4">
             {apparatus == Apparatus.VAULT ? (
-                <div className="flex flex-col">
-                    <h4>Average: {result.average}</h4>
+                <div className="flex flex-col justify-start text-left">
+                    <h2>SV: {result.vault1}</h2>
                     <div className="flex flex-row gap-4">
-                        <p className="flex flex-col text-left">
+                        <p className="flex flex-col text-left whitespace-nowrap overflow-hidden">
+                            <span className="text-xs font-semibold text-gray-500">Average</span>
+                            <span>{result.average}</span>
+                        </p>
+                        <p className="flex flex-col text-left whitespace-nowrap overflow-hidden">
                             <span className="text-xs font-semibold text-gray-500">Vault 1</span>
                             <span>{result.vault1}</span>
                         </p>
-                        <p className="flex flex-col text-left">
+                        <p className="flex flex-col text-left whitespace-nowrap overflow-hidden">
                             <span className="text-xs font-semibold text-gray-500">Vault 2</span>
                             <span>{result.vault2}</span>
                         </p>
@@ -61,13 +65,6 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
                     </div>
                 </div>
             )}
-            {tipsOpen ? ( 
-                <></>
-            ) : (
-                <div>
-                    <button onClick={() => setTipsOpen(true)}>See corrections</button>
-                </div>
-            )}
             <div className="w-full border justify-center items-center text-center">
                 <ul className="flex flex-col h-full m-auto justify-center items-center text-center">
                     {result.corrections.length > 0 ? result.corrections.map(correction => {
@@ -78,8 +75,6 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
                         <p>No suggested corrections</p>
                     )}
                 </ul>
-
-                {/*<button onClick={() => setTipsOpen(false)}>Close corrections</button>*/}
             </div>
         </div>
     );
