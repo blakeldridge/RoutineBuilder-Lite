@@ -91,7 +91,6 @@ const RoutineBuilder = () => {
 
     const calculateScore = () => {
         const newScore = scoreRoutine(routine, apparatusName);
-        console.log(newScore.invalid);
 
         for (let skill of routine) {
             if (skill) {

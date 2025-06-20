@@ -61,7 +61,7 @@ const SkillFilterForm = forwardRef(({ apparatus, filterUpdated }, ref) => {
     };
 
     return (
-        <div className="flex flex-row justify-center items-center gap-4 mb-4">
+        <div className="flex flex-row justify-center items-center gap-4 mb-4 mt-8">
 
             <div className="flex flex-row gap-2">
                 <select className="w-full min-w-[10-rem] sm:min-w-[5rem] md:min-w-[10rem] truncate px-2 py-1 border border-gray-300 rounded text-sm" value={groupFilter} onChange={(event) => setGroupFilter(event.target.value)}>
