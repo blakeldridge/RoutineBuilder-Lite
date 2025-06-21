@@ -21,6 +21,7 @@ const RoutineBuilder = () => {
     const [ skills, setSkills ] = useState([]);
     const [ isOpen, setIsOpen ] = useState(false);
     const [ isHdstOpen, setIsHdstOpen ] = useState(false);
+    const [ isSkillsOpen, setIsSkillsOpen ] = useState(false);
 
     if (!apparatus || !Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {
         return <Navigate to="/404" replace />
@@ -117,12 +118,18 @@ const RoutineBuilder = () => {
             return false;
         }
     };
+    
+    const handleSkillChosen = (skill, index) => {
+        routine[index] = skill;
+        calculateScore();
+        setIsSkillsOpen(false);
+    };
 
     return (
         <div>
             <button className="absolute top-10 left-10 p-4" onClick={() => navigate('/')}>Return</button>
             <h1>{apparatusName}</h1>
-            <SkillFilterForm ref={skillFilterRef} apparatus={apparatusName} filterUpdated={() => updateSkills()} />
+            <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
 
             <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row items-center gap-4">
@@ -139,7 +146,12 @@ const RoutineBuilder = () => {
                     return (
                         <div className="mb-4 flex flex-row text-center items-center gap-8">
                             <p>{index + 1}</p>
-                            <select className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" key={index} id={`select-${index}`} value={routine[index]? routine[index].id.toString() : -1} onChange={(event) => handleEditRoutine(index, event)}>
+                            {routine[index] ? (
+                                <button className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" onClick={() => {setIsSkillsOpen(true); skillFilterRef.current.chooseSkill(index)}}>{routine[index].name}</button>
+                            ) : (
+                                <button className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" onClick={() => {setIsSkillsOpen(true); skillFilterRef.current.chooseSkill(index)}}>-- Select Skill --</button>
+                            )}
+                            {/*<select className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" key={index} id={`select-${index}`} value={routine[index]? routine[index].id.toString() : -1} onChange={(event) => handleEditRoutine(index, event)}>
                                 <option  value={-1}>-- Select --</option>
                                 {routine[index] ? (
                                     <option key={routine[index].id} value={routine[index].id}>{routine[index].name}</option>
@@ -154,7 +166,7 @@ const RoutineBuilder = () => {
                                         </option>
                                     )
                                 })}
-                            </select>
+                            </select>*/}
                             <p className="flex flex-col text-left">
                                 <span className="text-xs font-semibold text-gray-500">Group</span>
                                 <span>{routine[index] ? routine[index].group : "-"}</span>
