@@ -43,6 +43,10 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
                     <h2>SV: {result.score}</h2>
                     <div className="flex flex-row gap-4">
                         <p className="flex flex-col text-left">
+                            <span className="text-xs font-semibold text-gray-500">Execution</span>
+                            <span>{result.execution}</span>
+                        </p>
+                        <p className="flex flex-col text-left">
                             <span className="text-xs font-semibold text-gray-500">Difficulty</span>
                             <span>{result.difficulty}</span>
                         </p>
