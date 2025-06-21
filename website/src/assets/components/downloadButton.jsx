@@ -47,14 +47,15 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
             doc.setFontSize(10);
             doc.setTextColor(107, 114, 128); // light blue
 
-            const labels = ['Difficulty', 'Requirements', 'Bonus', 'Penalty'];
+            const labels = ['Execution', 'Difficulty', 'Requirements', 'Bonus', 'Penalty'];
             const values = [
+                routineResult.execution ?? '-',
                 routineResult.difficulty ?? '-',
                 routineResult.requirements ?? '-',
                 routineResult.bonus ?? '-',
                 routineResult.penalty ?? '-',
             ];
-            const spacing = [0, 18, 26, 14];
+            const spacing = [0, 20, 18, 26, 14];
 
             let x = baseX;
             // Draw each label + value in a column
