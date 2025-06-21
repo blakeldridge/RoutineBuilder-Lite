@@ -1,6 +1,7 @@
 import { useState, useEffect, useImperativeHandle, forwardRef } from "react";
 import getSkills from "../utils/getSkills";
 import { Apparatus } from "../utils/apparatus";
+import FlopForm from "./flopForm";
 
 const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSkill, cancelChoice }, ref) => {
     const [ skills, setSkills ] = useState(getSkills(apparatus))
@@ -10,6 +11,7 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
     const [ nameFilter, setNameFilter ] = useState('');
     const [ filteredSkills, setFilteredSkills ] = useState(skills);
     const [ skillIndex, setSkillIndex ] = useState(-1);
+    const [ isFlopFormOpen, setIsFlopFormOpen ] = useState(false);
 
     const resetFilter = () => {
         setGroupFilter(0);
@@ -28,7 +30,7 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
 
         addSkill : (skill) => {
             skill.id = skills.length + 1;
-            setSkills([...skills, skill]);
+            setSkills([skill, ...skills]);
         },
 
         skillExistsByName : (skillName) => {
@@ -43,6 +45,24 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
             return skillExists;
         }
     }));
+
+    const addSkill = (skill) => {
+        skill.id = skills.length + 1;
+        setSkills([skill, ...skills]);
+        setIsFlopFormOpen(false);
+    };
+
+    const checkSkillExistsByName = (skillName) => {
+        let skillExists = false;
+        for (let i = skills.length - 1; i >= 0; i--) {
+            if (skillName == skills[i].name) {
+                skillExists = true;
+                break;
+            }
+        }  
+
+        return skillExists;
+    };
 
     useEffect(() => {
         filterSkills();
@@ -73,6 +93,10 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
         <div className="flex flex-col h-screen fixed inset-0 z-40 w-screen" style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
             <button onClick={cancelChoice} className="flex-none m-2 w-12 h-12">X</button>
             <div className="flex-none h-16 flex flex-row justify-center items-center gap-4 p-4">
+
+                {apparatus === Apparatus.POMMEL ? (
+                    <button onClick={() => setIsFlopFormOpen(true)}>Create Flop</button>
+                ) : null}
 
                 <div className="flex flex-row gap-2">
                     <select className="w-full min-w-[10-rem] sm:min-w-[5rem] md:min-w-[10rem] truncate px-2 py-1 border border-gray-300 rounded text-sm" value={groupFilter} onChange={(event) => setGroupFilter(event.target.value)}>
@@ -121,6 +145,8 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
                     );
                 })}
             </div>
+
+            <FlopForm isOpen={isFlopFormOpen} handleAddSkill={(skill) => addSkill(skill)} skillExists={checkSkillExistsByName} handleClose={() => setIsFlopFormOpen(false)}/>
         </div>
     );
 });

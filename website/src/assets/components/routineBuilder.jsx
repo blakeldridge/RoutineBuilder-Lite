@@ -137,9 +137,6 @@ const RoutineBuilder = () => {
 
             <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row items-center gap-4">
-                    {apparatusName === Apparatus.POMMEL ? (
-                        <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? "Close" : "Create Flop"}</button>
-                    ) : null}
                     <button onClick={resetRoutine}>Clear Routine</button>
                 </div>
                 <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} />
@@ -173,8 +170,6 @@ const RoutineBuilder = () => {
                 })}
             </div>
             <RoutineResult ref={scoreTableRef} apparatus={apparatusName} />
-
-            <FlopForm isOpen={isOpen} handleAddSkill={(skill) => addSkill(skill)} skillExists={checkSkillExistsByName} handleClose={() => setIsOpen(false)}/>
 
             <HandstandDismountForm ref={handstandDismountRef} isOpen={isHdstOpen} addSkill={placeHandstandDismount} handleClose={() => setIsHdstOpen(false)} />
         </div>
