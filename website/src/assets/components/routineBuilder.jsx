@@ -35,6 +35,10 @@ const RoutineBuilder = () => {
         updateSkills();
     }, [skillFilterRef]);
 
+    useEffect(() => {
+        calculateScore();
+    }, [routine]);
+
     const updateSkills = () => {
         setSkills(skillFilterRef.current.getFilteredSkills());
     };
@@ -151,22 +155,6 @@ const RoutineBuilder = () => {
                             ) : (
                                 <button className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" onClick={() => {setIsSkillsOpen(true); skillFilterRef.current.chooseSkill(index)}}>-- Select Skill --</button>
                             )}
-                            {/*<select className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" key={index} id={`select-${index}`} value={routine[index]? routine[index].id.toString() : -1} onChange={(event) => handleEditRoutine(index, event)}>
-                                <option  value={-1}>-- Select --</option>
-                                {routine[index] ? (
-                                    <option key={routine[index].id} value={routine[index].id}>{routine[index].name}</option>
-                                ) : null}
-                                {skills.map((skill, i) => {
-                                    if (routine.includes(skill) || (routine[index] && routine[index] == skill)) {
-                                        return null;
-                                    }
-                                    return  (
-                                        <option key={skill.id} value={skill.id} title={skill.name}>
-                                            {skill.name.length > 99 ? skill.name.slice(0, 97) + '...' : skill.name}
-                                        </option>
-                                    )
-                                })}
-                            </select>*/}
                             <p className="flex flex-col text-left">
                                 <span className="text-xs font-semibold text-gray-500">Group</span>
                                 <span>{routine[index] ? routine[index].group : "-"}</span>

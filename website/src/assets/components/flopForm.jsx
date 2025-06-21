@@ -10,6 +10,7 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
     const [ addDisabled, setAddDisabled ] = useState(true);
     const [ style, setStyle ] = useState("");
     const [ isAlertOpen, setAlertOpen ] = useState(false);
+    const [ isDisabled, setIsDisabled ] = useState(false);
 
     const skillOptions = [
         ["Bertonceji", "Davtyan", "Circle", "DSB"],
@@ -78,7 +79,7 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
         const hasDSA = customFlop.includes("DSA");
 
         // Initialize value
-        let value = "Can not identify flop sequence.";
+        let value = "N/A";
 
         // Calculate bertonceji or davtyan flops
         if ((customFlop[0] === "Bertonceji" || customFlop[0] === "Davtyan") && customFlop[1] === "Circle") {
@@ -186,7 +187,7 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
                 <div className="flex flex-row items-center justify-center gap-2">
                     <button onClick={handleCancel}>Cancel</button>
                     <button onClick={resetFlop}>Clear</button>
-                    <button onClick={addFlop}>Add Flop</button>
+                    <button disabled={flopValue == "N/A"} onClick={addFlop}>Add Flop</button>
                 </div>
             </div>
         </div>

@@ -7,7 +7,7 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
     const [ fileName, setFileName ] = useState("");
 
     const handleDownload = async (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         let saveName = fileName.trim() === "" ? "unnamed" : fileName.replace(/\s/g, "-");
 
@@ -91,12 +91,11 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
         doc.save(saveName + ".pdf");
     };
 
-
     return (
         <div>
             <form onSubmit={handleDownload} className="flex flex-row items-center gap-2">
                 <input className="px-2 py-1 border rounded text-sm" type="text" placeholder="File Name..." value={fileName} onChange={(event) => setFileName(event.target.value)} />
-                <button className="px-4 py-2 rounded bg-blue-600 text-white text-sm hover:bg-blue-500" type="submit">Download</button>
+                <button disabled={routine.filter(skill => skill != null).length == 0} className="px-4 py-2 rounded bg-blue-600 text-white text-sm" type="submit">Download</button>
             </form>
         </div>
     );
