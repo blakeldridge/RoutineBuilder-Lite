@@ -158,7 +158,7 @@ const RoutineBuilder = () => {
                             </p>
                             <p className="flex flex-col text-left">
                                 <span className="text-xs font-semibold text-gray-500">Difficulty</span>
-                                <span>{routine[index] ? (routine[index].invalid ? "N/A" : routine[index].difficulty) : "-"}</span>
+                                <span>{routine[index] ? (routine[index].invalid ? "N/A" : routine[index].difficulty.toFixed(1)) : "-"}</span>
                             </p>
                             <button className="items-center justify-center" disabled={!routine[index]} onClick={() => removeSkill(index)}>X</button>
                             {canConnect(index) ? (
