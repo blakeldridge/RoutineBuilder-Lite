@@ -124,9 +124,18 @@ const RoutineBuilder = () => {
     };
     
     const handleSkillChosen = (skill, index) => {
-        routine[index] = skill;
-        calculateScore();
         setIsSkillsOpen(false);
+        // const skillId = parseInt(event.target.value, 10);
+        // const skill = skills.find(skill => skill.id === skillId);
+
+        if (apparatusName == Apparatus.POMMEL && PommelSkills[skill.type] == PommelSkills.HANDSTAND_DISMOUNT) {
+            handstandDismountRef.current.setThisSkill(index, skill);
+            setIsHdstOpen(true);
+        } else {
+            routine[index] = skill;
+
+            calculateScore();
+        }      
     };
 
     return (

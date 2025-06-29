@@ -47,6 +47,9 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
     }));
 
     const addSkill = (skill) => {
+        if (apparatus == Apparatus.POMMEL && skill.group == 4) {
+            
+        }
         skill.id = skills.length + 1;
         setSkills([skill, ...skills]);
         setIsFlopFormOpen(false);

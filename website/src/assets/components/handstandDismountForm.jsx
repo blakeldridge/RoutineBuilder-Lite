@@ -25,7 +25,7 @@ const HandstandDismountForm = forwardRef(({ isOpen, addSkill, handleClose }, ref
 
     const addTurns = () => {
         const newSkill = { ...skill };
-        newSkill.difficulty = roundTo(skill.difficulty + value, 1);
+        newSkill.difficulty = skill.difficulty + value;
         newSkill.name = skill.name + " + " +  turns;
         addSkill(index, newSkill);
         resetForm();

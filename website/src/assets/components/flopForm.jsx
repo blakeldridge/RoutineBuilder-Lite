@@ -44,7 +44,7 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
             // create flop skill#
             const flop = {
                 name: flopName,
-                difficulty: convertDifficultyLetterToValue(flopValue),
+                difficulty: flopValue,
                 group : 2,
                 apparatus: Apparatus.POMMEL,
                 type: "FLOP",
@@ -87,24 +87,24 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
             // Calculate for russian flops
             if (customFlop[2] === "180 or 270 Russians") {
                 flopStyle += "ru";
-                value = "E";
+                value = 0.5;
             } else if (customFlop[2] === "360 or 540 Russians") {
                 flopStyle += "ru";
-                value = "F";
+                value = 0.6;
             } else if (customFlop[2] === "720 or 960 Russians") {
                 flopStyle += "ru";
-                value = "G";
+                value = 0.7;
             } else if (customFlop[2] === "1080+ Russians") {
                 flopStyle += "ru";
-                value = "H";
+                value = 0.8;
             }
             // Calculate for stockli flops
             else if (countDSBs === 2) {
                 flopStyle += "st";
-                value = "F";
+                value = 0.6;
             } else if (countDSBs === 1) {
                 flopStyle += "st";
-                value = "E";
+                value = 0.5;
             }
         }
         // Calculate flops from circles or DSB
@@ -113,42 +113,42 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
             if (customFlop[1] === "Circle" || customFlop[1] === "DSB") {
                 if (customFlop[2] === "180 or 270 Russians") {
                     flopStyle += "ru";
-                    value = "D";
+                    value = 0.4;
                 } else if (customFlop[2] === "360 or 540 Russians") {
                     flopStyle += "ru";
-                    value = "E";
+                    value = 0.5;
                 } else if (customFlop[2] === "720 or 960 Russians") {
                     flopStyle += "ru";
-                    value = "F";
+                    value = 0.6;
                 } else if (customFlop[2] === "1080+ Russians") {
                     flopStyle += "ru";
-                    value = "G";
+                    value = 0.7;
                 }
             } else {
                 if (customFlop[1] === "360 or 540 Russians") {
                     flopStyle += "ru";
-                    value = "D";
+                    value = 0.4;
                 } else if (customFlop[1] === "720 or 960 Russians") {
                     flopStyle += "ru";
-                    value = "E";
+                    value = 0.5;
                 } else if (customFlop[1] === "1080+ Russians") {
                     flopStyle += "ru";
-                    value = "F";
+                    value = 0.6;
                 }
             }
 
             if (countDSBs === 2) {
                 if (countCircles > 0) {
                     flopStyle += "st";
-                    value = "E";
+                    value = 0.5;
                 } else if (hasDSA) {
                     flopStyle += "st";
-                    value = "D";
+                    value = 0.4;
                 }
             } else if (countDSBs === 1) {
                 if (countCircles === 2 || (countCircles === 1 && hasDSA)) {
                     flopStyle += "st";
-                    value = "D";
+                    value = 0.4;
                 }
             }
         }
