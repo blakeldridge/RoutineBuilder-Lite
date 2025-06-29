@@ -191,6 +191,10 @@ function scoreFloor(routine) {
     const difficulty = calculateTotal(routine);
     const groups = calculateGroups(routine);
 
+    if (execution < 10) {
+        corrections.push("Need to have 6+ skills in order to receive full execution.")
+    }
+
     // calculate the requirements
     let requirements = 0;
 
@@ -352,6 +356,10 @@ function scorePommel(routine) {
     const difficulty = calculateTotal(routine);
     const groups = calculateGroups(routine);
 
+    if (execution < 10) {
+        corrections.push("Need to have 6+ skills in order to receive full execution.")
+    }
+
     // calculate the requirements
     let requirements = 0;
 
@@ -462,6 +470,10 @@ function scoreRings(routine) {
     const execution = calculateExecution(routine);
     const difficulty = calculateTotal(routine);
     const groups = calculateGroups(routine);
+
+    if (execution < 10) {
+        corrections.push("Need to have 6+ skills in order to receive full execution.")
+    }
 
     // calculate the requirements
     let requirements = 0;
@@ -620,6 +632,10 @@ function scorePbar(routine) {
     const difficulty = calculateTotal(routine);
     const groups = calculateGroups(routine);
 
+    if (execution < 10) {
+        corrections.push("Need to have 6+ skills in order to receive full execution.")
+    }
+
     // calculate the requirements
     let requirements = 0;
 
@@ -715,6 +731,10 @@ function scoreHbar(routine) {
     const execution = calculateExecution(routine);
     const difficulty = calculateTotal(routine);
     const groups = calculateGroups(routine);
+
+    if (execution < 10) {
+        corrections.push("Need to have 6+ skills in order to receive full execution.")
+    }
 
     // calculate the requirements
     let requirements = 0;
