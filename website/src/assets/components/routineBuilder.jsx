@@ -82,7 +82,9 @@ const RoutineBuilder = () => {
     };
 
     const removeSkill = (index) => {
+        routine[index].connection = false;
         routine[index] = null;
+        skillFilterRef.current.filterSkills();
 
         calculateScore();
     };
@@ -117,7 +119,7 @@ const RoutineBuilder = () => {
         } else if (apparatusName == Apparatus.RINGS) {
             return routine[index] && index + 1 < routine.length && routine[index + 1] && RingsSkills[routine[index].type] == RingsSkills.YAMA_JON;
         } else if (apparatusName == Apparatus.HBAR) {
-            return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 4 && routine[index + 1].group != 4;
+            return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 4 && routine[index + 1].group != 4 && (routine[index].group == 2 || routine[index + 1].group == 2);
         } else {
             return false;
         }
@@ -125,8 +127,6 @@ const RoutineBuilder = () => {
     
     const handleSkillChosen = (skill, index) => {
         setIsSkillsOpen(false);
-        // const skillId = parseInt(event.target.value, 10);
-        // const skill = skills.find(skill => skill.id === skillId);
 
         if (apparatusName == Apparatus.POMMEL && PommelSkills[skill.type] == PommelSkills.HANDSTAND_DISMOUNT) {
             handstandDismountRef.current.setThisSkill(index, skill);
@@ -142,7 +142,7 @@ const RoutineBuilder = () => {
         <div>
             <button className="absolute top-10 left-10 p-4" onClick={() => navigate('/')}>Return</button>
             <h1>{apparatusName}</h1>
-            <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
+            <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} routine={routine} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
 
             <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-row items-center gap-4">
@@ -154,7 +154,7 @@ const RoutineBuilder = () => {
             <div className="w-full min-w-full flex flex-col mt-4">
                 {routine.map((element, index) => {
                     return (
-                        <div className="mb-4 flex flex-row text-center items-center gap-8">
+                        <div key={index} className="mb-4 flex flex-row text-center items-center gap-8">
                             <p>{index + 1}</p>
                             {routine[index] ? (
                                 <button className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" onClick={() => {setIsSkillsOpen(true); skillFilterRef.current.chooseSkill(index)}}>{routine[index].name}</button>
@@ -171,7 +171,7 @@ const RoutineBuilder = () => {
                             </p>
                             <button className="items-center justify-center" disabled={!routine[index]} onClick={() => removeSkill(index)}>X</button>
                             {canConnect(index) ? (
-                                <button onClick={() => connectSkills(index)}>{routine[index].connection ? "-" : "+"}</button>
+                                <button style={{"width":"120px"}} onClick={() => connectSkills(index)}>{routine[index].connection ? "disconnect" : "connect"}</button>
                             ) : null}
 
                         </div>

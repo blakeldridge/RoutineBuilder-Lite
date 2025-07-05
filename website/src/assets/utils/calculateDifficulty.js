@@ -152,7 +152,7 @@ function scoreFloor(routine) {
     // add any uncounted skills to corrections
     for (let i = 0; i < routine.length; i++) {
         if (routine[i].invalid) {
-            corrections.push(`Skill ${i + 1} is not counted due to too many skills in group ${routine[i].group}`);
+            corrections.push(`Skill ${i + 1} is not counted due to having more than 4 skills in group ${routine[i].group}`);
         }
     }
 
@@ -305,7 +305,7 @@ function scorePommel(routine) {
     // add any uncounted skills to corrections
     for (let i = 0; i < routine.length; i++) {
         if (routine[i].invalid) {
-            corrections.push(`Skill ${i + 1} is not counted due to too many skills in group ${routine[i].group}`);
+            corrections.push(`Skill ${i + 1} is not counted due to having more than 4 skills in group ${routine[i].group}`);
         }
     }
 
@@ -422,7 +422,7 @@ function scoreRings(routine) {
     // add any uncounted skills to corrections
     for (let i = 0; i < routine.length; i++) {
         if (routine[i].invalid) {
-            corrections.push(`Skill ${i + 1} is not counted due to too many skills in group ${routine[i].group}`);
+            corrections.push(`Skill ${i + 1} is not counted due to having more than 4 many skills in group ${routine[i].group}`);
         }
     }
 
@@ -459,6 +459,7 @@ function scoreRings(routine) {
             strengthSkills += 1;
             if (strengthSkills > 3) {
                 routine[i].invalid = true;
+                corrections.push(`Skill ${i + 1} not counted. Cannot have more than 3 strength skills in a row without separating them with a B+ rated swinging element.`)
             }
         } else if (!routine[i].invalid &&routine[i].group == 1 && strengthSkills >= 3 && routine[i].difficulty >= 0.2) {
             strengthSkills = 0;
@@ -593,7 +594,7 @@ function scorePbar(routine) {
     // add any uncounted skills to corrections
     for (let i = 0; i < routine.length; i++) {
         if (routine[i].invalid) {
-            corrections.push(`Skill ${i + 1} is not counted due to too many skills in group ${routine[i].group}`);
+            corrections.push(`Skill ${i + 1} is not counted due to having more than 4 many skills in group ${routine[i].group}`);
         }
     }
 
@@ -698,7 +699,7 @@ function scoreHbar(routine) {
     // add any uncounted skills to corrections
     for (let i = 0; i < routine.length; i++) {
         if (routine[i] && routine[i].invalid) {
-            corrections.push(`Skill ${i + 1} is not counted due to too many skills in group ${routine[i].group}`);
+            corrections.push(`Skill ${i + 1} is not counted due to having more than 4 many skills in group ${routine[i].group}`);
         }
     }
 

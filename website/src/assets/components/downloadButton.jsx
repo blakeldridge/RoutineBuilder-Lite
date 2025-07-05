@@ -7,8 +7,7 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
     const [ fileName, setFileName ] = useState("");
 
     const handleDownload = async (e) => {
-        // e.preventDefault();
-
+        e.preventDefault();
         let saveName = fileName.trim() === "" ? "unnamed" : fileName.replace(/\s/g, "-");
 
         const doc = new jsPDF({
@@ -28,19 +27,19 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
         // Score Summary
         doc.setFontSize(14);
         if (apparatus === Apparatus.VAULT) {
-            doc.text(`Average Vault: ${routineResult.average}`, marginLeft, y);
+            doc.text(`Average Vault: ${routineResult.average.toFixed(2)}`, marginLeft, y);
             y += 8;
             doc.setFontSize(12);
-            doc.text(`Vault 1: ${routineResult.vault1} (Counted in all-around)`, marginLeft, y);
+            doc.text(`Vault 1: ${routineResult.vault1.toFixed(2)} (Counted in all-around)`, marginLeft, y);
             y += 6;
-            doc.text(`Vault 2: ${routineResult.vault2}`, marginLeft, y);
+            doc.text(`Vault 2: ${routineResult.vault2.toFixed(2)}`, marginLeft, y);
             y += 10;
         } else {
             let baseX = 10;
             // Set base positions
             doc.setFontSize(20); // Bigger font for "Start Value"
             doc.setTextColor(0, 0, 0);
-            doc.text(`SV: ${routineResult.score}`, baseX, y);
+            doc.text(`SV: ${routineResult.score.toFixed(2)}`, baseX, y);
             y += 8;
 
             // Smaller blue labels + values below
@@ -49,11 +48,11 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
 
             const labels = ['Execution', 'Difficulty', 'Requirements', 'Bonus', 'Penalty'];
             const values = [
-                routineResult.execution ?? '-',
-                routineResult.difficulty ?? '-',
-                routineResult.requirements ?? '-',
-                routineResult.bonus ?? '-',
-                routineResult.penalty ?? '-',
+                routineResult.execution.toFixed(2) ?? '-',
+                routineResult.difficulty.toFixed(2) ?? '-',
+                routineResult.requirements.toFixed(2) ?? '-',
+                routineResult.bonus ? routineResult.bonus.toFixed(2) : '-',
+                routineResult.penalty ? routineResult.penalty.toFixed(2) : '-',
             ];
             const spacing = [0, 20, 18, 26, 14];
 

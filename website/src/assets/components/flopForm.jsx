@@ -4,7 +4,7 @@ import { PommelSkills, PommelTypeSkills } from "../utils/skillTypes";
 import { convertDifficultyLetterToValue } from "../utils/skillInfo";
 
 const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
-    const [ skills, setSkills ] = useState(["", "", "", "", ""]);
+    const [ skills, setSkills ] = useState(["", "", "", ""]);
     const [ flopValue, setFlopValue ] = useState("N/A");
     const [ visibleDropdowns, setVisibleDropdowns ] = useState(3);
     const [ addDisabled, setAddDisabled ] = useState(true);
@@ -16,7 +16,6 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
         ["Bertonceji", "Davtyan", "Circle", "DSB"],
         ["Circle", "DSB", "360 or 540 Russians", "720 or 960 Russians", "1080+ Russians"],
         ["Circle", "DSB", "180 or 270 Russians", "360 or 540 Russians", "720 or 960 Russians", "1080+ Russians", "DSA"],
-        ["Circle", "DSB", "DSA"],
         ["Circle", "DSB", "DSA"],
     ];
 
@@ -31,7 +30,7 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
 
     const resetFlop = () => {
         setAlertOpen(false);
-        setSkills(["", "", "", "", ""]);
+        setSkills(["", "", "", ""]);
     };
     
     const addFlop = () => {

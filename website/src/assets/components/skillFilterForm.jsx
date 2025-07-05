@@ -3,7 +3,7 @@ import getSkills from "../utils/getSkills";
 import { Apparatus } from "../utils/apparatus";
 import FlopForm from "./flopForm";
 
-const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSkill, cancelChoice }, ref) => {
+const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated, selectSkill, cancelChoice }, ref) => {
     const [ skills, setSkills ] = useState(getSkills(apparatus))
 
     const [ groupFilter, setGroupFilter ] = useState(0);
@@ -22,6 +22,10 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
     useImperativeHandle(ref, () => ({
         getFilteredSkills : () => {
             return filteredSkills;
+        },
+
+        filterSkills : () => {
+            filterSkills();
         },
 
         chooseSkill : (index) => {
@@ -47,12 +51,8 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
     }));
 
     const addSkill = (skill) => {
-        if (apparatus == Apparatus.POMMEL && skill.group == 4) {
-            
-        }
-        skill.id = skills.length + 1;
-        setSkills([skill, ...skills]);
-        setIsFlopFormOpen(false);
+        selectSkill(skill, skillIndex);
+        filterSkills();
     };
 
     const checkSkillExistsByName = (skillName) => {
@@ -79,7 +79,8 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
         const skillSet = skills.filter(skill => 
             (groupFilter == 0 || skill.group == groupFilter) && 
             (difficultyFilter == 0 || skill.difficulty == difficultyFilter) && 
-            (nameFilter == '' || nameFilter.toLowerCase().split(" ").every(word => skill.name.toLowerCase().includes(word)))
+            (nameFilter == '' || nameFilter.toLowerCase().split(" ").every(word => skill.name.toLowerCase().includes(word))) &&
+            (!routine.some(s => s && s.id === skill.id))
         );
         setFilteredSkills(skillSet);
     };
@@ -140,7 +141,7 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, filterUpdated, selectSk
             <div className="flex flex-col flex-grow gap-1 items-center overflow-y-auto">
                 {filteredSkills.map((skill, index) => {
                     return (
-                        <button key={skill.id} onClick={() => selectSkill(skill, skillIndex)} className="flex flex-row gap-2 max-w-[50%] min-w-[50%] rounded bg-gray-600 text-center">
+                        <button key={skill.id} onClick={() => addSkill(skill)} className="flex flex-row gap-2 max-w-[50%] min-w-[50%] rounded bg-gray-600 text-center">
                             <p className="w-[15%]">Group: {skill.group}</p>
                             <p className="w-[65%] text-left">{skill.name}</p>
                             <p className="w-[10%]">{skill.difficulty}</p>
