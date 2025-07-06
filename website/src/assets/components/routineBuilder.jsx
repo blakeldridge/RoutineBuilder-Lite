@@ -149,7 +149,7 @@ const RoutineBuilder = () => {
 
     return (
         <div>
-            <button className="absolute top-10 left-10 p-4" onClick={() => navigate('/')}>Return</button>
+            <button className="absolute top-5 left-5  p-4" onClick={() => navigate('/')}>Return</button>
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} routine={routine} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
 
