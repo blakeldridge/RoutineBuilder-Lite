@@ -4,6 +4,11 @@ import { toUrlSlug } from '../utils/navigatePrep';
 
 const ApparatusSelector = () => {
     const navigate = useNavigate();
+    const isLoggedIn = localStorage.getItem("authToken");
+
+    if (isLoggedIn !== "true") {
+        navigate("/login");
+    }
 
     const handleClick = (event) => {
         const apparatus = event.currentTarget.dataset.apparatus;
