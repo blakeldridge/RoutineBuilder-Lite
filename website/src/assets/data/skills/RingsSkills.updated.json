@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "name": "Uprise fwd. to support.",
+    "name": "Uprise forwards to support.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Rings",
@@ -17,7 +17,7 @@
   },
   {
     "id": 2,
-    "name": "Uprise fwd and counter salto fwd. to bwd swingin hang.(Chechi)",
+    "name": "Uprise fwd and counter salto forwards to bwd swingin hang.(Chechi)",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Rings",
@@ -33,7 +33,7 @@
   },
   {
     "id": 4,
-    "name": "Swing fwd. through hdst.",
+    "name": "Swing forwards through handstand",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Rings",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "name": "Tucked double salto bwd. to hang(Guczoghy)",
+    "name": "Tucked double salto backwards to hang(Guczoghy)",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Rings",
@@ -49,7 +49,7 @@
   },
   {
     "id": 6,
-    "name": "Piked or straight double salto bwd. to hang.",
+    "name": "Piked or straight double salto backwards to hang.",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Rings",
@@ -57,7 +57,7 @@
   },
   {
     "id": 7,
-    "name": "Dislocate bwd. piked or straight.",
+    "name": "Dislocate backwards piked or straight.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Rings",
@@ -65,7 +65,7 @@
   },
   {
     "id": 8,
-    "name": "Uprise bwd. to support.",
+    "name": "Uprise backwards to support.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Rings",
@@ -89,7 +89,7 @@
   },
   {
     "id": 11,
-    "name": "Backward swing to salto fwd. piked to support (Honma)",
+    "name": "Backward swing to salto forwards piked to support (Honma)",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Rings",
@@ -113,7 +113,7 @@
   },
   {
     "id": 14,
-    "name": "Double salto fwd. tucked to hang. (Yamawaki)",
+    "name": "Double salto forwards tucked to hang. (Yamawaki)",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Rings",
@@ -121,7 +121,7 @@
   },
   {
     "id": 15,
-    "name": "Double salto fwd. piked or straight to hang.(Jonasson)",
+    "name": "Double salto forwards piked or straight to hang.(Jonasson)",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Rings",
@@ -153,7 +153,7 @@
   },
   {
     "id": 19,
-    "name": "Fwd. swing to swing bwd. in hang.",
+    "name": "Fwd. swing to swing backwards in hang.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Rings",
@@ -169,7 +169,7 @@
   },
   {
     "id": 21,
-    "name": "From support or cross, felge bwd. piked orstraight with bent arms to support.",
+    "name": "From support or cross, felge backwards piked orstraight with bent arms to support.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Rings",
@@ -177,7 +177,7 @@
   },
   {
     "id": 22,
-    "name": "Back kip or roll bwd str. with bent arms to handstand (2 s.).",
+    "name": "Back kip or roll bwd straight with bent arms to handstand (2 s.).",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Rings",
@@ -185,7 +185,7 @@
   },
   {
     "id": 23,
-    "name": "Swing fwd. to handstand or giant swing bwdto handstand (2 s.).",
+    "name": "Swing forwards to handstand or giant swing bwdto handstand (2 s.).",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Rings",
@@ -193,7 +193,7 @@
   },
   {
     "id": 24,
-    "name": "Uprise bwd. to handstand or giant swing fwd to handstand (2 s.).",
+    "name": "Uprise backwards to handstand or giant swing fwd to handstand (2 s.).",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Rings",
@@ -201,7 +201,7 @@
   },
   {
     "id": 25,
-    "name": "From support swing bwd. to handstand (2 s.).",
+    "name": "From support swing backwards to handstand (2 s.).",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Rings",
@@ -209,7 +209,7 @@
   },
   {
     "id": 26,
-    "name": "Honma and swing bwd. to handstand (2 s.).",
+    "name": "Honma and swing backwards to handstand (2 s.).",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Rings",
@@ -217,7 +217,7 @@
   },
   {
     "id": 27,
-    "name": "Honma str. and swing bwd. to handstand (2 s.).",
+    "name": "Honma straight and swing backwards to handstand (2 s.).",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Rings",
@@ -313,7 +313,7 @@
   },
   {
     "id": 39,
-    "name": "Vertical pull up with str. armsto V-cross(2 s.). (Colak)",
+    "name": "Vertical pull up with straight armsto V-cross(2 s.). (Colak)",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
@@ -321,7 +321,7 @@
   },
   {
     "id": 40,
-    "name": "Press to hdst. with bent body and bent arms(2 s)",
+    "name": "Press to handstand with bent body and bent arms(2 s)",
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Rings",
@@ -329,7 +329,7 @@
   },
   {
     "id": 41,
-    "name": "Press to hdst. with str. body a. bent arms or b.body. a.str. arms, orfr.strad.sup. lever(2 s.).",
+    "name": "Press to handstand with straight body a. bent arms or b.body. a.str. arms, orfr.strad.sup. lever(2 s.).",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Rings",
@@ -337,7 +337,7 @@
   },
   {
     "id": 42,
-    "name": "Press to hdst. with str. body and str. armsfromsupport or support scale (2 s.).",
+    "name": "Press to handstand with straight body and straight armsfromsupport or support scale (2 s.).",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
@@ -345,7 +345,7 @@
   },
   {
     "id": 43,
-    "name": "Press to hdst. with str. body and str. arms from swallow (2 s.).",
+    "name": "Press to handstand with straight body and straight arms from swallow (2 s.).",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
@@ -353,7 +353,7 @@
   },
   {
     "id": 44,
-    "name": "Slow roll fwd. piked with bent arms, to support.",
+    "name": "Slow roll forwards piked with bent arms, to support.",
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Rings",
@@ -401,7 +401,7 @@
   },
   {
     "id": 50,
-    "name": "Slow Roll bwd. with straight body to cross, Lcross or V cross (2 s.). (Azarian) (Tay)",
+    "name": "Slow Roll backwards with straight body to cross, Lcross or V cross (2 s.). (Azarian) (Tay)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
@@ -433,7 +433,7 @@
   },
   {
     "id": 54,
-    "name": "Through hanging scale rearways pull with str. body through crossto inv. swallow (2 s.).(Zahran)",
+    "name": "Through hanging scale rearways pull with straight body through crossto inv. swallow (2 s.).(Zahran)",
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Rings",
@@ -449,7 +449,7 @@
   },
   {
     "id": 56,
-    "name": "From sup. or cross, lower slowly to hang, and pull with str. arms to cross (2 s.). (Li Xiaoshuang)",
+    "name": "From support or cross, lower slowly to hang, and pull with straight arms to cross (2 s.). (Li Xiaoshuang)",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Rings",
@@ -569,7 +569,7 @@
   },
   {
     "id": 71,
-    "name": "From inverted cross lower slowly to invertedhang and felge bwd. slowly to cross (2 s.) (Vorobiov/Zou)",
+    "name": "From inverted cross lower slowly to invertedhang and felge backwards slowly to cross (2 s.) (Vorobiov/Zou)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
@@ -577,7 +577,7 @@
   },
   {
     "id": 72,
-    "name": "From inverted cross lower slowly to invertedhang and felge bwd. slowly to swallow (2 s.) or tosupport scale (2 s.) (Jotchev)",
+    "name": "From inverted cross lower slowly to invertedhang and felge backwards slowly to swallow (2 s.) or tosupport scale (2 s.) (Jotchev)",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
@@ -585,7 +585,7 @@
   },
   {
     "id": 73,
-    "name": "Roll bwd.slowly with str. arms and body to freesup. scale (2 s.). (Yan Mijayoung)",
+    "name": "Roll bwd.slowly with straight arms and body to freesup. scale (2 s.). (Yan Mijayoung)",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
@@ -593,7 +593,7 @@
   },
   {
     "id": 74,
-    "name": "Slow Roll bwd. with str. body to swallow (2 s.).",
+    "name": "Slow Roll backwards with straight body to swallow (2 s.).",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
@@ -609,7 +609,7 @@
   },
   {
     "id": 76,
-    "name": "Slow roll fwd. with straight body through crossand press to support scale without first going tosupport (2 s.). (Ng Kiu Chung 2)",
+    "name": "Slow roll forwards with straight body through crossand press to support scale without first going tosupport (2 s.). (Ng Kiu Chung 2)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
@@ -617,7 +617,7 @@
   },
   {
     "id": 77,
-    "name": "Slow roll fwd. with straight body through crossto inverted cross (2 s.). (Wynn)",
+    "name": "Slow roll forwards with straight body through crossto inverted cross (2 s.). (Wynn)",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Rings",
@@ -633,7 +633,7 @@
   },
   {
     "id": 79,
-    "name": "Slow roll fwd. with str. body toCross or L-Cross (2 s.), also from inverted hang. (Davtyan)",
+    "name": "Slow roll forwards with straight body toCross or L-Cross (2 s.), also from inverted hang. (Davtyan)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
@@ -649,7 +649,7 @@
   },
   {
     "id": 81,
-    "name": "From hang vertical pull up support and pressto hdst. with straight body and straight arms. (Cingolani)",
+    "name": "From hang vertical pull up support and pressto handstand with straight body and straight arms. (Cingolani)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Rings",
@@ -681,7 +681,7 @@
   },
   {
     "id": 85,
-    "name": "Uprise fwd. to L-sit, (2 s.).",
+    "name": "Uprise forwards to L-sit, (2 s.).",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Rings",
@@ -689,7 +689,7 @@
   },
   {
     "id": 86,
-    "name": "Uprise fwd. to V-sit (2 s.).",
+    "name": "Uprise forwards to V-sit (2 s.).",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
@@ -753,7 +753,7 @@
   },
   {
     "id": 94,
-    "name": "Uprise fwd. to cross or L-cross (2 s.).",
+    "name": "Uprise forwards to cross or L-cross (2 s.).",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
@@ -761,7 +761,7 @@
   },
   {
     "id": 95,
-    "name": "Uprise bwd. to cross or L-cross (2 s.).",
+    "name": "Uprise backwards to cross or L-cross (2 s.).",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Rings",
@@ -881,7 +881,7 @@
   },
   {
     "id": 110,
-    "name": "Uprise bwd. to support scale straddled (2 s.).",
+    "name": "Uprise backwards to support scale straddled (2 s.).",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Rings",
@@ -889,7 +889,7 @@
   },
   {
     "id": 111,
-    "name": "Uprise bwd. to support scale (2 s.).",
+    "name": "Uprise backwards to support scale (2 s.).",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
@@ -897,7 +897,7 @@
   },
   {
     "id": 112,
-    "name": "Uprise bwd. to sup.scale at ring height (2 s.).",
+    "name": "Uprise backwards to sup.scale at ring height (2 s.).",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
@@ -905,7 +905,7 @@
   },
   {
     "id": 113,
-    "name": "Uprise bwd. to inverted cross (2 s.).",
+    "name": "Uprise backwards to inverted cross (2 s.).",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Rings",
@@ -913,7 +913,7 @@
   },
   {
     "id": 114,
-    "name": "Felge bwd. straight to free sup.scale. (2 s.)",
+    "name": "Felge backwards straight to free sup.scale. (2 s.)",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Rings",
@@ -921,7 +921,7 @@
   },
   {
     "id": 115,
-    "name": "Salto fwd. piked or straight, also with ½ t.",
+    "name": "Salto forwards piked or straight, also with 1/2 twists",
     "difficulty": 0.1,
     "group": 4,
     "apparatus": "Rings",
@@ -929,7 +929,7 @@
   },
   {
     "id": 116,
-    "name": "Salto fwd. piked or straight with 1/1 t.",
+    "name": "Salto forwards piked or straight with 1/1 twists",
     "difficulty": 0.2,
     "group": 4,
     "apparatus": "Rings",
@@ -937,7 +937,7 @@
   },
   {
     "id": 117,
-    "name": "Salto fwd. piked or straight with 3/2 t.",
+    "name": "Salto forwards piked or straight with 3/2 twists",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Rings",
@@ -945,7 +945,7 @@
   },
   {
     "id": 118,
-    "name": "Salto fwd. piked orstraight with 2/1 t.",
+    "name": "Salto forwards piked orstraight with 2/1 twists",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Rings",
@@ -953,7 +953,7 @@
   },
   {
     "id": 119,
-    "name": "Double salto fwd. tucked or tucked with ½ t.",
+    "name": "Double salto forwards tucked or tucked with 1/2 twists",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Rings",
@@ -961,7 +961,7 @@
   },
   {
     "id": 120,
-    "name": "Double salto fwd. tucked with 3/2 t (also 1/1 t.)(Fischer)",
+    "name": "Double salto forwards tucked with 3/2 t (also 1/1 t.)(Fischer)",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Rings",
@@ -969,7 +969,7 @@
   },
   {
     "id": 121,
-    "name": "Double salto fwd. piked or piked with ½ t. (Balabanov)",
+    "name": "Double salto forwards piked or piked with 1/2 twists (Balabanov)",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Rings",
@@ -977,7 +977,7 @@
   },
   {
     "id": 122,
-    "name": "Double salto fwd. piked with 3/2 t. (also 1/1 t.).",
+    "name": "Double salto forwards piked with 3/2 twists (also 1/1 t.).",
     "difficulty": 0.5,
     "group": 4,
     "apparatus": "Rings",
@@ -985,7 +985,7 @@
   },
   {
     "id": 123,
-    "name": "Salto bwd. piked or straight also with ½.",
+    "name": "Salto backwards piked or straight also with ½.",
     "difficulty": 0.1,
     "group": 4,
     "apparatus": "Rings",
@@ -993,7 +993,7 @@
   },
   {
     "id": 124,
-    "name": "Salto bwd. straight with 1/1 t.",
+    "name": "Salto backwards straight with 1/1 twists",
     "difficulty": 0.2,
     "group": 4,
     "apparatus": "Rings",
@@ -1001,7 +1001,7 @@
   },
   {
     "id": 125,
-    "name": "Salto bwd. straight with 2/1 t. or 3/2 t.",
+    "name": "Salto backwards straight with 2/1 twists or 3/2 twists",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Rings",
@@ -1009,7 +1009,7 @@
   },
   {
     "id": 126,
-    "name": "Salto bwd. straight with 3/1 t.",
+    "name": "Salto backwards straight with 3/1 twists",
     "difficulty": 0.5,
     "group": 4,
     "apparatus": "Rings",
@@ -1017,7 +1017,7 @@
   },
   {
     "id": 127,
-    "name": "Double salto bwd. tucked or piked.",
+    "name": "Double salto backwards tucked or piked.",
     "difficulty": 0.2,
     "group": 4,
     "apparatus": "Rings",
@@ -1025,7 +1025,7 @@
   },
   {
     "id": 128,
-    "name": "Double salto bwd. straight.",
+    "name": "Double salto backwards straight.",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Rings",
@@ -1033,7 +1033,7 @@
   },
   {
     "id": 129,
-    "name": "Triple salto bwd. tucked.",
+    "name": "Triple salto backwards tucked.",
     "difficulty": 0.7,
     "group": 4,
     "apparatus": "Rings",
@@ -1041,7 +1041,7 @@
   },
   {
     "id": 130,
-    "name": "Triple salto bwd. piked. (Whittenburg)",
+    "name": "Triple salto backwards piked. (Whittenburg)",
     "difficulty": 0.9,
     "group": 4,
     "apparatus": "Rings",
@@ -1049,7 +1049,7 @@
   },
   {
     "id": 131,
-    "name": "Double salto bwd. t. with ½ or 1/1 t. or with 3/2 t.",
+    "name": "Double salto backwards twists with 1/2 or 1/1 twists or with 3/2 twists",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Rings",
@@ -1057,7 +1057,7 @@
   },
   {
     "id": 132,
-    "name": "Double salto bwd. t. with 2/1 t.",
+    "name": "Double salto backwards twists with 2/1 twists",
     "difficulty": 0.5,
     "group": 4,
     "apparatus": "Rings",
@@ -1065,7 +1065,7 @@
   },
   {
     "id": 133,
-    "name": "Double salto bwd. t. with 5/2 t.(Tuuha)",
+    "name": "Double salto backwards twists with 5/2 t.(Tuuha)",
     "difficulty": 0.6,
     "group": 4,
     "apparatus": "Rings",
@@ -1073,7 +1073,7 @@
   },
   {
     "id": 134,
-    "name": "Salto bwd. str. with 1/1 t. and salto t.",
+    "name": "Salto backwards straight with 1/1 twists and salto twists",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Rings",
@@ -1081,7 +1081,7 @@
   },
   {
     "id": 135,
-    "name": "Double salto bwd. straight with ½ or 1/1 t.",
+    "name": "Double salto backwards straight with 1/2 or 1/1 twists",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Rings",
@@ -1089,7 +1089,7 @@
   },
   {
     "id": 136,
-    "name": "Double salto bwd. straight with 3/2 or 2/1 t.",
+    "name": "Double salto backwards straight with 3/2 or 2/1 twists",
     "difficulty": 0.6,
     "group": 4,
     "apparatus": "Rings",

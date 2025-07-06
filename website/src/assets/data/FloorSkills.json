@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "name": "From handstand lower to L-sit or straddle L-sit (2 s.).",
+    "name": "From hdst. lower to L-sit or strad. L-sit (2 s.).",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Floor",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "name": "From stand, Swiss press to handstand (2 s.).",
+    "name": "From stand, Swiss press to hdst. (2 s.).",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Floor",
@@ -33,7 +33,7 @@
   },
   {
     "id": 4,
-    "name": "Piked body,str. arm or str.body, bent arm press to handstand with legs together (2 s.).",
+    "name": "Piked body,str. arm or str.body, bent arm press to hdst. with legs together (2 s.).",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Floor",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "name": "V-sit (2 s) and press to handstand (2 s.). Also final phase with straddle.",
+    "name": "V-sit (2 s) and press to hdst. (2 s.). Also final phase with straddle.",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Floor",
@@ -49,7 +49,7 @@
   },
   {
     "id": 6,
-    "name": "Manna (2 s.) and press to handstand (2 s.). Also final phase with straddle.",
+    "name": "Manna (2 s.) and press to hdst. (2 s.). Also final phase with straddle.",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Floor",
@@ -57,7 +57,7 @@
   },
   {
     "id": 7,
-    "name": "Rock to handstand from prone position (2 s.).",
+    "name": "Rock to hdst. from prone position (2 s.).",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Floor",
@@ -65,7 +65,7 @@
   },
   {
     "id": 8,
-    "name": "Press from split, L-sit straddle or front support (2 s.).",
+    "name": "Press from split, L-sit strad. or front sup. (2 s.).",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Floor",
@@ -121,7 +121,7 @@
   },
   {
     "id": 15,
-    "name": "1/2 or 1/1 turn in handstand or to handstand.",
+    "name": "½ or 1/1 turn in handstand or to handstand.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Floor",
@@ -129,7 +129,7 @@
   },
   {
     "id": 16,
-    "name": "From straddled planche (2 s.) press handstand (2 s.).",
+    "name": "From straddled planche (2 s.) press hdst. (2 s.).",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Floor",
@@ -137,7 +137,7 @@
   },
   {
     "id": 17,
-    "name": "From Planche 2 secs press handstand (2 s.).",
+    "name": "From Planche 2 s. press handstand (2 s.).",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Floor",
@@ -145,7 +145,7 @@
   },
   {
     "id": 18,
-    "name": "From Swallow 2 secs press to Japanese hdst.(2s.).(Alvariño)",
+    "name": "From Swallow 2 s. press to Japanese hdst.(2s.).(Alvariño)",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Floor",
@@ -153,7 +153,7 @@
   },
   {
     "id": 19,
-    "name": "From L-sit, etc., turn over backwards to stand.",
+    "name": "From L-sit, etc., turn over bwd. to stand.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Floor",
@@ -209,7 +209,7 @@
   },
   {
     "id": 26,
-    "name": "Jump backwards to front support.",
+    "name": "Jump bwd. to front support.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Floor",
@@ -217,7 +217,7 @@
   },
   {
     "id": 27,
-    "name": "Jump backwards with pike-stretch or with 1/1 turn to front support (Endo)",
+    "name": "Jump bwd. with pike-stretch or with 1/1 turn to front support (Endo)",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Floor",
@@ -233,7 +233,7 @@
   },
   {
     "id": 29,
-    "name": "Butterfly with 1/1 twist forwards or backwards (Tong Fei)",
+    "name": "Butterfly with 1/1 twist fwd. or bwd. (Tong Fei)",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Floor",
@@ -265,7 +265,7 @@
   },
   {
     "id": 33,
-    "name": "Flair or circle to handstand continue to flair or circle. (Gogoladze)",
+    "name": "Flair or circle to hdst. continue to flair or circle. (Gogoladze)",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Floor",
@@ -273,7 +273,7 @@
   },
   {
     "id": 34,
-    "name": "Flair hopping with 360° twists backwards through handstand back to flair (2 hops).",
+    "name": "Flair hopping with 360° t. bwd. thr. handstand back to flair (2 hops).",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Floor",
@@ -281,7 +281,7 @@
   },
   {
     "id": 35,
-    "name": "Lower from handstand to flair or circle.",
+    "name": "Lower from hdst. to flair or circle.",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Floor",
@@ -289,7 +289,7 @@
   },
   {
     "id": 36,
-    "name": "Flair with 1/2 spindle.",
+    "name": "Flair with ½ spindle.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Floor",
@@ -313,7 +313,7 @@
   },
   {
     "id": 39,
-    "name": "Flair with 1/2 spindle to handstand.",
+    "name": "Flair with ½ spindle to handstand.",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Floor",
@@ -353,7 +353,7 @@
   },
   {
     "id": 44,
-    "name": "Roll backwards through handstand with 1/2 twists",
+    "name": "Roll bwd. through hdst. with ½ t.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Floor",
@@ -361,7 +361,7 @@
   },
   {
     "id": 45,
-    "name": "Roll backwards with hop 1/1 twists through handstand",
+    "name": "Roll bwd. with hop 1/1 t. through hdst.",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Floor",
@@ -377,7 +377,7 @@
   },
   {
     "id": 47,
-    "name": "Handspring salto forwards tuck. (Morandi)",
+    "name": "Handspring salto fwd. tuck. (Morandi)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Floor",
@@ -393,7 +393,7 @@
   },
   {
     "id": 49,
-    "name": "Salto forwards tucked or piked, also with 1/2 twists",
+    "name": "Salto fwd. tucked or piked, also with ½ t.",
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Floor",
@@ -401,7 +401,7 @@
   },
   {
     "id": 50,
-    "name": "Salto forwards straight, also with 1/2 twists",
+    "name": "Salto fwd. straight, also with ½ t.",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Floor",
@@ -409,7 +409,7 @@
   },
   {
     "id": 51,
-    "name": "Double salto forwards tucked, also with 1/2 twists",
+    "name": "Double salto fwd. tucked, also with ½ t.",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Floor",
@@ -417,7 +417,7 @@
   },
   {
     "id": 52,
-    "name": "Double salto forwards piked, also with 1/2 twists",
+    "name": "Double salto fwd. piked, also with ½ t.",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Floor",
@@ -425,7 +425,7 @@
   },
   {
     "id": 53,
-    "name": "Double salto forwards tucked with 1/1 turn.",
+    "name": "Double salto fwd. tucked with 1/1 turn.",
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Floor",
@@ -433,7 +433,7 @@
   },
   {
     "id": 54,
-    "name": "Salto forwards twists or piked to front support.",
+    "name": "Salto fwd. t. or p. to front support.",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Floor",
@@ -441,7 +441,7 @@
   },
   {
     "id": 55,
-    "name": "Double salto forwards tucked with 3/2 turn. (Zapata)",
+    "name": "Double salto fwd. tucked with 3/2 turn. (Zapata)",
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Floor",
@@ -449,7 +449,7 @@
   },
   {
     "id": 56,
-    "name": "Jump forwards with 1/2 twists to double salto backwards Tuck (Deferr)",
+    "name": "Jump fwd. with ½ t. to dbl. salto bwd. Tuck (Deferr)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Floor",
@@ -457,7 +457,7 @@
   },
   {
     "id": 57,
-    "name": "Double salto forwards piked or straight with 3/2 turn. (Zapata 2)",
+    "name": "Double salto fwd. piked or straight with 3/2 turn. (Zapata 2)",
     "difficulty": 0.7,
     "group": 2,
     "apparatus": "Floor",
@@ -473,7 +473,7 @@
   },
   {
     "id": 59,
-    "name": "Salto backwards straight or Tempo salto backwards",
+    "name": "Salto backwards str. or Tempo salto bwd.",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Floor",
@@ -481,7 +481,7 @@
   },
   {
     "id": 60,
-    "name": "Double salto backwards tucked.",
+    "name": "Double salto bwd. tucked.",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Floor",
@@ -489,7 +489,7 @@
   },
   {
     "id": 61,
-    "name": "Salto backwards with 1/1 twists and salto backwards (Tsukahara)",
+    "name": "Salto bwd. with 1/1 t. and salto bwd. (Tsukahara)",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Floor",
@@ -497,7 +497,7 @@
   },
   {
     "id": 62,
-    "name": "Double salto backwards tucked with 2/1 twists or double salto bwd twists with 3/2 t..or salto backwards straight 3/2 to forwards salto tucked.",
+    "name": "Double salto bwd. tucked with 2/1 t. or double salto bwd t. with 3/2 t..or salto bwd. str. 3/2 to fwd. salto tucked.",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Floor",
@@ -505,7 +505,7 @@
   },
   {
     "id": 63,
-    "name": "Double salto backwards tucked with 3/1 t.(Ri Jong Song))",
+    "name": "Double salto bwd. tucked with 3/1 t.(Ri Jong Song))",
     "difficulty": 0.7,
     "group": 3,
     "apparatus": "Floor",
@@ -513,7 +513,7 @@
   },
   {
     "id": 64,
-    "name": "Salto backwards tucked or piked with 1/2 twists or Arabian tucked or piked.",
+    "name": "Salto backwards tucked or piked w. ½ t. or Arabian tucked or piked.",
     "difficulty": 0.1,
     "group": 3,
     "apparatus": "Floor",
@@ -521,7 +521,7 @@
   },
   {
     "id": 65,
-    "name": "Salto backwards straight with 1/2 twists or or 1/1 twists",
+    "name": "Salto backwards str. w. ½ t. or or 1/1 t.",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Floor",
@@ -529,7 +529,7 @@
   },
   {
     "id": 66,
-    "name": "Arabian jump backwards to double salto fwd tucked, also with 1/2 twists",
+    "name": "Arabian jump bwd. to double salto fwd tucked, also with ½ t.",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Floor",
@@ -537,7 +537,7 @@
   },
   {
     "id": 67,
-    "name": "Arabian jump backwards to double salto fwd piked, also with 1/2 turn",
+    "name": "Arabian jump bwd. to double salto fwd piked, also with ½ turn",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Floor",
@@ -545,7 +545,7 @@
   },
   {
     "id": 68,
-    "name": "Double salto backwards tucked with 5/2 twists",
+    "name": "Double salto bwd. tucked with 5/2 t.",
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Floor",
@@ -561,7 +561,7 @@
   },
   {
     "id": 70,
-    "name": "Double salto backwards piked.",
+    "name": "Double salto bwd. piked.",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Floor",
@@ -569,7 +569,7 @@
   },
   {
     "id": 71,
-    "name": "Triple salto backwards tucked. (Liukin)",
+    "name": "Triple salto bwd. tucked. (Liukin)",
     "difficulty": 0.9,
     "group": 3,
     "apparatus": "Floor",
@@ -577,7 +577,7 @@
   },
   {
     "id": 72,
-    "name": "Triple salto backwards piked. (Nagornyy)",
+    "name": "Triple salto bwd. piked. (Nagornyy)",
     "difficulty": 1,
     "group": 3,
     "apparatus": "Floor",
@@ -585,7 +585,7 @@
   },
   {
     "id": 73,
-    "name": "Double salto straddled with 1/1 twists (Lou Yun)",
+    "name": "Double salto straddled with 1/1 t. (Lou Yun)",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Floor",
@@ -593,7 +593,7 @@
   },
   {
     "id": 74,
-    "name": "Double salto straight with 5/2 twists",
+    "name": "Double salto straight with 5/2 t.",
     "difficulty": 0.8,
     "group": 3,
     "apparatus": "Floor",
@@ -601,7 +601,7 @@
   },
   {
     "id": 75,
-    "name": "Jump backwards with 1/2 twists to roll forwards",
+    "name": "Jump bwd. with ½ t. to roll fwd.",
     "difficulty": 0.1,
     "group": 3,
     "apparatus": "Floor",
@@ -609,7 +609,7 @@
   },
   {
     "id": 76,
-    "name": "Salto backwards straight with 1/1 twists and salto bwd piked.",
+    "name": "Salto bwd. str. with 1/1 twists and salto bwd piked.",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Floor",
@@ -617,7 +617,7 @@
   },
   {
     "id": 77,
-    "name": "Salto backwards straight with 2/1 t and salto bwd piked. (Kolyvanov)",
+    "name": "Salto bwd. str. with 2/1 t and salto bwd piked. (Kolyvanov)",
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Floor",
@@ -625,7 +625,7 @@
   },
   {
     "id": 78,
-    "name": "Double salto backwards straight or Double salto backwards straight and with 1/2 t., or Arabian Jump backwards to double salto forwards straight (Tamayo)",
+    "name": "Double salto bwd. straight or Double salto bwd. straight and with ½ t., or Arabian Jump bwd. to dbl. salto fwd. str. (Tamayo)",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Floor",
@@ -633,7 +633,7 @@
   },
   {
     "id": 79,
-    "name": "Double salto backwards straight with 3/2 twists or Arabian Jump backwards to double salto forwards straight with 1/1 twists Also Hypolito",
+    "name": "Double salto bwd. str. with 3/2 t. or Arabian Jump bwd. to dbl. salto fwd. str. with 1/1 t. Also Hypolito",
     "difficulty": 0.7,
     "group": 3,
     "apparatus": "Floor",
@@ -641,7 +641,7 @@
   },
   {
     "id": 80,
-    "name": "Double salto bwd.straight with 1/1 twists or Arabian jump backwards to double salto forwards straight with 1/2 twists Also Penev",
+    "name": "Double salto bwd.straight with 1/1 t. or Arabian jump bwd. to dbl. salto fwd. str. with ½ t. Also Penev",
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Floor",
@@ -649,7 +649,7 @@
   },
   {
     "id": 81,
-    "name": "Double salto backwards straight with 2/1 twists",
+    "name": "Double salto bwd. str. with 2/1 t.",
     "difficulty": 0.7,
     "group": 3,
     "apparatus": "Floor",
@@ -657,7 +657,7 @@
   },
   {
     "id": 82,
-    "name": "Double salto backwards with 7/2 twists (Minami)",
+    "name": "Double salto bwd. with 7/2 t. (Minami)",
     "difficulty": 0.8,
     "group": 3,
     "apparatus": "Floor",
@@ -665,7 +665,7 @@
   },
   {
     "id": 83,
-    "name": "Double salto backwards straight with 3/1 twists (Shirai 3)",
+    "name": "Double salto bwd. str. with 3/1 t. (Shirai 3)",
     "difficulty": 0.9,
     "group": 3,
     "apparatus": "Floor",
@@ -673,7 +673,7 @@
   },
   {
     "id": 84,
-    "name": "Double salto backwards straight with 7/2 t.(Jarman)",
+    "name": "Double salto bwd. str. with 7/2 t.(Jarman)",
     "difficulty": 1,
     "group": 3,
     "apparatus": "Floor",
@@ -681,7 +681,7 @@
   },
   {
     "id": 85,
-    "name": "Salto forwards tucked with 1/1 t., also with 3/2 twists",
+    "name": "Salto fwd. tucked with 1/1 t., also with 3/2 t.",
     "difficulty": 0.2,
     "group": 4,
     "apparatus": "Floor",
@@ -689,7 +689,7 @@
   },
   {
     "id": 86,
-    "name": "Salto forwards straight with 1/1 t., also with 3/2 twists",
+    "name": "Salto fwd. str. with 1/1 t., also with 3/2 t.",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Floor",
@@ -697,7 +697,7 @@
   },
   {
     "id": 87,
-    "name": "Salto forwards straight with 2/1 twists",
+    "name": "Salto fwd. str. with 2/1 t.",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Floor",
@@ -705,7 +705,7 @@
   },
   {
     "id": 88,
-    "name": "Salto forwards straight with 5/2 twists",
+    "name": "Salto fwd. str. with 5/2 t.",
     "difficulty": 0.5,
     "group": 4,
     "apparatus": "Floor",
@@ -713,7 +713,7 @@
   },
   {
     "id": 89,
-    "name": ". Salto forwards straight with 3/1 twists (Shirai 2)",
+    "name": ". Salto fwd. str. with 3/1 t. (Shirai 2)",
     "difficulty": 0.6,
     "group": 4,
     "apparatus": "Floor",
@@ -721,7 +721,7 @@
   },
   {
     "id": 90,
-    "name": "Salto backwards straight with 1/1 t",
+    "name": "Salto backwards str. w. 1/1 t",
     "difficulty": 0.2,
     "group": 4,
     "apparatus": "Floor",
@@ -729,7 +729,7 @@
   },
   {
     "id": 91,
-    "name": "Salto backwards straight with 3/2 twists or 2/1 twists",
+    "name": "Salto bwd. str. with 3/2 t. or 2/1 t.",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Floor",
@@ -737,7 +737,7 @@
   },
   {
     "id": 92,
-    "name": "Salto backwards straight with 5/2 twists",
+    "name": "Salto bwd. str. with 5/2 t.",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Floor",
@@ -745,7 +745,7 @@
   },
   {
     "id": 93,
-    "name": "Salto backwards straight with 7/2 t (González)",
+    "name": "Salto bwd. str. with 7/2 t (González)",
     "difficulty": 0.5,
     "group": 4,
     "apparatus": "Floor",
@@ -753,7 +753,7 @@
   },
   {
     "id": 94,
-    "name": "Salto forwards straight with 7/2 twists (Goshima)",
+    "name": "Salto fwd. str. with 7/2 t. (Goshima)",
     "difficulty": 0.7,
     "group": 4,
     "apparatus": "Floor",
@@ -761,7 +761,7 @@
   },
   {
     "id": 95,
-    "name": "Salto backwards tucked with 3/2 twists",
+    "name": "Salto backwards tucked w. 3/2 t.",
     "difficulty": 0.2,
     "group": 4,
     "apparatus": "Floor",
@@ -769,7 +769,7 @@
   },
   {
     "id": 96,
-    "name": "Salto backwards straight with 3/1 twists",
+    "name": "Salto bwd. str. with 3/1 t.",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Floor",
@@ -777,7 +777,7 @@
   },
   {
     "id": 97,
-    "name": "Salto backwards straight with 4/1 twists (Shirai / Nguyen)",
+    "name": "Salto bwd. str. with 4/1 t. (Shirai / Nguyen)",
     "difficulty": 0.6,
     "group": 4,
     "apparatus": "Floor",

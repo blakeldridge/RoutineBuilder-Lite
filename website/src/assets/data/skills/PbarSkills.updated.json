@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "name": "Fwd. uprise with ½ t. to handstand.",
+    "name": "Fwd. uprise with 1/2 twists to handstand.",
     "difficulty": 0.5,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -33,7 +33,7 @@
   },
   {
     "id": 4,
-    "name": "Fwd. uprise with Stützkehr 3/4 t. or 1/4 t. to handstand followed by a kip on one rail",
+    "name": "Fwd. uprise with Stutzkehr 3/4 twists or 1/4 twists to handstand followed by a kip on one rail",
     "difficulty": 0.6,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -41,7 +41,7 @@
   },
   {
     "id": 5,
-    "name": "Fwd. uprise with ¼ t. to hang on 1 rail.",
+    "name": "Fwd. uprise with ¼ twists to hang on 1 rail.",
     "difficulty": 0.1,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -49,7 +49,7 @@
   },
   {
     "id": 6,
-    "name": "Roll bwd. with ½ t. from upper arm hang or Fwd.uprise to Kato hop to support. (Watanabe) ",
+    "name": "Roll backwards with 1/2 twists from upper arm hang or Fwd.uprise to Kato hop to support. (Watanabe) ",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -73,7 +73,7 @@
   },
   {
     "id": 9,
-    "name": "Roll bwd. to handstand with straight arms.",
+    "name": "Roll backwards to handstand with straight arms.",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -89,7 +89,7 @@
   },
   {
     "id": 11,
-    "name": "Fwd. uprise with 1/1 t. to handstand. (Richards)",
+    "name": "Fwd. uprise with 1/1 twists to handstand. (Richards)",
     "difficulty": 0.5,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -97,7 +97,7 @@
   },
   {
     "id": 12,
-    "name": "Fwd. uprise with 3/2 t. to handstand. (Tsolakidis 2)",
+    "name": "Fwd. uprise with 3/2 twists to handstand. (Tsolakidis 2)",
     "difficulty": 0.6,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -105,7 +105,7 @@
   },
   {
     "id": 13,
-    "name": "Salto bwd. with straddled. cut to upper armhang.",
+    "name": "Salto backwards with straddled. cut to upper armhang.",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -113,7 +113,7 @@
   },
   {
     "id": 14,
-    "name": "Roll bwd. with straddled cut to support.",
+    "name": "Roll backwards with straddled cut to support.",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -121,7 +121,7 @@
   },
   {
     "id": 15,
-    "name": "Roll bwd. with salto bwd. tuck to upper arm hang.(Dimitrenko)",
+    "name": "Roll backwards with salto backwards tuck to upper arm hang.(Dimitrenko)",
     "difficulty": 0.6,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -129,7 +129,7 @@
   },
   {
     "id": 16,
-    "name": "Roll bwd. with salto bwd. pike to upper arm hang(Li Xiaopeng)",
+    "name": "Roll backwards with salto backwards pike to upper arm hang(Li Xiaopeng)",
     "difficulty": 0.7,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -137,7 +137,7 @@
   },
   {
     "id": 17,
-    "name": "Roll bwd. with ½ t. tuck to upper arm hang. (Harada)",
+    "name": "Roll backwards with 1/2 twists tuck to upper arm hang. (Harada)",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -145,7 +145,7 @@
   },
   {
     "id": 18,
-    "name": "Roll bwd. with ½ t. tuck to hang. (Dalton)",
+    "name": "Roll backwards with 1/2 twists tuck to hang. (Dalton)",
     "difficulty": 0.5,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -153,7 +153,7 @@
   },
   {
     "id": 19,
-    "name": "Bwd. uprise to handstand (or with ½ t).",
+    "name": "Bwd. uprise to handstand (or with 1/2 t).",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -161,7 +161,7 @@
   },
   {
     "id": 20,
-    "name": "Bwd. uprise with ½ t. hop to handstand.",
+    "name": "Bwd. uprise with 1/2 twists hop to handstand.",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -169,7 +169,7 @@
   },
   {
     "id": 21,
-    "name": "Bwd. uprise with ¾ t. hop to handstand on 1 rail.",
+    "name": "Bwd. uprise with ¾ twists hop to handstand on 1 rail.",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -177,7 +177,7 @@
   },
   {
     "id": 22,
-    "name": "Bwd. uprise with ½ t. and straddle cut bwd. to upper arm hang.",
+    "name": "Bwd. uprise with 1/2 twists and straddle cut backwards to upper arm hang.",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -185,7 +185,7 @@
   },
   {
     "id": 23,
-    "name": "Bwd. uprise with ½ t. a. straddled cut bwd. to support.",
+    "name": "Bwd. uprise with 1/2 twists a. straddled cut backwards to support.",
     "difficulty": 0.3,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -193,7 +193,7 @@
   },
   {
     "id": 24,
-    "name": "Bwd. uprise with ½ t. to support.",
+    "name": "Bwd. uprise with 1/2 twists to support.",
     "difficulty": 0.2,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -209,7 +209,7 @@
   },
   {
     "id": 26,
-    "name": "Bwd. uprise and salto fwd. pike or straight to support.",
+    "name": "Bwd. uprise and salto forwards pike or straight to support.",
     "difficulty": 0.4,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -217,7 +217,7 @@
   },
   {
     "id": 27,
-    "name": "Bwd. uprise and double salto fwd. tuck to upperarm hang.",
+    "name": "Bwd. uprise and double salto forwards tuck to upperarm hang.",
     "difficulty": 0.6,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -225,7 +225,7 @@
   },
   {
     "id": 28,
-    "name": "Bwd. uprise and 5/4 salto fwd. straddled toupper arm hang. (Pakhniuk 1)",
+    "name": "Bwd. uprise and 5/4 salto forwards straddled toupper arm hang. (Pakhniuk 1)",
     "difficulty": 0.5,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -233,7 +233,7 @@
   },
   {
     "id": 29,
-    "name": "Bwd. uprise and 5/4 salto fwd. straddled tohang. (Pakhniuk 2)",
+    "name": "Bwd. uprise and 5/4 salto forwards straddled tohang. (Pakhniuk 2)",
     "difficulty": 0.6,
     "group": 1,
     "apparatus": "Parallel Bars",
@@ -265,7 +265,7 @@
   },
   {
     "id": 33,
-    "name": "Bent arm swing fwd. to hop ½ t. to support. (Kato)",
+    "name": "Bent arm swing forwards to hop 1/2 twists to support. (Kato)",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -273,7 +273,7 @@
   },
   {
     "id": 34,
-    "name": "Stützkehr fwd. to handstand (to 1 or 2 bars).",
+    "name": "Stutzkehr forwards to handstand (to 1 or 2 bars).",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -281,7 +281,7 @@
   },
   {
     "id": 35,
-    "name": "Stützkehr fwd. to handstand (1 rail (also with additional ¼ or ¾ turn to handstand)(Bilozerchev - Peters) (Dimic)",
+    "name": "Stutzkehr forwards to handstand (1 rail (also with additional ¼ or ¾ turn to handstand)(Bilozerchev - Peters) (Dimic)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -297,7 +297,7 @@
   },
   {
     "id": 37,
-    "name": "Any press with bent arm straight. body, or str. arm bent body to handstand., on 1 or 2 rails (2 s.) alsostraddled",
+    "name": "Any press with bent arm straight. body, or straight arm bent body to handstand., on 1 or 2 rails (2 s.) alsostraddled",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -305,7 +305,7 @@
   },
   {
     "id": 38,
-    "name": "Diamidov and ½ turn to upper arms. (Salazar)",
+    "name": "Diamidov and 1/2 turn to upper arms. (Salazar)",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -321,7 +321,7 @@
   },
   {
     "id": 40,
-    "name": "Straddle cut bwd. to support.",
+    "name": "Straddle cut backwards to support.",
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -329,7 +329,7 @@
   },
   {
     "id": 41,
-    "name": "Straddle cut bwd. to handstand.",
+    "name": "Straddle cut backwards to handstand.",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -337,7 +337,7 @@
   },
   {
     "id": 42,
-    "name": "Straddle cut bwd. directly to hang (Babos)",
+    "name": "Straddle cut backwards directly to hang (Babos)",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -345,7 +345,7 @@
   },
   {
     "id": 43,
-    "name": "Straddle cut fwd. to support or L-sit (2 s.).",
+    "name": "Straddle cut forwards to support or L-sit (2 s.).",
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -353,7 +353,7 @@
   },
   {
     "id": 44,
-    "name": "Swing fwd. with 1/1 t. on 1 arm to handstand. (Diamidov)",
+    "name": "Swing forwards with 1/1 twists on 1 arm to handstand. (Diamidov)",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -361,7 +361,7 @@
   },
   {
     "id": 45,
-    "name": "Diamidov with ¼ or ½ t. to handstand.",
+    "name": "Diamidov with ¼ or 1/2 twists to handstand.",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -369,7 +369,7 @@
   },
   {
     "id": 46,
-    "name": "Swing fwd. with 1/1 t. to upper arm hang. (Carminucci)",
+    "name": "Swing forwards with 1/1 twists to upper arm hang. (Carminucci)",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -385,7 +385,7 @@
   },
   {
     "id": 48,
-    "name": "Swing forward with 5/4 t. on one arm through handstand. and Healy to upper arm.",
+    "name": "Swing forward with 5/4 twists on one arm through handstand. and Healy to upper arm.",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -401,7 +401,7 @@
   },
   {
     "id": 50,
-    "name": "Swing forward with 5/4 t. on one arm throughhandstand. and Healy to support.(Zonderland)",
+    "name": "Swing forward with 5/4 twists on one arm throughhandstand. and Healy to support.(Zonderland)",
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -409,7 +409,7 @@
   },
   {
     "id": 51,
-    "name": "Swing fwd. to handstand, hop to support. (Carballo)",
+    "name": "Swing forwards to handstand, hop to support. (Carballo)",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -433,7 +433,7 @@
   },
   {
     "id": 54,
-    "name": "Salto bwd. with ½ t. to upper arm hang. (Toumilovich)",
+    "name": "Salto backwards with 1/2 twists to upper arm hang. (Toumilovich)",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -465,7 +465,7 @@
   },
   {
     "id": 58,
-    "name": "3/2 salto bwd. with ½ t. to upper arm hang.(Suarez)",
+    "name": "3/2 salto backwards with 1/2 twists to upper arm hang.(Suarez)",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -481,7 +481,7 @@
   },
   {
     "id": 60,
-    "name": "Handstand. with ¼ t. and fall back to supportwith ¼ t.",
+    "name": "Handstand. with ¼ twists and fall back to supportwith ¼ twists",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -489,7 +489,7 @@
   },
   {
     "id": 61,
-    "name": "Handstand . with ¾ t. and fall back to supportwith ¼ t. (Brandstrom)",
+    "name": "Handstand . with ¾ twists and fall back to supportwith ¼ twists (Brandstrom)",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -497,7 +497,7 @@
   },
   {
     "id": 62,
-    "name": "Stützkehr bwd. to support.",
+    "name": "Stutzkehr backwards to support.",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -505,7 +505,7 @@
   },
   {
     "id": 63,
-    "name": "Stützkehr bwd. through handstand. to support. (Novikov)",
+    "name": "Stutzkehr backwards through handstand. to support. (Novikov)",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -513,7 +513,7 @@
   },
   {
     "id": 64,
-    "name": "Stützkehr bwd. with straddle cut bwd. tosupport",
+    "name": "Stutzkehr backwards with straddle cut backwards tosupport",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -553,7 +553,7 @@
   },
   {
     "id": 69,
-    "name": "Swing bwd. with ½ t. hop to handstand.",
+    "name": "Swing backwards with 1/2 twists hop to handstand.",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -561,7 +561,7 @@
   },
   {
     "id": 70,
-    "name": "Swing bwd. with ¾ t. hop to handstand.",
+    "name": "Swing backwards with ¾ twists hop to handstand.",
     "difficulty": 0.4,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -569,7 +569,7 @@
   },
   {
     "id": 71,
-    "name": "Swing bwd. with 1/1 t. hop to handstand. (Gatson 1)",
+    "name": "Swing backwards with 1/1 twists hop to handstand. (Gatson 1)",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -585,7 +585,7 @@
   },
   {
     "id": 73,
-    "name": "From handstand on 1 rail, ½ or ¾ t. fwd. or bwd.In handstand.",
+    "name": "From handstand on 1 rail, 1/2 or ¾ twists forwards or bwd.In handstand.",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -593,7 +593,7 @@
   },
   {
     "id": 74,
-    "name": "Any handstand . with ½ turn. (also with 2 s.)",
+    "name": "Any handstand . with 1/2 turn. (also with 2 s.)",
     "difficulty": 0.1,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -617,7 +617,7 @@
   },
   {
     "id": 77,
-    "name": "5/4 salto fwd. straddle directly to hang. (Lee Chul Hon/Sasaki)",
+    "name": "5/4 salto forwards straddle directly to hang. (Lee Chul Hon/Sasaki)",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -625,7 +625,7 @@
   },
   {
     "id": 78,
-    "name": "5/4 salto fwd. tuck or pike to upper arm hang.",
+    "name": "5/4 salto forwards tuck or pike to upper arm hang.",
     "difficulty": 0.2,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -649,7 +649,7 @@
   },
   {
     "id": 81,
-    "name": "5/4 salto fwd. straddled to bent arm support.",
+    "name": "5/4 salto forwards straddled to bent arm support.",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -657,7 +657,7 @@
   },
   {
     "id": 82,
-    "name": "Salto fwd. piked to hang. (Juarez 2)",
+    "name": "Salto forwards piked to hang. (Juarez 2)",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -665,7 +665,7 @@
   },
   {
     "id": 83,
-    "name": "Double salto fwd. tuck to upper arm hang.",
+    "name": "Double salto forwards tuck to upper arm hang.",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -673,7 +673,7 @@
   },
   {
     "id": 84,
-    "name": "Double salto fwd. pike to upper arm hang.",
+    "name": "Double salto forwards pike to upper arm hang.",
     "difficulty": 0.6,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -681,7 +681,7 @@
   },
   {
     "id": 85,
-    "name": "5/4 salto fwd. straight to upper arm hang",
+    "name": "5/4 salto forwards straight to upper arm hang",
     "difficulty": 0.3,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -689,7 +689,7 @@
   },
   {
     "id": 86,
-    "name": "Salto fwd. with 1/1 t. to upper arm hang. (Urzica)",
+    "name": "Salto forwards with 1/1 twists to upper arm hang. (Urzica)",
     "difficulty": 0.5,
     "group": 2,
     "apparatus": "Parallel Bars",
@@ -721,7 +721,7 @@
   },
   {
     "id": 90,
-    "name": "Moy piked with straddled. cut bwd. and ½ t. toupper arm hang (also legs together).",
+    "name": "Moy piked with straddled. cut backwards and 1/2 twists toupper arm hang (also legs together).",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -729,7 +729,7 @@
   },
   {
     "id": 91,
-    "name": "Moy piked with 1/1 t. to upper arm hang.(Nolet)",
+    "name": "Moy piked with 1/1 twists to upper arm hang.(Nolet)",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -737,7 +737,7 @@
   },
   {
     "id": 92,
-    "name": "Moy and salto fwd. tuck, pike. orstraddled. toupper arm hang.(Giraldo)",
+    "name": "Moy and salto forwards tuck, pike. orstraddled. toupper arm hang.(Giraldo)",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -761,7 +761,7 @@
   },
   {
     "id": 95,
-    "name": "Giantswing bwd.to handstand orwith inlocationfwd. (also with ¼ or ½ turn and to one rail). (Kenmotsu) (Wells)",
+    "name": "Giantswing bwd.to handstand orwith inlocationfwd. (also with ¼ or 1/2 turn and to one rail). (Kenmotsu) (Wells)",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -769,7 +769,7 @@
   },
   {
     "id": 96,
-    "name": "Giant swing bwd. to handstand on one rail(connected to Healy type element).(Piasecky)",
+    "name": "Giant swing backwards to handstand on one rail(connected to Healy type element).(Piasecky)",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -777,7 +777,7 @@
   },
   {
     "id": 97,
-    "name": "Giant swing bwd. with Diamidov to handstand,also to one rail.",
+    "name": "Giant swing backwards with Diamidov to handstand,also to one rail.",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -785,7 +785,7 @@
   },
   {
     "id": 98,
-    "name": "Giant swing Diamidov with ¼ or ½ t. tohandstand.",
+    "name": "Giant swing Diamidov with ¼ or 1/2 twists tohandstand.",
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -793,7 +793,7 @@
   },
   {
     "id": 99,
-    "name": "Swing down with salto bwd. straight to hang",
+    "name": "Swing down with salto backwards straight to hang",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -801,7 +801,7 @@
   },
   {
     "id": 100,
-    "name": "Giant swing bwd. with ½ t. to upper arm hang. (Gushiken)",
+    "name": "Giant swing backwards with 1/2 twists to upper arm hang. (Gushiken)",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -809,7 +809,7 @@
   },
   {
     "id": 101,
-    "name": "Giantswing bwd. with½ t. to support. (Marinitch)",
+    "name": "Giantswing backwards with½ twists to support. (Marinitch)",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -817,7 +817,7 @@
   },
   {
     "id": 102,
-    "name": "Giant swing. bwd. with Diamidov to handstand to one rail (connected to Healy type element).",
+    "name": "Giant swing. backwards with Diamidov to handstand to one rail (connected to Healy type element).",
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -825,7 +825,7 @@
   },
   {
     "id": 103,
-    "name": "Giant swing bwd. with Makuts to upper hang. (Dauser)",
+    "name": "Giant swing backwards with Makuts to upper hang. (Dauser)",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -833,7 +833,7 @@
   },
   {
     "id": 104,
-    "name": "Giant swing bwd. with Makuts.(Baumann)",
+    "name": "Giant swing backwards with Makuts.(Baumann)",
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -841,7 +841,7 @@
   },
   {
     "id": 105,
-    "name": "Giant swing bwd. with straddled cut to upper addled arm hang",
+    "name": "Giant swing backwards with straddled cut to upper addled arm hang",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -849,7 +849,7 @@
   },
   {
     "id": 106,
-    "name": "Giant swing bwd. with straddle cut to support or bent arms support. (Korolev)",
+    "name": "Giant swing backwards with straddle cut to support or bent arms support. (Korolev)",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -857,7 +857,7 @@
   },
   {
     "id": 107,
-    "name": "Giantswing bwd. with½ t. and straddled cut bwd. to upper arms. (Sosa)",
+    "name": "Giantswing backwards with½ twists and straddled cut backwards to upper arms. (Sosa)",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -889,7 +889,7 @@
   },
   {
     "id": 111,
-    "name": "Giant swing bwd. and salto with ½ t. to hang onthe end. (Chartrand)",
+    "name": "Giant swing backwards and salto with 1/2 twists to hang onthe end. (Chartrand)",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -897,7 +897,7 @@
   },
   {
     "id": 112,
-    "name": "Giant swing bwd. and salto with½ t. to upperarm hang.",
+    "name": "Giant swing backwards and salto with½ twists to upperarm hang.",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -905,7 +905,7 @@
   },
   {
     "id": 113,
-    "name": "Giant swing bwd. and salto with ½ t. to hang.",
+    "name": "Giant swing backwards and salto with 1/2 twists to hang.",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -913,7 +913,7 @@
   },
   {
     "id": 114,
-    "name": "Giant swing bwd. with½t. and 3/2 salto fwd to upparmhang. (Tanaka)",
+    "name": "Giant swing backwards with1/2t. and 3/2 salto fwd to upparmhang. (Tanaka)",
     "difficulty": 0.7,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -929,7 +929,7 @@
   },
   {
     "id": 116,
-    "name": "Glide kip with ½ t. to support.",
+    "name": "Glide kip with 1/2 twists to support.",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -937,7 +937,7 @@
   },
   {
     "id": 117,
-    "name": "Glide kip bwd. to handstand.",
+    "name": "Glide kip backwards to handstand.",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -945,7 +945,7 @@
   },
   {
     "id": 118,
-    "name": "Giant swing bwd. and salto with½ t.to support. (Torres)",
+    "name": "Giant swing backwards and salto with½ t.to support. (Torres)",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -953,7 +953,7 @@
   },
   {
     "id": 119,
-    "name": "Giant swing backward with½ t. and 3/2 saltoforward piked to upper arm hang. (Esparza)",
+    "name": "Giant swing backward with½ twists and 3/2 saltoforward piked to upper arm hang. (Esparza)",
     "difficulty": 0.8,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -961,7 +961,7 @@
   },
   {
     "id": 120,
-    "name": "Glide kip to straddled cut bwd. handstand on 1 or 2 rail.",
+    "name": "Glide kip to straddled cut backwards handstand on 1 or 2 rail.",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -969,7 +969,7 @@
   },
   {
     "id": 121,
-    "name": "Glide kip to straddled cut bwd. to hand. (Okubo)",
+    "name": "Glide kip to straddled cut backwards to hand. (Okubo)",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -977,7 +977,7 @@
   },
   {
     "id": 122,
-    "name": "Giant swing bwd. and salto with ½ str to upperarm hang (Fokin)",
+    "name": "Giant swing backwards and salto with 1/2 str to upperarm hang (Fokin)",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1001,7 +1001,7 @@
   },
   {
     "id": 125,
-    "name": "Glide kip through L-sit piked to handstand andhop with 3/4 t. or more.",
+    "name": "Glide kip through L-sit piked to handstand andhop with 3/4 twists or more.",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1033,7 +1033,7 @@
   },
   {
     "id": 129,
-    "name": "Felge with ½ t. to upper arm hang.",
+    "name": "Felge with 1/2 twists to upper arm hang.",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1041,7 +1041,7 @@
   },
   {
     "id": 130,
-    "name": "Felge with ½ t. to rear support.",
+    "name": "Felge with 1/2 twists to rear support.",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1049,7 +1049,7 @@
   },
   {
     "id": 131,
-    "name": "Cast with ½ t. to up. arm hang.",
+    "name": "Cast with 1/2 twists to up. arm hang.",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1057,7 +1057,7 @@
   },
   {
     "id": 132,
-    "name": "Cast with ½ t. to support.",
+    "name": "Cast with 1/2 twists to support.",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1073,7 +1073,7 @@
   },
   {
     "id": 134,
-    "name": "Felge with ½ or ¾ t. to handstand.",
+    "name": "Felge with 1/2 or ¾ twists to handstand.",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1081,7 +1081,7 @@
   },
   {
     "id": 135,
-    "name": "Felge with 1/1 t. to handstand.(Teng Hai Bin)",
+    "name": "Felge with 1/1 twists to handstand.(Teng Hai Bin)",
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1097,7 +1097,7 @@
   },
   {
     "id": 137,
-    "name": "Felge with 5/4 t. to handstand.(Zhou Shixiong)",
+    "name": "Felge with 5/4 twists to handstand.(Zhou Shixiong)",
     "difficulty": 0.7,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1145,7 +1145,7 @@
   },
   {
     "id": 143,
-    "name": "Felge roll backward with tuck salto ½ to upperarm hang. (Gagnon 1)",
+    "name": "Felge roll backward with tuck salto 1/2 to upperarm hang. (Gagnon 1)",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1153,7 +1153,7 @@
   },
   {
     "id": 144,
-    "name": "Felge roll backward with straight salto ½ toupper arm hang. (Gagnon 2)",
+    "name": "Felge roll backward with straight salto 1/2 toupper arm hang. (Gagnon 2)",
     "difficulty": 0.3,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1169,7 +1169,7 @@
   },
   {
     "id": 146,
-    "name": "Felge with salto bwd p. to up. arm hang.(Juarez 1)",
+    "name": "Felge with salto bwd piked to up. arm hang.(Juarez 1)",
     "difficulty": 0.6,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1185,7 +1185,7 @@
   },
   {
     "id": 148,
-    "name": "Felge forward with ½ t. to support.",
+    "name": "Felge forward with 1/2 twists to support.",
     "difficulty": 0.2,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1193,7 +1193,7 @@
   },
   {
     "id": 149,
-    "name": "Shoot up with ¼ t. to handstand.",
+    "name": "Shoot up with ¼ twists to handstand.",
     "difficulty": 0.4,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1201,7 +1201,7 @@
   },
   {
     "id": 150,
-    "name": "Shoot up with ½ or 3/4 t. to handstand. (Nguyen)",
+    "name": "Shoot up with 1/2 or 3/4 twists to handstand. (Nguyen)",
     "difficulty": 0.5,
     "group": 3,
     "apparatus": "Parallel Bars",
@@ -1217,7 +1217,7 @@
   },
   {
     "id": 152,
-    "name": "Salto fwd. piked or straight also with ½ t.",
+    "name": "Salto forwards piked or straight also with 1/2 twists",
     "difficulty": 0.1,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1225,7 +1225,7 @@
   },
   {
     "id": 153,
-    "name": "Double salto fwd. tuck.",
+    "name": "Double salto forwards tuck.",
     "difficulty": 0.5,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1233,7 +1233,7 @@
   },
   {
     "id": 154,
-    "name": "Double salto fwd. p.(Belyavskiy)",
+    "name": "Double salto forwards p.(Belyavskiy)",
     "difficulty": 0.6,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1241,7 +1241,7 @@
   },
   {
     "id": 155,
-    "name": "Salto fwd. piked or straight with 1/1",
+    "name": "Salto forwards piked or straight with 1/1",
     "difficulty": 0.2,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1249,7 +1249,7 @@
   },
   {
     "id": 156,
-    "name": "Salto fwd. piked or straight. 3/2 t.",
+    "name": "Salto forwards piked or straight. 3/2 twists",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1257,7 +1257,7 @@
   },
   {
     "id": 157,
-    "name": "Salto fwd. piked orstraight with 2/1 or 5/2 t.",
+    "name": "Salto forwards piked orstraight with 2/1 or 5/2 twists",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1265,7 +1265,7 @@
   },
   {
     "id": 158,
-    "name": "Double salto fwd. tuck with ½ t. or ½ t. double salto bwd.",
+    "name": "Double salto forwards tuck with 1/2 twists or 1/2 twists double salto backwards",
     "difficulty": 0.5,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1273,7 +1273,7 @@
   },
   {
     "id": 159,
-    "name": "Double salto fwd. tucked with 1/1 t.(Larduet)",
+    "name": "Double salto forwards tucked with 1/1 t.(Larduet)",
     "difficulty": 0.7,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1281,7 +1281,7 @@
   },
   {
     "id": 160,
-    "name": "Double salto fwd. tuck from end.",
+    "name": "Double salto forwards tuck from end.",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1289,7 +1289,7 @@
   },
   {
     "id": 161,
-    "name": "Double salto fwd. piked with ½ t.(Dalaloyan)",
+    "name": "Double salto forwards piked with 1/2 t.(Dalaloyan)",
     "difficulty": 0.6,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1297,7 +1297,7 @@
   },
   {
     "id": 162,
-    "name": "Salto bwd. piked or straight, also with ½ t.",
+    "name": "Salto backwards piked or straight, also with 1/2 twists",
     "difficulty": 0.1,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1305,7 +1305,7 @@
   },
   {
     "id": 163,
-    "name": "Salto bwd. piked or straight with 1/1 or 3/2 t.",
+    "name": "Salto backwards piked or straight with 1/1 or 3/2 twists",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1313,7 +1313,7 @@
   },
   {
     "id": 164,
-    "name": "Salto bwd.straight with 2/1 t. (Kan)",
+    "name": "Salto bwd.straight with 2/1 twists (Kan)",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1329,7 +1329,7 @@
   },
   {
     "id": 166,
-    "name": "Double salto bwd. tuck from end.",
+    "name": "Double salto backwards tuck from end.",
     "difficulty": 0.2,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1337,7 +1337,7 @@
   },
   {
     "id": 167,
-    "name": "Double salto bwd. tuck.",
+    "name": "Double salto backwards tuck.",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1345,7 +1345,7 @@
   },
   {
     "id": 168,
-    "name": "Double salto bwd. pike.",
+    "name": "Double salto backwards pike.",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1353,7 +1353,7 @@
   },
   {
     "id": 169,
-    "name": "Double salto bwd. t. with 1/1 t.(Hiroyuki Kato)",
+    "name": "Double salto backwards twists with 1/1 t.(Hiroyuki Kato)",
     "difficulty": 0.7,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1361,7 +1361,7 @@
   },
   {
     "id": 170,
-    "name": "Double salto bwd. tucked with½ t. or salto bwd.½ tucked to salto fwd. tucked.",
+    "name": "Double salto backwards tucked with½ twists or salto bwd.½ tucked to salto forwards tucked.",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1369,7 +1369,7 @@
   },
   {
     "id": 171,
-    "name": "From hang on end, salto bwd. straight.",
+    "name": "From hang on end, salto backwards straight.",
     "difficulty": 0.1,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1377,7 +1377,7 @@
   },
   {
     "id": 172,
-    "name": "From hang on end, double salto bwd. Tuck.",
+    "name": "From hang on end, double salto backwards Tuck.",
     "difficulty": 0.3,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1385,7 +1385,7 @@
   },
   {
     "id": 173,
-    "name": "From hang on end, double salto bwd. pike.",
+    "name": "From hang on end, double salto backwards pike.",
     "difficulty": 0.4,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1401,7 +1401,7 @@
   },
   {
     "id": 175,
-    "name": "From hang on end, triple salto bwd. Tuck",
+    "name": "From hang on end, triple salto backwards Tuck",
     "difficulty": 0.7,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1409,7 +1409,7 @@
   },
   {
     "id": 176,
-    "name": "Fromhang on end, double salto bwd. tuck with 1/1 or ½ t.",
+    "name": "Fromhang on end, double salto backwards tuck with 1/1 or 1/2 twists",
     "difficulty": 0.5,
     "group": 4,
     "apparatus": "Parallel Bars",
@@ -1417,7 +1417,7 @@
   },
   {
     "id": 177,
-    "name": "From hang on end, double salto bwd. tuck with 2/1 t.",
+    "name": "From hang on end, double salto backwards tuck with 2/1 twists",
     "difficulty": 0.6,
     "group": 4,
     "apparatus": "Parallel Bars",
