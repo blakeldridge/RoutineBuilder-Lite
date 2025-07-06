@@ -47,7 +47,7 @@ const HandstandDismountForm = forwardRef(({ isOpen, addSkill, handleClose }, ref
 
     return (
         <div className="fixed inset-0 z-40 w-screen h-screen" style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
-            <div className="mx-auto fixed top-1/2 left-1/2 bg-[#242424] transform -translate-x-1/2 -translate-y-1/2 p-6 rounded shadow-lg z-50 text-center">
+            <div className="fixed w-[70%] md:w-[50%] lg:w-[30%] top-1/2 left-1/2 bg-[#242424] transform -translate-x-1/2 -translate-y-1/2 p-6 rounded shadow-lg z-50 text-center">
                 <h3>Add Turns to dismount</h3>
                 <select className="my-2" value={turns} onChange={handleChange}>
                     {options.map((option, index) => {
