@@ -21,7 +21,7 @@ const ApparatusSelector = () => {
 
     return (
         <div>
-            <h1>Select an Apparatus:</h1>
+            <h1>Select Apparatus:</h1>
         <div className="grid p-4 lg:px-[20%] grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
             <button data-apparatus={Apparatus.FLOOR} onClick={handleClick}>{Apparatus.FLOOR}</button>
             <button data-apparatus={Apparatus.POMMEL} onClick={handleClick}>{Apparatus.POMMEL}</button>
