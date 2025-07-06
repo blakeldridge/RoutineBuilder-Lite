@@ -159,3 +159,30 @@ pre {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   margin-bottom: 2rem;
 }
+
+/* Target scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #242424;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Thin scrollbar with custom colors */
+* {
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: #888 #242424; /* thumb color, track color */
+}

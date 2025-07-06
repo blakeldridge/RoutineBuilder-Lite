@@ -150,7 +150,7 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
 
                 <button className="truncate" onClick={resetFilter}>Clear Filters</button>
             </div>
-            <div className="flex-none max-w-[50%] min-w-[50%] m-auto h-16 flex flex-row justify-between items-center p-4">
+            <div className="flex-none w-full lg:max-w-[50%] lg:min-w-[50%] m-auto h-16 flex flex-row justify-between items-center p-4">
 
                 {apparatus === Apparatus.POMMEL ? (
                     <button onClick={() => setIsFlopFormOpen(true)}>Create Flop</button>
@@ -169,10 +169,10 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
                 </div>
             </div>
 
-            <div className="flex flex-col flex-grow gap-1 items-center overflow-y-auto">
+            <div className="flex flex-col flex-grow gap-1 mx-5 lg:mx-0 items-center overflow-y-auto">
                 {filteredSkills.map((skill, index) => {
                     return (
-                        <button key={skill.id} onClick={() => addSkill(skill)} className="flex flex-row gap-2 max-w-[50%] min-w-[50%] rounded bg-gray-600 text-center">
+                        <button key={skill.id} onClick={() => addSkill(skill)} className="flex flex-row gap-2 w-full lg:max-w-[50%] lg:min-w-[50%] rounded bg-gray-600 text-center">
                             <p className="w-[15%]">Group: {skill.group}</p>
                             <p className="w-[65%] text-left">{skill.name}</p>
                             <p className="w-[10%]">{skill.difficulty}</p>
