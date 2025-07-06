@@ -12,6 +12,7 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
     const [ filteredSkills, setFilteredSkills ] = useState(skills);
     const [ skillIndex, setSkillIndex ] = useState(-1);
     const [ isFlopFormOpen, setIsFlopFormOpen ] = useState(false);
+    const [ listOrder, setListOrder ] = useState("asc-d");
 
     const resetFilter = () => {
         setGroupFilter(0);
@@ -69,7 +70,7 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
 
     useEffect(() => {
         filterSkills();
-    }, [groupFilter, difficultyFilter, nameFilter, skills]);
+    }, [groupFilter, difficultyFilter, nameFilter, skills, listOrder]);
 
     useEffect(() => {
         filterUpdated();
@@ -82,7 +83,24 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
             (nameFilter == '' || nameFilter.toLowerCase().split(" ").every(word => skill.name.toLowerCase().includes(word))) &&
             (!routine.some(s => s && s.id === skill.id))
         );
-        setFilteredSkills(skillSet);
+        setFilteredSkills(sortSkills(skillSet));
+    };
+
+    const sortSkills = (skills) => {
+        switch(listOrder) {
+            case "asc-d":
+                return skills.sort((skill1, skill2) => skill1.difficulty - skill2.difficulty);
+            case "desc-d":
+                return skills.sort((skill1, skill2) => skill2.difficulty - skill1.difficulty);
+            case "asc-g":
+                return skills.sort((skill1, skill2) => skill1.group - skill2.group);
+            case "desc-g":
+                return skills.sort((skill1, skill2) => skill2.group - skill1.group);
+            case "asc-a":
+                return skills.sort((skill1, skill2) => skill1.name.localeCompare(skill2.name, undefined, {sensitivity:"base"}));
+            case "desc-a":
+                return skills.sort((skill1, skill2) => skill2.name.localeCompare(skill1.name, undefined, {sensitivity:"base"}));
+        }
     };
 
     const handleSearch = (event) => {
@@ -97,11 +115,6 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
         <div className="flex flex-col h-screen fixed inset-0 z-40 w-screen" style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
             <button onClick={cancelChoice} className="flex-none m-2 w-12 h-12">X</button>
             <div className="flex-none h-16 flex flex-row justify-center items-center gap-4 p-4">
-
-                {apparatus === Apparatus.POMMEL ? (
-                    <button onClick={() => setIsFlopFormOpen(true)}>Create Flop</button>
-                ) : null}
-
                 <div className="flex flex-row gap-2">
                     <select className="w-full min-w-[10-rem] sm:min-w-[5rem] md:min-w-[10rem] truncate px-2 py-1 border border-gray-300 rounded text-sm" value={groupFilter} onChange={(event) => setGroupFilter(event.target.value)}>
                         <option value={0}>All Groups</option>
@@ -136,6 +149,24 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
                 </form>
 
                 <button className="truncate" onClick={resetFilter}>Clear Filters</button>
+            </div>
+            <div className="flex-none max-w-[50%] min-w-[50%] m-auto h-16 flex flex-row justify-between items-center p-4">
+
+                {apparatus === Apparatus.POMMEL ? (
+                    <button onClick={() => setIsFlopFormOpen(true)}>Create Flop</button>
+                ) : <div></div>}
+
+                <div className="flex items-center gap-2">
+                    <p>Sort: </p>
+                    <select className="w-full min-w-[10-rem] sm:min-w-[5rem] md:min-w-[10rem] truncate px-2 py-1 border border-gray-300 rounded text-sm" value={listOrder} onChange={(event) => setListOrder(event.target.value)}>
+                        <option value={"asc-d"}>Difficulty: low to high</option>
+                        <option value={"desc-d"}>Difficulty: high to low</option>
+                        <option value={"asc-g"}>Group: 1-4</option>
+                        <option value={"desc-g"}>Group: 4-1</option>
+                        <option value={"asc-a"}>Alphabetical: a-z</option>
+                        <option value={"desc-a"}>Alphabetical: z-a</option>
+                    </select>
+                </div>
             </div>
 
             <div className="flex flex-col flex-grow gap-1 items-center overflow-y-auto">
