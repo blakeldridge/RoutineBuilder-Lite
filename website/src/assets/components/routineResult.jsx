@@ -19,7 +19,7 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
         );
     }
     return (
-        <div className="flex flex-col lg:flex-row justify-between gap-4">
+        <div className="flex flex-col lg:max-w-[75%] lg:flex-row justify-between gap-4 mx-[10%] lg:mx-auto">
             {apparatus == Apparatus.VAULT ? (
                 <div className="flex flex-col justify-start text-left">
                     <h2>SV: {result.vault1.toFixed(2)}</h2>
@@ -69,8 +69,8 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
                     </div>
                 </div>
             )}
-            <div className="w-full border justify-center items-center text-center">
-                <ul className="flex flex-col h-full m-auto justify-center items-center text-center">
+            <div className="px-[2%] border justify-center items-center">
+                <ul className="flex flex-col h-full my-1 justify-center items-start list-disc pl-2">
                     {result.corrections.length > 0 ? result.corrections.map(correction => {
                         return (
                             <li>{correction}</li>
