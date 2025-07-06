@@ -20,13 +20,16 @@ const ApparatusSelector = () => {
     };
 
     return (
-        <div className="grid grid-cols-3 gap-4 text-lg">
+        <div>
+            <h1>Select an Apparatus:</h1>
+        <div className="grid p-4 lg:px-[20%] grid-cols-2 lg:grid-cols-3 gap-4 text-lg">
             <button data-apparatus={Apparatus.FLOOR} onClick={handleClick}>{Apparatus.FLOOR}</button>
             <button data-apparatus={Apparatus.POMMEL} onClick={handleClick}>{Apparatus.POMMEL}</button>
             <button data-apparatus={Apparatus.RINGS} onClick={handleClick}>{Apparatus.RINGS}</button>
             <button data-apparatus={Apparatus.VAULT} onClick={handleClick}>{Apparatus.VAULT}</button>
             <button data-apparatus={Apparatus.PBAR} onClick={handleClick}>{Apparatus.PBAR}</button>
             <button data-apparatus={Apparatus.HBAR} onClick={handleClick}>{Apparatus.HBAR}</button>
+        </div>
         </div>
     );
 };
