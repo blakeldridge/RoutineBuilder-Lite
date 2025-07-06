@@ -24,10 +24,12 @@ const RoutineBuilder = () => {
     const [ isSkillsOpen, setIsSkillsOpen ] = useState(false);
 
     const isLoggedIn = localStorage.getItem("authToken");
-
-    if (isLoggedIn !== "true") {
-        navigate("/login");
-    }
+    
+    useEffect(() => {
+        if (isLoggedIn !== "true") {
+            navigate("/login");
+        }
+    })
 
 
     if (!apparatus || !Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {

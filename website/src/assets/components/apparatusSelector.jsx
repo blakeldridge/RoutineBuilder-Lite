@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
 import { Apparatus } from '../utils/apparatus';
 import { toUrlSlug } from '../utils/navigatePrep';
@@ -6,9 +7,11 @@ const ApparatusSelector = () => {
     const navigate = useNavigate();
     const isLoggedIn = localStorage.getItem("authToken");
 
-    if (isLoggedIn !== "true") {
-        navigate("/login");
-    }
+    useEffect(() => {
+        if (isLoggedIn !== "true") {
+            navigate("/login");
+        }
+    })
 
     const handleClick = (event) => {
         const apparatus = event.currentTarget.dataset.apparatus;
