@@ -19,7 +19,7 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
         );
     }
     return (
-        <div className="flex flex-row justify-between gap-4">
+        <div className="flex flex-col lg:flex-row justify-between gap-4">
             {apparatus == Apparatus.VAULT ? (
                 <div className="flex flex-col justify-start text-left">
                     <h2>SV: {result.vault1.toFixed(2)}</h2>

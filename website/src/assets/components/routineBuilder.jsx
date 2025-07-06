@@ -153,23 +153,26 @@ const RoutineBuilder = () => {
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} routine={routine} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
 
-            <div className="flex flex-row justify-between items-center">
+            <div className="flex flex-row mt-4 max-w-[90vw] lg:max-w-[65vw] mx-auto justify-between items-center">
                 <div className="flex flex-row items-center gap-4">
                     <button onClick={resetRoutine}>Clear Routine</button>
                 </div>
                 <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} />
             </div>
-
-            <div className="w-full min-w-full flex flex-col mt-4">
-                {routine.map((element, index) => {
-                    return (
-                        <div key={index} className="mb-4 flex flex-row text-center items-center gap-8">
+            <div className="w-full min-w-full flex flex-col mt-4 mx-auto items-center">
+                {routine.map((element, index) => (
+                    <div key={index} className="relative mb-4 w-full flex flex-row justify-center">
+                        <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8">
                             <p>{index + 1}</p>
-                            {routine[index] ? (
-                                <button className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" onClick={() => {setIsSkillsOpen(true); skillFilterRef.current.chooseSkill(index)}}>{routine[index].name}</button>
-                            ) : (
-                                <button className="truncate max-w-[50vw] min-w-[50vw] px-2 py-1 border rounded text-sm" onClick={() => {setIsSkillsOpen(true); skillFilterRef.current.chooseSkill(index)}}>-- Select Skill --</button>
-                            )}
+                            <button
+                                className="truncate max-w-[60vw] lg:max-w-[50vw] min-w-[60vw] lg:min-w-[50vw] px-2 py-1 border rounded text-sm"
+                                onClick={() => {
+                                    setIsSkillsOpen(true);
+                                    skillFilterRef.current.chooseSkill(index);
+                                }}
+                            >
+                                {routine[index] ? routine[index].name : "-- Select Skill --"}
+                            </button>
                             <p className="flex flex-col text-left">
                                 <span className="text-xs font-semibold text-gray-500">Group</span>
                                 <span>{routine[index] ? routine[index].group : "-"}</span>
@@ -178,15 +181,43 @@ const RoutineBuilder = () => {
                                 <span className="text-xs font-semibold text-gray-500">Difficulty</span>
                                 <span>{routine[index] ? (routine[index].invalid ? "N/A" : routine[index].difficulty.toFixed(1)) : "-"}</span>
                             </p>
-                            <button className="items-center justify-center" disabled={!routine[index]} onClick={() => removeSkill(index)}>X</button>
-                            {canConnect(index) ? (
-                                <button style={{"width":"120px"}} onClick={() => connectSkills(index)}>{routine[index].connection ? "disconnect" : "connect"}</button>
+                            <button
+                                className="items-center justify-center"
+                                disabled={!routine[index]}
+                                onClick={() => removeSkill(index)}
+                            >
+                                X
+                            </button>
+                            {!canConnect(index) && (apparatus === Apparatus.FLOOR || apparatus === Apparatus.RINGS || apparatus === Apparatus.HBAR) ? (
+                                <div className="block lg:hidden w-[35px]"></div>
                             ) : null}
-
                         </div>
-                    );
-                })}
+                        {canConnect(index) && (
+                            <>
+                                <div className="hidden lg:flex absolute right-[0px] top-1/2 -translate-y-1/2">
+                                    <button
+                                        className="w-[100px] justify-center border px-2 py-1 rounded text-sm"
+                                        onClick={() => connectSkills(index)}
+                                    >
+                                        {routine[index].connection ? "disconnect" : "connect"}
+                                    </button>
+                                </div>
+
+                                <div className="lg:hidden flex items-center ml-2">
+                                    <button
+                                        className="w-[25px] flex justify-center border px-2 py-1 rounded text-sm"
+                                        onClick={() => connectSkills(index)}
+                                    >
+                                        {routine[index].connection ? "-" : "+"}
+                                    </button>
+                                </div>
+                            </>
+                        )}
+                    </div>
+                ))}
             </div>
+
+
             <RoutineResult ref={scoreTableRef} apparatus={apparatusName} />
 
             <HandstandDismountForm ref={handstandDismountRef} isOpen={isHdstOpen} addSkill={placeHandstandDismount} handleClose={() => setIsHdstOpen(false)} />
