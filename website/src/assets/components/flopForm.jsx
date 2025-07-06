@@ -161,7 +161,7 @@ const FlopForm = ({ isOpen, handleAddSkill, skillExists, handleClose }) => {
 
     return (
         <div className="fixed inset-0 z-40 w-screen h-screen" style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
-            <div className="fixed top-1/2 left-1/2 bg-[#242424] transform -translate-x-1/2 -translate-y-1/2 p-6 rounded shadow-lg z-50">
+            <div className="fixed w-[70%] md:w-[50%] lg:w-[30%] top-1/2 left-1/2 bg-[#242424] transform -translate-x-1/2 -translate-y-1/2 p-6 rounded shadow-lg z-50">
                 {skillOptions.map((options, index) => {
                     return (
                         <select className="mb-2" key={index} value={skills[index]} onChange={(e) => handleSkillAdded(index, e.target.value)}>
