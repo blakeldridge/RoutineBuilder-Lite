@@ -2,6 +2,7 @@ import { useState, useEffect, useImperativeHandle, forwardRef } from "react";
 import getSkills from "../utils/getSkills";
 import { Apparatus } from "../utils/apparatus";
 import FlopForm from "./flopForm";
+import getGroupNames from "../utils/getGroupNames";
 
 const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated, selectSkill, cancelChoice }, ref) => {
     const [ skills, setSkills ] = useState(getSkills(apparatus))
@@ -123,13 +124,9 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
                 <div className="flex flex-row gap-2">
                     <select className="w-full min-w-[10-rem] sm:min-w-[5rem] md:min-w-[10rem] truncate px-2 py-1 border border-gray-300 rounded text-sm" value={groupFilter} onChange={(event) => setGroupFilter(event.target.value)}>
                         <option value={0}>All Groups</option>
-                        <option value={1}>Group I</option>
-                        <option value={2}>Group II</option>
-                        <option value={3}>Group III</option>
-                        <option value={4}>Group IV</option>
-                        {apparatus == Apparatus.VAULT && (
-                            <option value={5}>Group V</option>
-                        )}
+                        {getGroupNames(apparatus).map((groupName, index) => (
+                            <option value={index + 1}>{groupName}</option>
+                        ))}
                     </select>
 
                     {apparatus !== Apparatus.VAULT && (
