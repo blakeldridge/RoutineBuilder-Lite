@@ -4,6 +4,43 @@ import { Apparatus } from "../utils/apparatus";
 import FlopForm from "./flopForm";
 import getGroupNames from "../utils/getGroupNames";
 
+const skillSynonymMap = {
+  "y-scale": "standing scale",
+  "balance": "standing scale",
+  "arabesque": "standing scale",
+  "flick to support": "jump backwards to front support",
+  "flip": "salto",
+  "shear": "scissor",
+  "czech": "czechkehre",
+  "check": "czechkehre",
+  "cheque": "czechkehre",
+  "sohn": "kehr",
+  "stockli": "kehre",
+  "tong fei": "vammen",
+  "dislo": "dislocate",
+  "inlo": "inlocate",
+  "planche": "supportscale", // Note: both "support scale" and "supportscale" map here
+  "maltese": "swallow",
+  "swallow": "maltese",
+  "victorian": "inverted swallow",
+  "undersomi": "felge",
+  "turn": "pirouette",
+  "longswing": "giant",
+  "giant swing": "giant",
+  "giantswing": "giant",
+  "upstart": "glide kip",
+  "kip": "upstart", // prioritizing last seen mapping, may overlap
+  "short clear": "shoot up",
+  "clear": "shoot up",
+  "stalder": "stoop",
+  "adler": "stoop",
+  "endo": "stoop",
+  "squat": "adler", // Note: could also be from "stoop"
+  "blind": "1/2 turn",
+  "top": "1/2 turn",
+  "tkatchev": "vault backwards"
+};
+
 const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated, selectSkill, cancelChoice }, ref) => {
     const [ skills, setSkills ] = useState(getSkills(apparatus))
 
@@ -78,10 +115,14 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
     }, [filteredSkills])
 
     const filterSkills = () => {
+        const checkSynonym = () => {
+
+        };
+        
         const skillSet = skills.filter(skill => 
             (groupFilter == 0 || skill.group == groupFilter) && 
             (difficultyFilter == 0 || skill.difficulty == difficultyFilter) && 
-            (nameFilter == '' || nameFilter.toLowerCase().split(" ").every(word => skill.name.toLowerCase().includes(word))) &&
+            (nameFilter == '' || nameFilter.toLowerCase().split(/\b/).every(word => skill.name.toLowerCase().includes(word) || Object.keys(skillSynonymMap).some(key => key.includes(word)) && skill.name.toLowerCase().includes(skillSynonymMap[Object.keys(skillSynonymMap).filter(key => key.includes(word))[0]]))) &&
             (!routine.some(s => s && s.id === skill.id))
         );
         setFilteredSkills(sortSkills(skillSet));
