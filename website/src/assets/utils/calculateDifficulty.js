@@ -82,22 +82,22 @@ function calculateGroups(routine) {
 }
 
 // Function to make skills invalid if they fall under the following:
-//  - Too many skills in a specific group
 //  - Come after the dismount
-function invalidateGroups(routine, apparatus) {
-    const groups = countGroups(routine);
-
-    // Floor has no dismount, disregard for rule 2
-    if (apparatus !== Apparatus.FLOOR) {
-        const dismountIndex = routine.findIndex(skill => skill && skill.group == 4);
-        if (dismountIndex != -1) {
-            for (let i = dismountIndex + 1; i < routine.length; i++) {
-                if (routine[i]) {
-                    routine[i].invalid = true;
-                }
+function invalidateDismount(routine) {
+    const dismountIndex = routine.findIndex(skill => skill && skill.group == 4);
+    if (dismountIndex != -1) {
+        for (let i = dismountIndex + 1; i < routine.length; i++) {
+            if (routine[i]) {
+                routine[i].invalid = true;
             }
         }
     }
+}
+
+// Function to make skills invalid if they fall under the following:
+//  - Too many skills in a specific group
+function invalidateGroups(routine, apparatus) {
+    const groups = countGroups(routine);
 
     // Invalidate the smallest valued elements of each group, if more than 4 elements in the group
     for (let i = 0; i < groups.length; i++) {
@@ -309,6 +309,14 @@ function scorePommel(routine) {
         }
     }
 
+    invalidateDismount(routine);
+    // add any uncounted skills to corrections
+    for (let i = 0; i < routine.length; i++) {
+        if (routine[i].invalid) {
+            corrections.push(`Skill ${i + 1} is not counted due to coming after a dismount`);
+        }
+    }
+
     // check for special repetitions
 
     for (const type of Object.values(PommelSkills)) {
@@ -423,6 +431,14 @@ function scoreRings(routine) {
     for (let i = 0; i < routine.length; i++) {
         if (routine[i].invalid) {
             corrections.push(`Skill ${i + 1} is not counted due to having more than 4 many skills in group ${routine[i].group}`);
+        }
+    }
+
+    invalidateDismount(routine);
+    // add any uncounted skills to corrections
+    for (let i = 0; i < routine.length; i++) {
+        if (routine[i].invalid) {
+            corrections.push(`Skill ${i + 1} is not counted due to coming after a dismount`);
         }
     }
 
@@ -598,6 +614,14 @@ function scorePbar(routine) {
         }
     }
 
+    invalidateDismount(routine);
+    // add any uncounted skills to corrections
+    for (let i = 0; i < routine.length; i++) {
+        if (routine[i].invalid) {
+            corrections.push(`Skill ${i + 1} is not counted due to coming after a dismount`);
+        }
+    }
+
     // check for special repetitions
 
     for (const type of Object.values(PbarSkills)) {
@@ -700,6 +724,14 @@ function scoreHbar(routine) {
     for (let i = 0; i < routine.length; i++) {
         if (routine[i] && routine[i].invalid) {
             corrections.push(`Skill ${i + 1} is not counted due to having more than 4 many skills in group ${routine[i].group}`);
+        }
+    }
+
+    invalidateDismount(routine);
+    // add any uncounted skills to corrections
+    for (let i = 0; i < routine.length; i++) {
+        if (routine[i].invalid) {
+            corrections.push(`Skill ${i + 1} is not counted due to coming after a dismount`);
         }
     }
 
