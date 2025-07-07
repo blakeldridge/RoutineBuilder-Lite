@@ -98,7 +98,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border: 1px solid #646cff;
 }
 button:disabled {
   border: none;

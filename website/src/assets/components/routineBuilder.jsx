@@ -163,9 +163,9 @@ const RoutineBuilder = () => {
                 {routine.map((element, index) => (
                     <div key={index} className="relative mb-4 w-full flex flex-row justify-center">
                         <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8">
-                            <p>{index + 1}</p>
+                            <p className={`${routine[index] && routine[index].invalid ? "font-semibold !text-red-500 text-lg" : ""}`}>{routine[index] && routine[index].invalid ? "!": index + 1}</p>
                             <button
-                                className="truncate max-w-[60vw] lg:max-w-[50vw] min-w-[60vw] lg:min-w-[50vw] px-2 py-1 border rounded text-sm"
+                                className={`${routine[index] && routine[index].invalid ? "!border-2 !border-solid !border-red-500" : ""} truncate max-w-[60vw] lg:max-w-[50vw] min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
                                 onClick={() => {
                                     setIsSkillsOpen(true);
                                     skillFilterRef.current.chooseSkill(index);
