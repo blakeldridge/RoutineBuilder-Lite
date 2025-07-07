@@ -58,8 +58,8 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
 
     const checkSkillExistsByName = (skillName) => {
         let skillExists = false;
-        for (let i = skills.length - 1; i >= 0; i--) {
-            if (skillName == skills[i].name) {
+        for (let i = routine.length - 1; i >= 0; i--) {
+            if (routine[i] && skillName == routine[i].name) {
                 skillExists = true;
                 break;
             }
@@ -105,6 +105,11 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
 
     const handleSearch = (event) => {
         event.preventDefault();
+    };
+
+    const addFlop = (skill) => {
+        setIsFlopFormOpen(false);
+        addSkill(skill);
     };
 
     if (!isOpen) {
@@ -181,7 +186,7 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
                 })}
             </div>
 
-            <FlopForm isOpen={isFlopFormOpen} handleAddSkill={(skill) => addSkill(skill)} skillExists={checkSkillExistsByName} handleClose={() => setIsFlopFormOpen(false)}/>
+            <FlopForm isOpen={isFlopFormOpen} handleAddSkill={(skill) => addFlop(skill)} skillExists={checkSkillExistsByName} handleClose={() => setIsFlopFormOpen(false)}/>
         </div>
     );
 });
