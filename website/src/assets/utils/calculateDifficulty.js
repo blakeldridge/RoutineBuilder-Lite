@@ -385,7 +385,7 @@ function scorePommel(routine) {
     // Dismount gains itself requirement
     requirements += groups[3];
     if (groups[3] == 0) {
-        corrections.push("Add a dismount to gain extra requirment.");
+        corrections.push("Add a dismount to gain extra requirement.");
     }
 
     const invalidIndexes = routine.reduce((acc, skill, index) => {
@@ -501,7 +501,7 @@ function scoreRings(routine) {
     // Dismount gains itself requirement
     requirements += groups[3];
     if (groups[3] == 0) {
-        corrections.push("Add a dismount to gain extra requirment.");
+        corrections.push("Add a dismount to gain extra requirement.");
     } else if (groups[3] < 0.3) {
         corrections.push("Improve to a C+ dismount to be able to get stick bonus");
     }
@@ -662,7 +662,7 @@ function scorePbar(routine) {
     // Dismount gains itself requirement
     requirements += groups[3];
     if (groups[3] == 0) {
-        corrections.push("Add a dismount to gain extra requirment.");
+        corrections.push("Add a dismount to gain extra requirement.");
     } else if (groups[3] < 0.3) {
         corrections.push("Improve to a C+ dismount to be able to get stick bonus");
     }
@@ -762,7 +762,7 @@ function scoreHbar(routine) {
     // Dismount gains itself requirement
     requirements += groups[3];
     if (groups[3] == 0) {
-        corrections.push("Add a dismount to gain extra requirment.");
+        corrections.push("Add a dismount to gain extra requirement.");
     } else if (groups[3] < 0.3) {
         corrections.push("Improve to a C+ dismount to be able to get stick bonus");
     }
