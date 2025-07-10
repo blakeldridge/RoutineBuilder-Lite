@@ -165,7 +165,7 @@ const RoutineBuilder = () => {
                         <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8">
                             <p className={`${routine[index] && routine[index].invalid ? "font-semibold !text-red-500 text-lg" : ""}`}>{routine[index] && routine[index].invalid ? "!": index + 1}</p>
                             <button
-                                className={`${routine[index] && routine[index].invalid ? "!border-2 !border-solid !border-red-500" : ""} truncate max-w-[60vw] lg:max-w-[50vw] min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
+                                className={`${routine[index] && routine[index].invalid ? "!border-2 !border-solid !border-red-500" : ""} truncate max-w-[50vw] md:max-w-[60vw] lg:max-w-[50vw] min-w-[50vw] md:min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
                                 onClick={() => {
                                     setIsSkillsOpen(true);
                                     skillFilterRef.current.chooseSkill(index);
@@ -188,8 +188,11 @@ const RoutineBuilder = () => {
                             >
                                 X
                             </button>
-                            {!canConnect(index) && (apparatus === Apparatus.FLOOR || apparatus === Apparatus.RINGS || apparatus === Apparatus.HBAR) ? (
-                                <div className="block lg:hidden w-[35px]"></div>
+                            {!canConnect(index) && (apparatusName === Apparatus.FLOOR || apparatusName === Apparatus.RINGS || apparatusName === Apparatus.HBAR) ? (
+                                <div className="w-[35px]">
+                                    
+
+                                </div>
                             ) : null}
                         </div>
                         {canConnect(index) && (
