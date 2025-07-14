@@ -161,8 +161,8 @@ const RoutineBuilder = () => {
             </div>
             <div className="w-full min-w-full flex flex-col mt-4 mx-2 lg:mx-auto items-center">
                 {routine.map((element, index) => (
-                    <div key={index} className="relative mb-4 w-full flex flex-row justify-center">
-                        <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8">
+                    <div key={index} className="mb-4 w-full flex flex-row justify-between items-center px-2 lg:px-0 max-w-[90vw] lg:max-w-[65vw] mx-auto">
+                        <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8 flex-grow justify-center">
                             <p className={`${routine[index] && routine[index].invalid ? "font-semibold !text-red-500 text-lg" : ""}`}>{routine[index] && routine[index].invalid ? "!": index + 1}</p>
                             <button
                                 className={`${routine[index] && routine[index].invalid ? "!border-2 !border-solid !border-red-500" : ""} truncate max-w-[50vw] md:max-w-[60vw] lg:max-w-[50vw] min-w-[50vw] md:min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
@@ -189,33 +189,29 @@ const RoutineBuilder = () => {
                                 X
                             </button>
                             {!canConnect(index) && (apparatusName === Apparatus.FLOOR || apparatusName === Apparatus.RINGS || apparatusName === Apparatus.HBAR) ? (
-                                <div className="w-[35px]">
-                                    
-
-                                </div>
+                                <div className="w-[30px]"></div>
                             ) : null}
                         </div>
-                        {canConnect(index) && (
-                            <>
-                                <div className="hidden lg:flex absolute right-[0px] top-1/2 -translate-y-1/2">
-                                    <button
-                                        className="w-[100px] justify-center border px-2 py-1 rounded text-sm"
-                                        onClick={() => connectSkills(index)}
-                                    >
+                            <div className="flex-shrink-0 ml-2">
+                            {canConnect(index) ? (
+                                <div className="hidden lg:flex">
+                                    <button className="w-[90px] border px-2 py-1 rounded text-sm flex justify-center" onClick={() => connectSkills(index)}>
                                         {routine[index].connection ? "disconnect" : "connect"}
                                     </button>
                                 </div>
+                            ) : (
+                                <div className="hidden lg:flex w-[90px]"></div> // placeholder
+                            )}
 
-                                <div className="lg:hidden flex items-center ml-2">
-                                    <button
-                                        className="w-[25px] flex justify-center border px-2 py-1 rounded text-sm"
-                                        onClick={() => connectSkills(index)}
-                                    >
+                            {/* Mobile button */}
+                            {canConnect(index) && (
+                                <div className="lg:hidden flex">
+                                    <button className="w-[20px] border px-2 py-1 rounded text-sm flex justify-center"  onClick={() => connectSkills(index)}>
                                         {routine[index].connection ? "-" : "+"}
                                     </button>
                                 </div>
-                            </>
-                        )}
+                            )}
+                            </div>
                     </div>
                 ))}
             </div>
