@@ -203,7 +203,7 @@ const RoutineBuilder = () => {
                                 <div className="w-[30px]"></div>
                             ) : null}
                         </div>
-                            <div className="flex-shrink-0 md:ml-2">
+                            <div className="flex-shrink-0 ml-1 md:ml-2">
                             {canConnect(index) ? (
                                 <div className="hidden lg:flex">
                                     <button className="w-[90px] border px-2 py-1 rounded text-sm flex justify-center" onClick={() => connectSkills(index)}>
