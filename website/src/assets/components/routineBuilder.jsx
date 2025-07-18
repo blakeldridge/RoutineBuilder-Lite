@@ -160,7 +160,7 @@ const RoutineBuilder = () => {
     return (
         <div>
             <ToastContainer position="bottom-center" hideProgressBar="true" toastStyle={{backgroundColor: "green", color: "white"}}/>
-            <button className="absolute top-5 left-5  p-4" onClick={() => navigate('/')}>Return</button>
+            <button className="flex justify-start m-4 md:m-0 md:absolute md:top-5 md:left-5  p-4" onClick={() => navigate('/')}>Return</button>
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} routine={routine} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
 
