@@ -193,17 +193,17 @@ const RoutineBuilder = () => {
                                 <span>{routine[index] ? (routine[index].invalid ? "N/A" : routine[index].difficulty.toFixed(1)) : "-"}</span>
                             </p>
                             <button
-                                className="items-center justify-center"
+                                className="flex items-center justify-center w-[10px] md:w-auto"
                                 disabled={!routine[index]}
                                 onClick={() => removeSkill(index)}
                             >
                                 X
                             </button>
                             {!canConnect(index) && (apparatusName === Apparatus.FLOOR || apparatusName === Apparatus.RINGS || apparatusName === Apparatus.HBAR) ? (
-                                <div className="w-[100px]"></div>
+                                <div className="w-[30px]"></div>
                             ) : null}
                         </div>
-                            <div className="flex-shrink-0 ml-2">
+                            <div className="flex-shrink-0 md:ml-2">
                             {canConnect(index) ? (
                                 <div className="hidden lg:flex">
                                     <button className="w-[90px] border px-2 py-1 rounded text-sm flex justify-center" onClick={() => connectSkills(index)}>
@@ -217,7 +217,7 @@ const RoutineBuilder = () => {
                             {/* Mobile button */}
                             {canConnect(index) && (
                                 <div className="lg:hidden flex">
-                                    <button className="w-[20px] border px-1 py-1 rounded text-sm flex justify-center"  onClick={() => connectSkills(index)}>
+                                    <button className="w-[20px] border w-[10px] md:w-auto py-1 rounded text-sm flex justify-center"  onClick={() => connectSkills(index)}>
                                         {routine[index].connection ? "-" : "+"}
                                     </button>
                                 </div>
