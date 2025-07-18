@@ -160,8 +160,8 @@ const RoutineBuilder = () => {
     return (
         <div>
             <ToastContainer position="bottom-center" hideProgressBar="true" toastStyle={{backgroundColor: "green", color: "white"}}/>
-            <button className="flex justify-start m-4 md:m-0 md:absolute md:top-5 md:left-5  p-4" onClick={() => navigate('/')}>Return</button>
-            <h1>{apparatusName}</h1>
+            <button className="flex justify-start m-2 md:m-4 md:m-0 md:absolute md:top-5 md:left-5  p-4" onClick={() => navigate('/')}>Return</button>
+            <h1 className="m-auto">{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} routine={routine} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
 
             <div className="flex flex-row gap-4 mt-4 max-w-[90vw] lg:max-w-[65vw] mx-auto justify-between items-center">
@@ -172,7 +172,7 @@ const RoutineBuilder = () => {
             </div>
             <div className="w-full min-w-full flex flex-col mt-4 lg:mx-auto items-center">
                 {routine.map((element, index) => (
-                    <div key={index} className="mb-4 w-full flex flex-row justify-between items-center px-2 lg:px-0 max-w-[90vw] lg:max-w-[65vw] mx-auto">
+                    <div key={index} className="mb-4 w-full flex flex-row justify-between items-center max-w-[90vw] lg:max-w-[65vw] mx-auto">
                         <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8 flex-grow justify-center">
                             <p className={`${routine[index] && routine[index].invalid ? "font-semibold !text-red-500 text-lg" : ""}`}>{routine[index] && routine[index].invalid ? "!": index + 1}</p>
                             <button
@@ -200,7 +200,7 @@ const RoutineBuilder = () => {
                                 X
                             </button>
                             {!canConnect(index) && (apparatusName === Apparatus.FLOOR || apparatusName === Apparatus.RINGS || apparatusName === Apparatus.HBAR) ? (
-                                <div className="w-[30px]"></div>
+                                <div className="w-[100px]"></div>
                             ) : null}
                         </div>
                             <div className="flex-shrink-0 ml-2">
@@ -217,7 +217,7 @@ const RoutineBuilder = () => {
                             {/* Mobile button */}
                             {canConnect(index) && (
                                 <div className="lg:hidden flex">
-                                    <button className="w-[20px] border px-2 py-1 rounded text-sm flex justify-center"  onClick={() => connectSkills(index)}>
+                                    <button className="w-[20px] border px-1 py-1 rounded text-sm flex justify-center"  onClick={() => connectSkills(index)}>
                                         {routine[index].connection ? "-" : "+"}
                                     </button>
                                 </div>
