@@ -69,16 +69,19 @@ const RoutineResult = forwardRef(({ apparatus }, ref) => {
                     </div>
                 </div>
             )}
-            <div className="px-[2%] border justify-center items-center">
-                <ul className="flex flex-col h-full my-1 justify-center items-start list-disc pl-2">
+            <div className="flex flex-col w-full">
+            <h3 className="flex justify-start">Corrections:</h3>
+            <div className="px-[2%] border justify-center items-center text-center w-full">
+                <ul className="flex flex-col h-full my-1 text-center justify-center items-start list-disc pl-2">
                     {result.corrections.length > 0 ? result.corrections.map(correction => {
                         return (
                             <li>{correction}</li>
                         );
                     }) : (
-                        <p>No suggested corrections</p>
+                        <p className="text-center mx-auto">No suggested corrections</p>
                     )}
                 </ul>
+            </div>
             </div>
         </div>
     );
