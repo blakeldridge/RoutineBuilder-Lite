@@ -164,7 +164,7 @@ const RoutineBuilder = () => {
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} routine={routine} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
 
-            <div className="flex flex-row mt-4 max-w-[90vw] lg:max-w-[65vw] mx-auto justify-between items-center">
+            <div className="flex flex-row gap-4 mt-4 max-w-[90vw] lg:max-w-[65vw] mx-auto justify-between items-center">
                 <div className="flex flex-row items-center gap-4">
                     <button onClick={resetRoutine}>Clear Routine</button>
                 </div>
@@ -176,7 +176,7 @@ const RoutineBuilder = () => {
                         <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8 flex-grow justify-center">
                             <p className={`${routine[index] && routine[index].invalid ? "font-semibold !text-red-500 text-lg" : ""}`}>{routine[index] && routine[index].invalid ? "!": index + 1}</p>
                             <button
-                                className={`${routine[index] && routine[index].invalid ? "!border-2 !border-solid !border-red-500" : ""} truncate max-w-[50vw] md:max-w-[60vw] lg:max-w-[50vw] min-w-[50vw] md:min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
+                                className={`${routine[index] && routine[index].invalid ? "!border-2 !border-solid !border-red-500" : ""} truncate max-w-[45vw] md:max-w-[60vw] lg:max-w-[50vw] min-w-[45vw] md:min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
                                 onClick={() => {
                                     setIsSkillsOpen(true);
                                     skillFilterRef.current.chooseSkill(index);

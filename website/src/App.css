@@ -5,6 +5,7 @@
   padding: 0;
   text-align: center;
   overflow-y:hidden;
+  overflow-x:hidden;
 }
 
 .logo {
@@ -32,6 +33,13 @@
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    margin: 0; /* Removes all margins on mobile */
+    padding: 0; /* Optional: ensure no padding either */
   }
 }
 
