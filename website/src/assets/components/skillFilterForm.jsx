@@ -164,8 +164,8 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
 
     return (
         <div className="flex flex-col h-screen fixed inset-0 z-40 w-screen" style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}>
-            <button onClick={cancelChoice} className="flex-none m-2 w-12 h-12">X</button>
-            <div className="flex-none h-16 flex flex-row justify-center items-center gap-4 p-4">
+            <button onClick={cancelChoice} className="absolute top-5 left-5 md:flex md:flex-none md:m-2 w-12 h-12">X</button>
+            <div className="flex-none mt-16 md:mt-16 md:h-16 flex flex-col md:flex-row justify-center items-center gap-4 p-4">
                 <div className="flex flex-row gap-2">
                     <select className="w-full min-w-[10-rem] sm:min-w-[5rem] md:min-w-[10rem] truncate px-2 py-1 border border-gray-300 rounded text-sm" value={groupFilter} onChange={(event) => setGroupFilter(event.target.value)}>
                         <option value={0}>All Groups</option>
@@ -190,12 +190,13 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
                         </select>
                     )}
                 </div>
+                <div className="flex flex-row justify-center gap-2">
+                    <form className="flex flex-row gap-2 w-full">
+                        <input type="text" placeholder="Search..." value={nameFilter} onChange={(event) => setNameFilter(event.target.value)} />
+                    </form>
 
-                <form className="flex flex-row gap-2">
-                    <input type="text" placeholder="Search..." value={nameFilter} onChange={(event) => setNameFilter(event.target.value)} />
-                </form>
-
-                <button className="truncate" onClick={resetFilter}>Clear Filters</button>
+                    <button className="truncate w-full" onClick={resetFilter}>Clear Filters</button>
+                </div>
             </div>
             <div className="flex-none w-full lg:max-w-[50%] lg:min-w-[50%] m-auto h-16 flex flex-row justify-between items-center p-4">
 
