@@ -150,9 +150,11 @@ const RoutineBuilder = () => {
     };
 
     const connectSkillsPopup = (index1, index2) => {
-        toast.success(`Connected skill ${index1 + 1} to skill ${index2 + 1}`, {
-                autoClose: 1000,
-        });
+        toast.success(`Connected skill ${index1 + 1} to skill ${index2 + 1}`, { autoClose: 1000 });
+    };
+
+    const downloadRoutinePopup = (fileName) => {
+        toast.success(`Successfully saved routine to ${fileName}`, { autoClose : 1000 })
     };
 
     return (
@@ -166,7 +168,7 @@ const RoutineBuilder = () => {
                 <div className="flex flex-row items-center gap-4">
                     <button onClick={resetRoutine}>Clear Routine</button>
                 </div>
-                <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} />
+                <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} downloadPopup={(filename) => downloadRoutinePopup(filename)} />
             </div>
             <div className="w-full min-w-full flex flex-col mt-4 mx-2 lg:mx-auto items-center">
                 {routine.map((element, index) => (

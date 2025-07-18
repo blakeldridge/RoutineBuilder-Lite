@@ -3,7 +3,7 @@ import { autoTable } from "jspdf-autotable";
 import { useState } from "react";
 import { Apparatus } from "../utils/apparatus";
 
-function DownloadPDFButton({ apparatus, routine, routineResult }) {
+function DownloadPDFButton({ apparatus, routine, routineResult, downloadPopup }) {
     const [ fileName, setFileName ] = useState("");
 
     const handleDownload = async (e) => {
@@ -88,6 +88,9 @@ function DownloadPDFButton({ apparatus, routine, routineResult }) {
         });
 
         doc.save(saveName + ".pdf");
+
+        downloadPopup(saveName + ".pdf");
+        setFileName("");
     };
 
     return (
