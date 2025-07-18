@@ -170,7 +170,7 @@ const RoutineBuilder = () => {
                 </div>
                 <DownloadPDFButton apparatus={apparatusName} routine={routine} routineResult={score} downloadPopup={(filename) => downloadRoutinePopup(filename)} />
             </div>
-            <div className="w-full min-w-full flex flex-col mt-4 mx-2 lg:mx-auto items-center">
+            <div className="w-full min-w-full flex flex-col mt-4 lg:mx-auto items-center">
                 {routine.map((element, index) => (
                     <div key={index} className="mb-4 w-full flex flex-row justify-between items-center px-2 lg:px-0 max-w-[90vw] lg:max-w-[65vw] mx-auto">
                         <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8 flex-grow justify-center">
