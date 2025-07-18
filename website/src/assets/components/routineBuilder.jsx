@@ -4,12 +4,13 @@ import { fromUrlSlug } from '../utils/navigatePrep';
 import { Apparatus } from '../utils/apparatus';
 import scoreRoutine from '../utils/calculateDifficulty';
 import { useState, useRef  } from 'react';
-import { FloorSkills, PommelSkills, RingsSkills } from '../utils/skillTypes';
+import { PommelSkills, RingsSkills } from '../utils/skillTypes';
 import RoutineResult from './routineResult';
 import SkillFilterForm from './skillFilterForm';
-import FlopForm from './flopForm';
 import HandstandDismountForm from './handstandDismountForm';
 import DownloadPDFButton from './downloadButton';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const RoutineBuilder = () => {
     const navigate = useNavigate();
@@ -71,6 +72,7 @@ const RoutineBuilder = () => {
             routine[index].connection = false;
         } else {
             routine[index].connection = true;
+            connectSkillsPopup(index, index + 1);
         }
 
         calculateScore();
@@ -147,8 +149,15 @@ const RoutineBuilder = () => {
         }      
     };
 
+    const connectSkillsPopup = (index1, index2) => {
+        toast.success(`Connected skill ${index1 + 1} to skill ${index2 + 1}`, {
+                autoClose: 1000,
+        });
+    };
+
     return (
         <div>
+            <ToastContainer position="bottom-center" hideProgressBar="true" toastStyle={{backgroundColor: "green", color: "white"}}/>
             <button className="absolute top-5 left-5  p-4" onClick={() => navigate('/')}>Return</button>
             <h1>{apparatusName}</h1>
             <SkillFilterForm ref={skillFilterRef} isOpen={isSkillsOpen} apparatus={apparatusName} routine={routine} filterUpdated={() => updateSkills()} selectSkill={handleSkillChosen} cancelChoice={() => setIsSkillsOpen(false)} />
