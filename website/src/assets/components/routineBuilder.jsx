@@ -128,9 +128,12 @@ const RoutineBuilder = () => {
         if (apparatusName == Apparatus.FLOOR) {
             return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 1 && routine[index + 1].group != 1;
         } else if (apparatusName == Apparatus.RINGS) {
-            return routine[index] && index + 1 < routine.length && routine[index + 1] && RingsSkills[routine[index].type] == RingsSkills.YAMA_JON;
+            return routine[index] && index + 1 < routine.length && routine[index + 1] && RingsSkills[routine[index].type] == RingsSkills.YAMA_JON && RingsSkills[routine[index + 1].type] == RingsSkills.SWING_HANDSTAND;
         } else if (apparatusName == Apparatus.HBAR) {
-            return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 4 && routine[index + 1].group != 4 && (routine[index].group == 2 || routine[index + 1].group == 2);
+            return routine[index] && index + 1 < routine.length && routine[index + 1] && routine[index].group != 4 && routine[index + 1].group != 4 && 
+            ((routine[index].group == 2 && routine[index].difficulty >= 0.4 && routine[index + 1].group != 2 && routine[index + 1].difficulty >= 0.4) || 
+            (routine[index].group != 2 && routine[index].difficulty >= 0.4 && routine[index + 1].group == 2 && routine[index + 1].difficulty >= 0.4) || 
+            (routine[index].group == 2 && routine[index + 1].group == 2));
         } else {
             return false;
         }
