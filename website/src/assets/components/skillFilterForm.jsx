@@ -118,11 +118,7 @@ const SkillFilterForm = forwardRef(({ isOpen, apparatus, routine, filterUpdated,
         filterUpdated();
     }, [filteredSkills])
 
-    const filterSkills = () => {
-        const checkSynonym = () => {
-
-        };
-        
+    const filterSkills = () => {        
         const skillSet = skills.filter(skill => 
             (groupFilter == 0 || skill.group == groupFilter) && 
             (difficultyFilter == 0 || skill.difficulty == difficultyFilter) && 

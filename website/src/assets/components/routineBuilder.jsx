@@ -139,7 +139,7 @@ const RoutineBuilder = () => {
     const handleSkillChosen = (skill, index) => {
         setIsSkillsOpen(false);
 
-        if (apparatusName == Apparatus.POMMEL && PommelSkills[skill.type] == PommelSkills.HANDSTAND_DISMOUNT) {
+        if (apparatusName == Apparatus.POMMEL && PommelSkills[skill.type] == PommelSkills.HANDSTAND_DISMOUNT && skill.id != 95 && skill.id != 94) {
             handstandDismountRef.current.setThisSkill(index, skill);
             setIsHdstOpen(true);
         } else {
