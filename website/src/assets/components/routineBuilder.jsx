@@ -73,7 +73,6 @@ const RoutineBuilder = () => {
             routine[index].connectionColour = null;
         } else {
             routine[index].connection = true;
-            connectSkillsPopup(index, index + 1);
         }
 
         let connectionColours = ["#6525ae", "#3f37c9", "#b052ef", "#4895ef"];
@@ -168,10 +167,6 @@ const RoutineBuilder = () => {
 
             calculateScore();
         }      
-    };
-
-    const connectSkillsPopup = (index1, index2) => {
-        toast.success(`Connected skill ${index1 + 1} to skill ${index2 + 1}`, { autoClose: 1000 });
     };
 
     const downloadRoutinePopup = (fileName) => {
