@@ -4,6 +4,7 @@ import ApparatusSelector from './assets/components/apparatusSelector';
 import RoutineBuilder from './assets/components/routineBuilder';
 import ErrorPage from './assets/components/errorPage';
 import Login from './assets/components/login';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
 
 				<Route path="*" element={<ErrorPage />} />
 			</Routes>
+			<Analytics />
 		</Router>
     );
 };
