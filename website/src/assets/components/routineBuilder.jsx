@@ -110,6 +110,9 @@ const RoutineBuilder = () => {
     const removeSkill = (index) => {
         routine[index].connection = false;
         routine[index] = null;
+        if (index - 1 >= 0 && routine[index - 1]?.connection) {
+            routine[index - 1].connection = false;
+        }
         skillFilterRef.current.filterSkills();
 
         calculateScore();
