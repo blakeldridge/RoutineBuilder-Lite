@@ -26,11 +26,11 @@ const RoutineBuilder = () => {
 
     const isLoggedIn = localStorage.getItem("authToken");
     
-    useEffect(() => {
+    /*useEffect(() => {
         if (isLoggedIn !== "true") {
             navigate("/login");
         }
-    })
+    })*/
 
 
     if (!apparatus || !Object.values(Apparatus).includes(fromUrlSlug(apparatus))) {
