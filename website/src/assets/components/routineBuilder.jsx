@@ -200,7 +200,7 @@ const RoutineBuilder = () => {
                             </p>
                             <button
                                 className={`${routine[index] && routine[index].invalid  ? "!border-2 !border-solid !border-red-500" : 
-                                    (routine[index] && routine[index].connection) || (index - 1 >= 0 && routine[index - 1] && routine[index - 1].connection) ? `!border-1 !border-solid` : ""} truncate max-w-[50vw] md:max-w-[60vw] lg:max-w-[50vw] min-w-[50vw] md:min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
+                                    (routine[index] && routine[index].connection) || (index - 1 >= 0 && routine[index - 1] && routine[index - 1].connection) ? `!border-1 !border-solid` : ""} truncate max-w-[45vw] md:max-w-[60vw] lg:max-w-[50vw] min-w-[45vw] md:min-w-[60vw] lg:min-w-[50vw] md:px-2 py-1 rounded text-sm`}
                                 
                                 style={{
                                     borderColor: routine[index] ? routine[index].invalid ? "red" : routine[index].connection ? routine[index].connectionColour : index - 1 >= 0 && routine[index - 1] && routine[index - 1].connection ? routine[index - 1].connectionColour : "" : "",
@@ -221,7 +221,7 @@ const RoutineBuilder = () => {
                                 <span>{routine[index] ? (routine[index].invalid ? "N/A" : routine[index].difficulty.toFixed(1)) : "-"}</span>
                             </p>
                             <button
-                                className="flex items-center justify-center w-[10px] md:w-auto"
+                                className="flex items-center justify-center w-[8px] md:w-auto"
                                 disabled={!routine[index]}
                                 onClick={() => removeSkill(index)}
                             >
@@ -231,7 +231,7 @@ const RoutineBuilder = () => {
                                 <div className="w-[30px]"></div>
                             ) : null}
                         </div>
-                            <div className="flex-shrink-0 ml-1 md:ml-2">
+                            <div className="flex-shrink-0 ml-1 lg:ml-2">
                             {canConnect(index) ? (
                                 <div className="hidden lg:flex">
                                     <button className="w-[90px] border px-2 py-1 rounded text-sm flex justify-center" onClick={() => connectSkills(index)}>
@@ -245,7 +245,7 @@ const RoutineBuilder = () => {
                             {/* Mobile button */}
                             {canConnect(index) && (
                                 <div className="lg:hidden flex">
-                                    <button className="w-[20px] border w-[10px] md:w-auto py-1 rounded text-sm flex justify-center"  onClick={() => connectSkills(index)}>
+                                    <button className="border w-[10px] md:w-auto py-1 rounded text-sm flex justify-center"  onClick={() => connectSkills(index)}>
                                         {routine[index].connection ? "-" : "+"}
                                     </button>
                                 </div>
