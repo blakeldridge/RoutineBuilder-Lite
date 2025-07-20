@@ -70,9 +70,24 @@ const RoutineBuilder = () => {
     const connectSkills = (index) => {
         if (routine[index].connection) {
             routine[index].connection = false;
+            routine[index].connectionColour = null;
         } else {
             routine[index].connection = true;
             connectSkillsPopup(index, index + 1);
+        }
+
+        let connectionColours = ["#6525ae", "#3f37c9", "#b052ef", "#4895ef"];
+
+        for (let i = 0; i < routine.length; i++) {
+            let skill = routine[i];
+            if (skill && skill.connection) {
+                if (i - 1 >= 0 && routine[i - 1]?.connection){
+                    skill.connectionColour = routine[i - 1].connectionColour;
+                } else {
+                    skill.connectionColour = connectionColours[0];
+                    connectionColours.splice(0, 1);
+                }
+            }
         }
 
         calculateScore();
@@ -177,9 +192,22 @@ const RoutineBuilder = () => {
                 {routine.map((element, index) => (
                     <div key={index} className="mb-4 w-full flex flex-row justify-between items-center px-2 lg:px-0 max-w-[90vw] lg:max-w-[65vw] mx-auto">
                         <div className="flex flex-row text-center items-center gap-2 md:gap-4 lg:gap-8 flex-grow justify-center">
-                            <p className={`${routine[index] && routine[index].invalid ? "font-semibold !text-red-500 text-lg" : ""}`}>{routine[index] && routine[index].invalid ? "!": index + 1}</p>
+                            <p className={`${routine[index] && routine[index].invalid ? "font-semibold !text-red-500 text-lg" : 
+                            (routine[index] && routine[index].connection) || (index - 1 >= 0 && routine[index - 1] && routine[index - 1].connection) ? `font-semibold` : "" }`}
+                            
+                            style={{
+                                color: routine[index] ? routine[index].invalid ? "red" : routine[index].connection ? routine[index].connectionColour : index - 1 >= 0 && routine[index - 1] && routine[index - 1].connection ? routine[index - 1].connectionColour : "" : "",
+                            }}>
+                                {routine[index] && routine[index].invalid ? "!": index + 1}
+                            </p>
                             <button
-                                className={`${routine[index] && routine[index].invalid ? "!border-2 !border-solid !border-red-500" : ""} truncate max-w-[50vw] md:max-w-[60vw] lg:max-w-[50vw] min-w-[50vw] md:min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
+                                className={`${routine[index] && routine[index].invalid  ? "!border-2 !border-solid !border-red-500" : 
+                                    (routine[index] && routine[index].connection) || (index - 1 >= 0 && routine[index - 1] && routine[index - 1].connection) ? `!border-1 !border-solid` : ""} truncate max-w-[50vw] md:max-w-[60vw] lg:max-w-[50vw] min-w-[50vw] md:min-w-[60vw] lg:min-w-[50vw] px-2 py-1 rounded text-sm`}
+                                
+                                style={{
+                                    borderColor: routine[index] ? routine[index].invalid ? "red" : routine[index].connection ? routine[index].connectionColour : index - 1 >= 0 && routine[index - 1] && routine[index - 1].connection ? routine[index - 1].connectionColour : "" : "",
+                                }}
+                                
                                 onClick={() => {
                                     setIsSkillsOpen(true);
                                     skillFilterRef.current.chooseSkill(index);
