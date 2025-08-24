@@ -1,0 +1,46 @@
+# Dependencies
+/node_modules/
+
+# Build output
+/dist/
+/build/
+/.next/
+/out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+debug.log*
+
+# Editor/OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+.next/cache/
+/tmp/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Coverage / testing
+coverage/
+*.lcov
+
+# Misc
+*.tgz
+*.zip
+
+# Typescript build info
+*.tsbuildinfo
+
+# Storybook
+storybook-static/
